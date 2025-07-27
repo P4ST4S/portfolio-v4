@@ -1,0 +1,31 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+
+const Footer = () => (
+  <footer className="bg-[#1A1A1A]/70 border-t border-slate-800 py-8">
+    <div className="container mx-auto px-6 text-center text-slate-400">
+      <div className="flex justify-center gap-6 mb-4">
+        <a
+          href="https://github.com/P4ST4S"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#00C4B3] transition-colors"
+        >
+          <FaGithub className="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/antoinerospars/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#00C4B3] transition-colors"
+        >
+          <FaLinkedin className="w-6 h-6" />
+        </a>
+      </div>
+      <p>
+        &copy; {new Date().getFullYear()} Antoine ROSPARS. Conçu avec passion.
+      </p>
+    </div>
+  </footer>
+);
+
+export default Footer;
