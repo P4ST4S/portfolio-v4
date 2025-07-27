@@ -10,7 +10,7 @@ const projectsData: Project[] = [
     },
     {
         id: 2,
-        title: "Datakeen",
+        title: "Datakeen App V2 et V3",
         description: "Contribution à une plateforme d'IA en tant que développeur fullstack.",
         tags: ["React", "NestJS", "Express", "MongoDB", "Prisma", "GitLab CI"],
         links: {}
