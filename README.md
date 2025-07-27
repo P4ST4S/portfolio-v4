@@ -2,8 +2,9 @@
 
 <!-- Logo -->
 <div align="center">
-<img src="public/logo-full.png" alt="Logo Antoine ROSPARS" width="200" align="center" style="display: block; margin: 22px auto; border-radius: 8px;" />
+<img src="public/logo-full.png" alt="Logo Antoine ROSPARS" width="200" align="center" style="display: block; margin: 0 auto; border-radius: 8px;" />
 </div>
+<br/>
 
 <div align="center">
 
