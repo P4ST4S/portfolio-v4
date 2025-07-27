@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, type FC, type FormEvent } from "react";
 import Modal from "react-modal";
 import type { ContactModalProps } from "@/types";
 import emailjs from "@emailjs/browser";
@@ -10,35 +10,35 @@ const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
-const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
     setFeedback(null);
 
     try {
-      await emailjs.send(
+      if (!formRef.current) return;
+
+      // Log environment variables for debugging;
+      console.log("EMAILJS_PUBLIC_KEY:", EMAILJS_PUBLIC_KEY);
+      console.log("EMAILJS_SERVICE_ID:", EMAILJS_SERVICE_ID);
+      console.log("EMAILJS_TEMPLATE_ID:", EMAILJS_TEMPLATE_ID);
+
+      await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        {
-          from_name: name,
-          reply_to: email,
-          message,
-        },
+        formRef.current,
         {
           publicKey: EMAILJS_PUBLIC_KEY,
         }
       );
+
       setFeedback("✅ Message envoyé avec succès !");
-      setName("");
-      setEmail("");
-      setMessage("");
+      formRef.current.reset();
     } catch (err) {
       console.error(err);
       setFeedback("❌ Une erreur s'est produite.");
@@ -52,7 +52,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       className="bg-[#1A1A1A] rounded-lg max-w-lg mx-auto p-6 shadow-lg relative mt-20"
-      overlayClassName="fixed inset-0 bg-[#00C4B333] flex justify-center items-start z-50"
+      overlayClassName="fixed inset-0 bg-[rgba(0,196,179,0.2)] flex justify-center items-start z-50"
     >
       <button
         onClick={onClose}
@@ -61,33 +61,27 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         <ImCross className="text-xl text-red-500" />
       </button>
       <h2 className="text-2xl font-bold mb-4 text-[#00C4B3]">Contactez-moi</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
-          name="name"
+          name="user_name"
           placeholder="Votre nom"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
           required
-          className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white"
+          className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
         />
         <input
           type="email"
-          name="email"
+          name="user_email"
           placeholder="Votre e-mail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white"
+          className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
         />
         <textarea
           name="message"
           placeholder="Votre message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
           required
           rows={5}
-          className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white"
+          className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
         />
         <button
           type="submit"
@@ -96,7 +90,9 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         >
           {sending ? "Envoi en cours..." : "Envoyer"}
         </button>
-        {feedback && <p className="text-sm text-center mt-2">{feedback}</p>}
+        {feedback && (
+          <p className="text-sm text-center mt-2 text-white">{feedback}</p>
+        )}
       </form>
     </Modal>
   );
