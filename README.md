@@ -1,6 +1,6 @@
 # Portfolio – Antoine ROSPARS
 
-[![Netlify Status](https://img.shields.io/netlify/12345678-1234-1234-1234-123456789abc?style=flat-square&logo=netlify)](https://app.netlify.com/projects/arospars-portfolio/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/32c531cb-865d-4f32-b5e5-ded12fd4c086/deploy-status)](https://app.netlify.com/projects/arospars-portfolio/deploys)
 [![CI](https://github.com/P4ST4S/portfolio-v4/actions/workflows/CI.yml/badge.svg)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/CI.yml)
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
