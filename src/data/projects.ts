@@ -64,6 +64,13 @@ const projectsData: Project[] = [
         tags: ["Docusaurus", "React", "Documentation"],
         links: { github: "https://github.com/EIP-TEK89/docs", demo: "https://docs.triosigno.com/" }
     },
+    {
+        id: 10,
+        title: "Portfolio",
+        description: "Mon portfolio personnel, mettant en avant mes projets et compétences.",
+        tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
+        links: { github: "https://github.com/P4ST4S/portfolio-v4", demo: "https://arospars-portfolio.netlify.app/" }
+    }
 ];
 
 export default projectsData;
