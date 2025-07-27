@@ -6,7 +6,7 @@ const projectsData: Project[] = [
         title: "TrioSigno",
         description: "Plateforme de gestion de projets avec une approche Fullstack & DevOps.",
         tags: ["React", "TypeScript", "NestJS", "Docker", "PostgreSQL", "Prisma", "GitHub Actions"],
-        links: { github: "https://github.com/EIP-TEK89/trio-signo-fullstack" }
+        links: { github: "https://github.com/EIP-TEK89/trio-signo-fullstack", demo: "https://triosigno.com/" }
     },
     {
         id: 2,
@@ -56,7 +56,14 @@ const projectsData: Project[] = [
         description: "Application de gestion de rendez-vous médicaux avec notifications et rappels. Projet réalisé en 1 semaine dans le cadre d'un examen.",
         tags: ["React", "TypeScript", "NestJS", "MySQL", "Prisma"],
         links: { github: "https://github.com/DatabaseSystemRepo" }
-    }
+    },
+    {
+        id: 9,
+        title: "TrioSigno Documentation",
+        description: "Documentation pour la plateforme TrioSigno, incluant des guides et des tutoriels.",
+        tags: ["Docusaurus", "React", "Documentation"],
+        links: { github: "https://github.com/EIP-TEK89/docs", demo: "https://docs.triosigno.com/" }
+    },
 ];
 
 export default projectsData;
