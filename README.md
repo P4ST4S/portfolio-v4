@@ -1,5 +1,7 @@
 # Portfolio – Antoine ROSPARS
 
+<!-- Logo -->
+<img src="public/logo-full.png" alt="Logo Antoine ROSPARS" width="200" align="center" style="display: block; margin: 22px auto; border-radius: 8px;" />
 <div align="center">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/32c531cb-865d-4f32-b5e5-ded12fd4c086/deploy-status)](https://app.netlify.com/projects/arospars-portfolio/deploys)
