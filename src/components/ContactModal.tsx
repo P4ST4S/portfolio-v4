@@ -1,4 +1,5 @@
-import { useRef, useState, type FC, type FormEvent } from "react";
+import { useRef, useState } from "react";
+import type { FC, FormEvent } from "react";
 import Modal from "react-modal";
 import type { ContactModalProps } from "@/types";
 import emailjs from "@emailjs/browser";
