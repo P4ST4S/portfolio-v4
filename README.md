@@ -71,12 +71,6 @@ Retrouvez tous les projets dans la section dédiée du site.
 
 ---
 
-## 🖼️ Aperçu Discord
-
-Le site intègre les balises Open Graph pour un partage enrichi sur Discord et les réseaux.
-
----
-
 ## Licence
 
 MIT
