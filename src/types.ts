@@ -8,3 +8,14 @@ export interface Project {
         demo?: string;
     };
 }
+
+export interface ContactModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+export type FormState = {
+    name: string;
+    email: string;
+    message: string;
+};
