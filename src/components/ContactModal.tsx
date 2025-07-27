@@ -23,11 +23,6 @@ const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
     try {
       if (!formRef.current) return;
 
-      // Log environment variables for debugging;
-      console.log("EMAILJS_PUBLIC_KEY:", EMAILJS_PUBLIC_KEY);
-      console.log("EMAILJS_SERVICE_ID:", EMAILJS_SERVICE_ID);
-      console.log("EMAILJS_TEMPLATE_ID:", EMAILJS_TEMPLATE_ID);
-
       await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
