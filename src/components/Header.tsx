@@ -30,6 +30,11 @@ const Header = () => {
           href="#hero"
           className="text-xl font-bold text-slate-100 hover:text-[#00C4B3] transition-colors"
         >
+          <img
+            src="/logov2.png"
+            alt="Logo"
+            className="h-8 inline-block mr-2 mb-1"
+          />
           Antoine ROSPARS
         </a>
         <nav className="hidden md:flex items-center space-x-8">
