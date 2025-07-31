@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa6";
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -77,6 +78,16 @@ const Hero = () => {
             <FaLinkedin className="w-8 h-8" />
           </a>
         </div>
+      </div>
+      
+      <div className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <a
+          href="#about"
+          className="flex flex-col items-center text-slate-400 hover:text-[#00C4B3] transition-colors duration-300 group"
+        >
+          <span className="text-sm mb-2 opacity-75">Scroll</span>
+          <FaChevronDown className="w-5 h-5 animate-bounce group-hover:text-[#00C4B3]" />
+        </a>
       </div>
     </section>
   );
