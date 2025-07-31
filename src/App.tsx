@@ -1,11 +1,13 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
 import SEOContent from "@/components/SEOContent";
-import Skills from "@/components/Skills";
+
+const About = lazy(() => import("@/components/About"));
+const Skills = lazy(() => import("@/components/Skills"));
+const Projects = lazy(() => import("@/components/Projects"));
+const Contact = lazy(() => import("@/components/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 export default function App() {
   return (
@@ -14,12 +16,22 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+          <About />
+        </Suspense>
+        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+          <Skills />
+        </Suspense>
+        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={<div className="py-10 flex justify-center"><div className="animate-spin w-6 h-6 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
