@@ -10,4 +10,19 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          icons: ['react-icons/fa6', 'react-icons/fa'],
+          email: ['@emailjs/browser'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
+  optimizeDeps: {
+    include: ['react-icons/fa6', 'react-icons/fa'],
+  },
 })
