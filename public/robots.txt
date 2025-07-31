@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://arospars-portfolio.netlify.app/sitemap.xml
+Sitemap: https://antoinerospars.dev/sitemap.xml
 
 # Block access to sensitive files
 Disallow: /src/
