@@ -9,10 +9,6 @@ export interface Project {
     };
 }
 
-export interface ContactModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-}
 
 export type FormState = {
     name: string;

@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import ContactModal from "./ContactModal";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,15 +49,14 @@ const Header = () => {
               </a>
             ))}
           </nav>
-          <button
-            onClick={() => setModalOpen(true)}
+          <a
+            href="#contact"
             className="hidden md:inline-block bg-[#00C4B3] text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
           >
             Me contacter
-          </button>
+          </a>
         </div>
       </header>
-      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </>
   );
 };
