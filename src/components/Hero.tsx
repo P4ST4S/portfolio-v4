@@ -27,32 +27,50 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center text-center relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#00C4B3]/5 via-transparent to-[#00C4B3]/10"></div>
-      
+
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#00C4B3]/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
       <div className="absolute top-40 right-10 w-72 h-72 bg-slate-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
       <div className="absolute -bottom-8 left-20 w-72 h-72 bg-[#00C4B3]/5 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className={`transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div
+          className={`transform transition-all duration-1000 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-100 leading-tight mb-2">
             {text}
             <span className="animate-blink text-[#00C4B3]">|</span>
           </h1>
         </div>
-        
-        <div className={`transform transition-all duration-1000 delay-500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+
+        <div
+          className={`transform transition-all duration-1000 delay-500 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <p className="mt-4 text-xl md:text-2xl text-[#00C4B3] font-medium animate-fade-in-up">
             Développeur Fullstack Français & Architecte Web | Diplômé Epitech
           </p>
         </div>
-        
-        <div className={`transform transition-all duration-1000 delay-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+
+        <div
+          className={`transform transition-all duration-1000 delay-700 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-400">
-            Expert React, Node.js, TypeScript. Je transforme des idées complexes en applications web modernes et performantes, de la conception à la mise en production. Basé à Paris, disponible en freelance.
+            Expert React, Node.js, TypeScript. Je transforme des idées complexes
+            en applications web modernes et performantes, de la conception à la
+            mise en production. Basé à Paris, disponible en freelance.
           </p>
         </div>
-        
-        <div className={`mt-10 flex justify-center items-center gap-4 transform transition-all duration-1000 delay-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+
+        <div
+          className={`mt-10 flex justify-center items-center gap-4 transform transition-all duration-1000 delay-1000 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <a
             href="#projects"
             className="bg-[#00C4B3] text-[#1A1A1A] font-bold py-3 px-6 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#00C4B3]/25 animate-bounce-subtle"
@@ -77,13 +95,17 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      
-      <div className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+
+      <div
+        className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1500 ${
+          isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+        }`}
+      >
         <a
           href="#about"
           className="flex flex-col items-center text-slate-400 hover:text-[#00C4B3] transition-colors duration-300 group"
         >
-          <span className="text-sm mb-2 opacity-75">Scroll</span>
+          <span className="text-sm mb-2 opacity-75">Défilez</span>
           <FaChevronDown className="w-5 h-5 animate-bounce group-hover:text-[#00C4B3]" />
         </a>
       </div>
