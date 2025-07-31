@@ -1,27 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { reportWebVitals } from './utils/performance'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import { reportWebVitals } from "./utils/performance";
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+  </StrictMode>
+);
 
-// Report web vitals for performance monitoring
-reportWebVitals({ name: 'initial', value: 0 })
-
-// Defensive: Catch and suppress external script errors
-window.addEventListener('error', (event) => {
-  // Suppress errors from external scripts we don't control
-  if (event.filename && (
-    event.filename.includes('share-modal') ||
-    event.filename.includes('chrome-extension') ||
-    event.filename.includes('moz-extension')
-  )) {
-    event.preventDefault();
-    return false;
-  }
-});
+// Track all Core Web Vitals
+onCLS(reportWebVitals);
+onINP(reportWebVitals);
+onFCP(reportWebVitals);
+onLCP(reportWebVitals);
+onTTFB(reportWebVitals);

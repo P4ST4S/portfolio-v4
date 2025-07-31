@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SEOContent from "@/components/SEOContent";
+import PerformanceDashboard from "@/components/PerformanceDashboard";
 
 const About = lazy(() => import("@/components/About"));
 const Skills = lazy(() => import("@/components/Skills"));
@@ -16,22 +17,54 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+        <Suspense
+          fallback={
+            <div className="py-20 flex justify-center">
+              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+            </div>
+          }
+        >
           <About />
         </Suspense>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+        <Suspense
+          fallback={
+            <div className="py-20 flex justify-center">
+              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+            </div>
+          }
+        >
           <Skills />
         </Suspense>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+        <Suspense
+          fallback={
+            <div className="py-20 flex justify-center">
+              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+            </div>
+          }
+        >
           <Projects />
         </Suspense>
-        <Suspense fallback={<div className="py-20 flex justify-center"><div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+        <Suspense
+          fallback={
+            <div className="py-20 flex justify-center">
+              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+            </div>
+          }
+        >
           <Contact />
         </Suspense>
       </main>
-      <Suspense fallback={<div className="py-10 flex justify-center"><div className="animate-spin w-6 h-6 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div></div>}>
+      <Suspense
+        fallback={
+          <div className="py-10 flex justify-center">
+            <div className="animate-spin w-6 h-6 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+          </div>
+        }
+      >
         <Footer />
       </Suspense>
+
+      {process.env.NODE_ENV === "development" && <PerformanceDashboard />}
     </div>
   );
 }
