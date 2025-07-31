@@ -7,6 +7,7 @@ import PerformanceDashboard from "@/components/PerformanceDashboard";
 const About = lazy(() => import("@/components/About"));
 const Skills = lazy(() => import("@/components/Skills"));
 const Projects = lazy(() => import("@/components/Projects"));
+const ResponsiveShowcase = lazy(() => import("@/components/ResponsiveShowcase"));
 const Contact = lazy(() => import("@/components/Contact"));
 const Footer = lazy(() => import("@/components/Footer"));
 
@@ -43,6 +44,15 @@ export default function App() {
           }
         >
           <Projects />
+        </Suspense>
+        <Suspense
+          fallback={
+            <div className="py-20 flex justify-center">
+              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+            </div>
+          }
+        >
+          <ResponsiveShowcase />
         </Suspense>
         <Suspense
           fallback={
