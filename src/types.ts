@@ -9,6 +9,16 @@ export interface Project {
     };
 }
 
+export interface Skill {
+    name: string;
+    level: number;
+    icon?: string;
+}
+
+export interface SkillCategory {
+    category: string;
+    skills: Skill[];
+}
 
 export type FormState = {
     name: string;
