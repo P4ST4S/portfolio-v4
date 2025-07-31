@@ -43,14 +43,13 @@ const Hero = () => {
         
         <div className={`transform transition-all duration-1000 delay-500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <p className="mt-4 text-xl md:text-2xl text-[#00C4B3] font-medium animate-fade-in-up">
-            Développeur Fullstack & Architecte de solutions web
+            Développeur Fullstack Français & Architecte Web | Diplômé Epitech
           </p>
         </div>
         
         <div className={`transform transition-all duration-1000 delay-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-400">
-            Je transforme des idées complexes en applications web élégantes et
-            performantes, de la conception à la mise en production.
+            Expert React, Node.js, TypeScript. Je transforme des idées complexes en applications web modernes et performantes, de la conception à la mise en production. Basé à Paris, disponible en freelance.
           </p>
         </div>
         

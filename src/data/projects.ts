@@ -69,7 +69,7 @@ const projectsData: Project[] = [
         title: "Portfolio",
         description: "Mon portfolio personnel, mettant en avant mes projets et compétences.",
         tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
-        links: { github: "https://github.com/P4ST4S/portfolio-v4", demo: "https://arospars-portfolio.netlify.app/" }
+        links: { github: "https://github.com/P4ST4S/portfolio-v4", demo: "https://antoinerospars.dev/" }
     }
 ];
 

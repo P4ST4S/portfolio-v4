@@ -43,16 +43,16 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
-            Intéressé par mon profil ?
+            Contactez Antoine ROSPARS - Développeur Fullstack
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Je suis actuellement à la recherche d'opportunités Freelance.
-            N'hésitez pas à me contacter.
+            Développeur freelance français basé à Paris. Disponible pour vos projets React, Node.js, TypeScript.
+            Diplômé Epitech, expert en développement fullstack moderne.
           </p>
         </div>
         
         <div className="max-w-lg mx-auto">
-          <h3 className="text-2xl font-bold mb-6 text-[#00C4B3] text-center">Contactez-moi</h3>
+          <h3 className="text-2xl font-bold mb-6 text-[#00C4B3] text-center">Freelance Developer - Devis Gratuit</h3>
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
