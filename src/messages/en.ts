@@ -45,6 +45,46 @@ export const en = {
   'footer.rights': 'All rights reserved.',
   'footer.madeWith': 'Made with',
 
+  // Skills Categories
+  'skills.categories.frontend': 'Frontend',
+  'skills.categories.backend': 'Backend',
+  'skills.categories.devops': 'DevOps & Tools',
+  'skills.categories.others': 'Others',
+
+  // Skills Names
+  'skills.names.fullstackArchitecture': 'Fullstack Architecture',
+  'skills.names.restApi': 'REST API',
+  'skills.names.microservices': 'Microservices',
+  'skills.names.unitTesting': 'Unit Testing',
+  'skills.names.documentation': 'Documentation',
+  'skills.names.webPerformance': 'Web Performance',
+  'skills.names.webSecurity': 'Web Security',
+
+  // Projects
+  'projects.triosigno.title': 'TrioSigno',
+  'projects.triosigno.description': 'Project management platform with Fullstack & DevOps approach.',
+  'projects.datakeenApp.title': 'Datakeen App V2 and V3',
+  'projects.datakeenApp.description': 'Contribution to an AI platform as a fullstack developer.',
+  'projects.frigoApp.title': 'Fridge App',
+  'projects.frigoApp.description': 'Mobile app for shared fridge management: stocks, recipes, and shopping calendar.',
+  'projects.datakeenSdk.title': 'Datakeen SDK',
+  'projects.datakeenSdk.description': 'Creation of a software development kit for service integration.',
+  'projects.petHealth.title': 'Pet Health Taker',
+  'projects.petHealth.description': 'Backend for a veterinary appointment management application.',
+  'projects.francilienne.title': 'Francilienne de Miroiterie',
+  'projects.francilienne.description': 'Showcase website for a craftsman, emphasizing design and user experience.',
+  'projects.cguGenerator.title': 'CGU Generator',
+  'projects.cguGenerator.description': 'Terms of Use Generator.',
+  'projects.medicalApp.title': 'Medical App',
+  'projects.medicalApp.description': 'Medical appointment management application with notifications and reminders. Project completed in 1 week as part of an exam.',
+  'projects.triosignoDoc.title': 'TrioSigno Documentation',
+  'projects.triosignoDoc.description': 'Documentation for the TrioSigno platform, including guides and tutorials.',
+  'projects.portfolio.title': 'Portfolio',
+  'projects.portfolio.description': 'My personal portfolio, showcasing my projects and skills.',
+
+  // Footer
+  'footer.copyright': 'Designed with passion.',
+
   // Common
   'common.loading': 'Loading...',
 };

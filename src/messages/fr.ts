@@ -18,14 +18,6 @@ export const fr = {
   'about.description1': 'Développeur fullstack français diplômé de <strong>EPITECH</strong>, école d\'ingénieur reconnue. Avec 2 ans d\'expérience professionnelle, je maîtrise l\'ensemble de la chaîne de développement web moderne, du design d\'interfaces utilisateur avec <strong>React</strong> et <strong>TypeScript</strong>, au développement d\'API robustes avec <strong>Node.js</strong> et <strong>NestJS</strong>, jusqu\'au déploiement continu avec <strong>Docker</strong> et les pipelines CI/CD.',
   'about.description2': 'Basé à Paris, je développe des applications web performantes et élégantes pour mes clients. Spécialisé en architecture fullstack moderne, je transforme vos idées en solutions digitales robustes. Disponible en freelance pour vos projets web innovants.',
 
-  // Skills Section
-  'skills.title': 'Compétences techniques',
-  'skills.subtitle': 'Technologies que je maîtrise',
-
-  // Projects Section
-  'projects.title': 'Mes projets',
-  'projects.subtitle': 'Une sélection de mes travaux récents',
-
   // Contact Section
   'contact.title': 'Contactez Antoine ROSPARS - Développeur Fullstack',
   'contact.subtitle': 'Développeur freelance français basé à Paris. Disponible pour vos projets React, Node.js, TypeScript. Diplômé Epitech, expert en développement fullstack moderne.',
@@ -45,13 +37,51 @@ export const fr = {
   'skills.experienceDescription': 'en développement web moderne',
   'skills.learningNote': 'Toujours en apprentissage continu des dernières technologies',
 
+  // Skills Categories
+  'skills.categories.frontend': 'Frontend',
+  'skills.categories.backend': 'Backend',
+  'skills.categories.devops': 'DevOps & Tools',
+  'skills.categories.others': 'Autres',
+
+  // Skills Names
+  'skills.names.fullstackArchitecture': 'Architecture Fullstack',
+  'skills.names.restApi': 'API REST',
+  'skills.names.microservices': 'Microservices',
+  'skills.names.unitTesting': 'Tests Unitaires',
+  'skills.names.documentation': 'Documentation',
+  'skills.names.webPerformance': 'Performance Web',
+  'skills.names.webSecurity': 'Sécurité Web',
+
   // Projects Section
   'projects.title': 'Projets Fullstack - Portfolio Antoine ROSPARS',
   'projects.subtitle': 'Applications web modernes développées avec React, Node.js, TypeScript. Découvrez mes réalisations de développeur fullstack français, architectures performantes et interfaces élégantes.',
 
+  // Project Details
+  'projects.triosigno.title': 'TrioSigno',
+  'projects.triosigno.description': 'Plateforme de gestion de projets avec une approche Fullstack & DevOps.',
+  'projects.datakeenApp.title': 'Datakeen App V2 et V3',
+  'projects.datakeenApp.description': 'Contribution à une plateforme d\'IA en tant que développeur fullstack.',
+  'projects.frigoApp.title': 'Application Frigo',
+  'projects.frigoApp.description': 'App mobile de gestion de frigo partagé : stocks, recettes, et calendrier de courses.',
+  'projects.datakeenSdk.title': 'Datakeen SDK',
+  'projects.datakeenSdk.description': 'Création d\'un kit de développement logiciel pour l\'intégration de services.',
+  'projects.petHealth.title': 'Pet Health Taker',
+  'projects.petHealth.description': 'Backend pour une application de gestion de rendez-vous vétérinaires.',
+  'projects.francilienne.title': 'Francilienne de Miroiterie',
+  'projects.francilienne.description': 'Site vitrine pour un artisan, mettant l\'accent sur le design et l\'expérience utilisateur.',
+  'projects.cguGenerator.title': 'CGU Generator',
+  'projects.cguGenerator.description': 'Générateur de Conditions Générales d\'Utilisation.',
+  'projects.medicalApp.title': 'Medical App',
+  'projects.medicalApp.description': 'Application de gestion de rendez-vous médicaux avec notifications et rappels. Projet réalisé en 1 semaine dans le cadre d\'un examen.',
+  'projects.triosignoDoc.title': 'TrioSigno Documentation',
+  'projects.triosignoDoc.description': 'Documentation pour la plateforme TrioSigno, incluant des guides et des tutoriels.',
+  'projects.portfolio.title': 'Portfolio',
+  'projects.portfolio.description': 'Mon portfolio personnel, mettant en avant mes projets et compétences.',
+
   // Footer
   'footer.rights': 'Tous droits réservés.',
   'footer.madeWith': 'Fait avec',
+  'footer.copyright': 'Conçu avec passion.',
 
   // Common
   'common.loading': 'Chargement...',

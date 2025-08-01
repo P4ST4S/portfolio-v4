@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import projectsData from "@/data/projects";
+import { useProjectsData } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import { FormattedMessage } from "react-intl";
 
 const Projects = () => {
+  const projectsData = useProjectsData();
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 

@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import skillsData from "@/data/skills";
+import { useSkillsData } from "@/data/skills";
 import type { SkillCategory } from "@/types";
 import { FormattedMessage } from "react-intl";
 
 const Skills = () => {
+  const skillsData = useSkillsData();
   const [isVisible, setIsVisible] = useState(false);
   const [animatedBars, setAnimatedBars] = useState<Set<string>>(new Set());
   const sectionRef = useRef<HTMLElement>(null);
