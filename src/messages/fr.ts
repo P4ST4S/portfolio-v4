@@ -27,8 +27,27 @@ export const fr = {
   'projects.subtitle': 'Une sélection de mes travaux récents',
 
   // Contact Section
-  'contact.title': 'Contactez-moi',
-  'contact.subtitle': 'Discutons de votre prochain projet',
+  'contact.title': 'Contactez Antoine ROSPARS - Développeur Fullstack',
+  'contact.subtitle': 'Développeur freelance français basé à Paris. Disponible pour vos projets React, Node.js, TypeScript. Diplômé Epitech, expert en développement fullstack moderne.',
+  'contact.formTitle': 'Freelance Developer - Devis Gratuit',
+  'contact.namePlaceholder': 'Votre nom',
+  'contact.emailPlaceholder': 'Votre e-mail',
+  'contact.messagePlaceholder': 'Votre message',
+  'contact.sendButton': 'Envoyer un email',
+  'contact.sendingButton': 'Envoi en cours...',
+  'contact.successMessage': '✅ Message envoyé avec succès !',
+  'contact.errorMessage': '❌ Une erreur s\'est produite.',
+
+  // Skills Section
+  'skills.title': 'Compétences Techniques',
+  'skills.subtitle': 'Stack technique maîtrisée pour développer des applications web modernes et performantes',
+  'skills.experience': '2 ans d\'expérience',
+  'skills.experienceDescription': 'en développement web moderne',
+  'skills.learningNote': 'Toujours en apprentissage continu des dernières technologies',
+
+  // Projects Section
+  'projects.title': 'Projets Fullstack - Portfolio Antoine ROSPARS',
+  'projects.subtitle': 'Applications web modernes développées avec React, Node.js, TypeScript. Découvrez mes réalisations de développeur fullstack français, architectures performantes et interfaces élégantes.',
 
   // Footer
   'footer.rights': 'Tous droits réservés.',
