@@ -92,6 +92,7 @@ export const en = {
   // Collaborators Section
   'collaborators.title': 'Collaborators & Previous Mates',
   'collaborators.subtitle': 'Talented professionals I\'ve had the pleasure to work with on various projects',
+  'collaborators.lookingContact': 'Looking to <strong>collaborate</strong> with talented professionals?',
   'collaborators.workTogether': 'Work together',
   'collaborators.viewProfile': 'View profile',
   'collaborators.contact': 'Contact',

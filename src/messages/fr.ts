@@ -90,6 +90,7 @@ export const fr = {
   // Collaborators Section
   'collaborators.title': 'Collaborateurs & Anciens Collègues',
   'collaborators.subtitle': 'Professionnels talentueux avec qui j\'ai eu le plaisir de travailler sur divers projets',
+  'collaborators.lookingContact': 'Vous cherchez à <strong>collaborer</strong> avec des professionnels talentueux ?',
   'collaborators.workTogether': 'Travailler ensemble',
   'collaborators.viewProfile': 'Voir le profil',
   'collaborators.contact': 'Contacter',
