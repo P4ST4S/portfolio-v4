@@ -1,31 +1,22 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import { TbLanguage } from 'react-icons/tb';
 
 const LanguageSwitcher = () => {
   const { locale, setLocale } = useLanguage();
 
+  const toggleLanguage = () => {
+    setLocale(locale === 'en' ? 'fr' : 'en');
+  };
+
   return (
-    <div className="flex items-center space-x-2">
-      <button
-        onClick={() => setLocale('fr')}
-        className={`px-2 py-1 text-sm font-medium rounded transition-colors duration-200 ${
-          locale === 'fr'
-            ? 'bg-[#00C4B3] text-[#1A1A1A]'
-            : 'text-slate-300 hover:text-[#00C4B3]'
-        }`}
-      >
-        FR
-      </button>
-      <button
-        onClick={() => setLocale('en')}
-        className={`px-2 py-1 text-sm font-medium rounded transition-colors duration-200 ${
-          locale === 'en'
-            ? 'bg-[#00C4B3] text-[#1A1A1A]'
-            : 'text-slate-300 hover:text-[#00C4B3]'
-        }`}
-      >
-        EN
-      </button>
-    </div>
+    <button
+      onClick={toggleLanguage}
+      className="flex items-center space-x-2 px-3 py-2 text-slate-300 hover:text-[#00C4B3] transition-colors duration-300 rounded-lg hover:bg-slate-800/50"
+      title={`Switch to ${locale === 'en' ? 'French' : 'English'}`}
+    >
+      <TbLanguage className="w-5 h-5" />
+      <span className="text-sm font-medium">{locale.toUpperCase()}</span>
+    </button>
   );
 };
 
