@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useCollaboratorsData } from "@/data/collaborators";
 import type { Collaborator } from "@/types";
 import { FormattedMessage } from "react-intl";
@@ -30,15 +30,27 @@ const Collaborators = () => {
   }, []);
 
   const getInitials = (name: string) => {
-    return name.split(' ').map(n => n[0]).join('').toUpperCase();
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase();
   };
 
   return (
-    <section ref={sectionRef} id="collaborators" className="py-20 md:py-32 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      id="collaborators"
+      className="py-20 md:py-32 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-transparent to-slate-800/20"></div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
-        <div className={`text-center mb-16 transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div
+          className={`text-center mb-16 transform transition-all duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4 relative inline-block">
             <FormattedMessage id="collaborators.title" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
@@ -52,19 +64,22 @@ const Collaborators = () => {
           {collaboratorsData.map((collaborator: Collaborator, index) => (
             <div
               key={collaborator.id}
-              className={`transform transition-all duration-700 delay-${index * 200} ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+              className={`transform transition-all duration-700 delay-${
+                index * 200
+              } ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-12 opacity-0"
               }`}
             >
               <div className="bg-slate-800/50 rounded-xl p-6 shadow-lg backdrop-blur-sm border border-slate-700/50 hover:border-[#00C4B3]/30 transition-all duration-500 h-full group hover:shadow-[0_0_30px_rgba(0,196,179,0.15)] hover:-translate-y-2">
-                
                 {/* Avatar */}
                 <div className="flex justify-center mb-6">
                   <div className="relative">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#00C4B3] to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-all duration-300">
                       {collaborator.avatar ? (
-                        <img 
-                          src={collaborator.avatar} 
+                        <img
+                          src={collaborator.avatar}
                           alt={collaborator.name}
                           className="w-full h-full rounded-full object-cover"
                         />
@@ -99,14 +114,16 @@ const Collaborators = () => {
                 {/* Specialities */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2 justify-center">
-                    {collaborator.specialities.slice(0, 4).map((speciality, specIndex) => (
-                      <span
-                        key={specIndex}
-                        className="px-3 py-1 text-xs font-medium bg-slate-700/50 text-slate-300 rounded-full border border-slate-600/50 group-hover:border-[#00C4B3]/30 transition-all duration-300"
-                      >
-                        {speciality}
-                      </span>
-                    ))}
+                    {collaborator.specialities
+                      .slice(0, 4)
+                      .map((speciality, specIndex) => (
+                        <span
+                          key={specIndex}
+                          className="px-3 py-1 text-xs font-medium bg-slate-700/50 text-slate-300 rounded-full border border-slate-600/50 group-hover:border-[#00C4B3]/30 transition-all duration-300"
+                        >
+                          {speciality}
+                        </span>
+                      ))}
                   </div>
                 </div>
 
@@ -123,7 +140,7 @@ const Collaborators = () => {
                       <FaLinkedin className="w-5 h-5" />
                     </a>
                   )}
-                  
+
                   {collaborator.links.github && (
                     <a
                       href={collaborator.links.github}
@@ -135,7 +152,7 @@ const Collaborators = () => {
                       <FaGithub className="w-5 h-5" />
                     </a>
                   )}
-                  
+
                   {collaborator.links.website && (
                     <a
                       href={collaborator.links.website}
@@ -147,7 +164,7 @@ const Collaborators = () => {
                       <FaBriefcase className="w-5 h-5" />
                     </a>
                   )}
-                  
+
                   {collaborator.links.email && (
                     <a
                       href={`mailto:${collaborator.links.email}`}
@@ -167,9 +184,20 @@ const Collaborators = () => {
         </div>
 
         {/* Call to action */}
-        <div className={`text-center mt-16 transform transition-all duration-700 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div
+          className={`text-center mt-16 transform transition-all duration-700 delay-1000 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
           <p className="text-slate-400 text-lg mb-6">
-            Looking to <strong className="text-[#00C4B3]">collaborate</strong> with talented professionals?
+            <FormattedMessage
+              id="collaborators.lookingContact"
+              values={{
+                strong: (chunks: ReactNode) => (
+                  <strong className="text-[#00C4B3]">{chunks}</strong>
+                ),
+              }}
+            />
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
