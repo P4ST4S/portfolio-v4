@@ -3,105 +3,64 @@ import { useIntl } from "react-intl";
 
 export const useCollaboratorsData = (): Collaborator[] => {
   const intl = useIntl();
-  
+
   return [
     {
       id: 1,
-      name: "John Doe",
-      role: intl.formatMessage({ id: 'collaborators.roles.uiuxDesigner' }),
+      name: "Lenny VIGEON",
+      role: intl.formatMessage({ id: 'collaborators.roles.aiExpert' }),
       specialities: [
-        intl.formatMessage({ id: 'collaborators.specialities.uiDesign' }),
-        intl.formatMessage({ id: 'collaborators.specialities.uxResearch' }),
-        intl.formatMessage({ id: 'collaborators.specialities.prototyping' }),
-        intl.formatMessage({ id: 'collaborators.specialities.branding' })
+        intl.formatMessage({ id: 'collaborators.specialities.python' }),
+        intl.formatMessage({ id: 'collaborators.specialities.pytorch' }),
+        intl.formatMessage({ id: 'collaborators.specialities.cpp' }),
+        intl.formatMessage({ id: 'collaborators.specialities.machineLearning' })
       ],
-      description: intl.formatMessage({ id: 'collaborators.johnDoe.description' }),
+      description: intl.formatMessage({ id: 'collaborators.lennyVigeon.description' }),
       links: {
-        linkedin: "https://linkedin.com/in/johndoe",
-        website: "https://johndoe-design.com",
-        email: "john@example.com"
-      },
-      company: "Design Studio"
+        linkedin: "https://www.linkedin.com/in/lenny-vigeon/",
+        github: "https://github.com/Linnchoeuh"
+      }
     },
     {
       id: 2,
-      name: "Jane Smith",
-      role: intl.formatMessage({ id: 'collaborators.roles.mobileDevExpert' }),
+      name: "Christophe CHHOR",
+      role: intl.formatMessage({ id: 'collaborators.roles.projectManager' }),
       specialities: [
-        intl.formatMessage({ id: 'collaborators.specialities.reactNative' }),
-        intl.formatMessage({ id: 'collaborators.specialities.flutter' }),
-        intl.formatMessage({ id: 'collaborators.specialities.ios' }),
-        intl.formatMessage({ id: 'collaborators.specialities.android' })
+        intl.formatMessage({ id: 'collaborators.specialities.projectManagement' }),
+        intl.formatMessage({ id: 'collaborators.specialities.agile' }),
+        intl.formatMessage({ id: 'collaborators.specialities.teamLeadership' }),
+        intl.formatMessage({ id: 'collaborators.specialities.strategicPlanning' })
       ],
-      description: intl.formatMessage({ id: 'collaborators.janeSmith.description' }),
+      description: intl.formatMessage({ id: 'collaborators.christopheChhor.description' }),
       links: {
-        github: "https://github.com/janesmith",
-        linkedin: "https://linkedin.com/in/janesmith",
-        email: "jane@example.com"
-      },
-      company: "Tech Corp"
-    },
-    {
-      id: 3,
-      name: "Alex Johnson",
-      role: intl.formatMessage({ id: 'collaborators.roles.devOpsEngineer' }),
-      specialities: [
-        intl.formatMessage({ id: 'collaborators.specialities.aws' }),
-        intl.formatMessage({ id: 'collaborators.specialities.kubernetes' }),
-        intl.formatMessage({ id: 'collaborators.specialities.terraform' }),
-        intl.formatMessage({ id: 'collaborators.specialities.cicd' })
-      ],
-      description: intl.formatMessage({ id: 'collaborators.alexJohnson.description' }),
-      links: {
-        github: "https://github.com/alexjohnson",
-        website: "https://alexjohnson-devops.com",
-        linkedin: "https://linkedin.com/in/alexjohnson"
-      },
-      company: "Cloud Solutions Inc"
+        linkedin: "https://www.linkedin.com/in/christophe-chhor/"
+      }
     }
   ];
 };
 
-// Legacy export for backward compatibility (example data)
+// Legacy export for backward compatibility
 const collaboratorsData: Collaborator[] = [
   {
     id: 1,
-    name: "John Doe",
-    role: "UI/UX Designer",
-    specialities: ["UI Design", "UX Research", "Prototyping", "Branding"],
-    description: "Creative designer with 5 years of experience in creating intuitive and beautiful user interfaces.",
+    name: "Lenny Vigeon",
+    role: "AI Expert",
+    specialities: ["Python", "PyTorch", "C++", "Machine Learning"],
+    description: "AI specialist with deep expertise in Python and PyTorch for machine learning applications, and advanced C++ programming skills.",
     links: {
-      linkedin: "https://linkedin.com/in/johndoe",
-      website: "https://johndoe-design.com",
-      email: "john@example.com"
-    },
-    company: "Design Studio"
+      linkedin: "https://linkedin.com/in/lennyvigeon",
+      github: "https://github.com/lennyvigeon"
+    }
   },
   {
     id: 2,
-    name: "Jane Smith",
-    role: "Mobile Development Expert",
-    specialities: ["React Native", "Flutter", "iOS", "Android"],
-    description: "Mobile development specialist focusing on cross-platform solutions and native performance.",
+    name: "Christophe Chhor",
+    role: "Project Manager",
+    specialities: ["Project Management", "Agile", "Team Leadership", "Strategic Planning"],
+    description: "Experienced project manager with a proven track record of delivering complex projects on time and within budget.",
     links: {
-      github: "https://github.com/janesmith",
-      linkedin: "https://linkedin.com/in/janesmith",
-      email: "jane@example.com"
-    },
-    company: "Tech Corp"
-  },
-  {
-    id: 3,
-    name: "Alex Johnson",
-    role: "DevOps Engineer",
-    specialities: ["AWS", "Kubernetes", "Terraform", "CI/CD"],
-    description: "Infrastructure expert specializing in cloud architecture and automated deployment pipelines.",
-    links: {
-      github: "https://github.com/alexjohnson",
-      website: "https://alexjohnson-devops.com",
-      linkedin: "https://linkedin.com/in/alexjohnson"
-    },
-    company: "Cloud Solutions Inc"
+      linkedin: "https://linkedin.com/in/christophechhor"
+    }
   }
 ];
 

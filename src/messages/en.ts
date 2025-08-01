@@ -97,26 +97,20 @@ export const en = {
   'collaborators.contact': 'Contact',
 
   // Collaborator Roles
-  'collaborators.roles.uiuxDesigner': 'UI/UX Designer',
-  'collaborators.roles.mobileDevExpert': 'Mobile Development Expert',
-  'collaborators.roles.devOpsEngineer': 'DevOps Engineer',
+  'collaborators.roles.aiExpert': 'AI Expert',
+  'collaborators.roles.projectManager': 'Project Manager',
 
   // Collaborator Specialities
-  'collaborators.specialities.uiDesign': 'UI Design',
-  'collaborators.specialities.uxResearch': 'UX Research',
-  'collaborators.specialities.prototyping': 'Prototyping',
-  'collaborators.specialities.branding': 'Branding',
-  'collaborators.specialities.reactNative': 'React Native',
-  'collaborators.specialities.flutter': 'Flutter',
-  'collaborators.specialities.ios': 'iOS',
-  'collaborators.specialities.android': 'Android',
-  'collaborators.specialities.aws': 'AWS',
-  'collaborators.specialities.kubernetes': 'Kubernetes',
-  'collaborators.specialities.terraform': 'Terraform',
-  'collaborators.specialities.cicd': 'CI/CD',
+  'collaborators.specialities.python': 'Python',
+  'collaborators.specialities.pytorch': 'PyTorch',
+  'collaborators.specialities.cpp': 'C++',
+  'collaborators.specialities.machineLearning': 'Machine Learning',
+  'collaborators.specialities.projectManagement': 'Project Management',
+  'collaborators.specialities.agile': 'Agile',
+  'collaborators.specialities.teamLeadership': 'Team Leadership',
+  'collaborators.specialities.strategicPlanning': 'Strategic Planning',
 
   // Collaborator Descriptions
-  'collaborators.johnDoe.description': 'Creative designer with 5 years of experience in creating intuitive and beautiful user interfaces.',
-  'collaborators.janeSmith.description': 'Mobile development specialist focusing on cross-platform solutions and native performance.',
-  'collaborators.alexJohnson.description': 'Infrastructure expert specializing in cloud architecture and automated deployment pipelines.',
+  'collaborators.lennyVigeon.description': 'AI specialist with deep expertise in Python and PyTorch for machine learning applications, and advanced C++ programming skills.',
+  'collaborators.christopheChhor.description': 'Experienced project manager with a proven track record of delivering complex projects on time and within budget.',
 };

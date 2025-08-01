@@ -95,26 +95,20 @@ export const fr = {
   'collaborators.contact': 'Contacter',
 
   // Collaborator Roles
-  'collaborators.roles.uiuxDesigner': 'Designer UI/UX',
-  'collaborators.roles.mobileDevExpert': 'Expert Développement Mobile',
-  'collaborators.roles.devOpsEngineer': 'Ingénieur DevOps',
+  'collaborators.roles.aiExpert': 'Expert IA',
+  'collaborators.roles.projectManager': 'Chef de Projet',
 
   // Collaborator Specialities
-  'collaborators.specialities.uiDesign': 'Design UI',
-  'collaborators.specialities.uxResearch': 'Recherche UX',
-  'collaborators.specialities.prototyping': 'Prototypage',
-  'collaborators.specialities.branding': 'Image de marque',
-  'collaborators.specialities.reactNative': 'React Native',
-  'collaborators.specialities.flutter': 'Flutter',
-  'collaborators.specialities.ios': 'iOS',
-  'collaborators.specialities.android': 'Android',
-  'collaborators.specialities.aws': 'AWS',
-  'collaborators.specialities.kubernetes': 'Kubernetes',
-  'collaborators.specialities.terraform': 'Terraform',
-  'collaborators.specialities.cicd': 'CI/CD',
+  'collaborators.specialities.python': 'Python',
+  'collaborators.specialities.pytorch': 'PyTorch',
+  'collaborators.specialities.cpp': 'C++',
+  'collaborators.specialities.machineLearning': 'Apprentissage Automatique',
+  'collaborators.specialities.projectManagement': 'Gestion de Projet',
+  'collaborators.specialities.agile': 'Agile',
+  'collaborators.specialities.teamLeadership': 'Leadership d\'Équipe',
+  'collaborators.specialities.strategicPlanning': 'Planification Stratégique',
 
   // Collaborator Descriptions
-  'collaborators.johnDoe.description': 'Designer créatif avec 5 ans d\'expérience dans la création d\'interfaces utilisateur intuitives et belles.',
-  'collaborators.janeSmith.description': 'Spécialiste en développement mobile axé sur les solutions multiplateformes et les performances natives.',
-  'collaborators.alexJohnson.description': 'Expert en infrastructure spécialisé dans l\'architecture cloud et les pipelines de déploiement automatisés.',
+  'collaborators.lennyVigeon.description': 'Spécialiste en IA avec une expertise approfondie en Python et PyTorch pour les applications d\'apprentissage automatique, et des compétences avancées en programmation C++.',
+  'collaborators.christopheChhor.description': 'Chef de projet expérimenté avec un historique prouvé de livraison de projets complexes dans les délais et le budget.',
 };
