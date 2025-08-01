@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import projectsData from "@/data/projects";
+import { useProjectsData } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import { FormattedMessage } from "react-intl";
 
 const Projects = () => {
+  const projectsData = useProjectsData();
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -28,7 +30,7 @@ const Projects = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [projectsData]);
 
   return (
     <section ref={sectionRef} id="projects" className="py-20 md:py-32 bg-[#1A1A1A]/70 relative overflow-hidden">
@@ -37,12 +39,11 @@ const Projects = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4 relative inline-block">
-            Projets Fullstack - Portfolio Antoine ROSPARS
+            <FormattedMessage id="projects.title" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
           </h2>
           <p className="text-slate-400 mt-6 max-w-2xl mx-auto">
-            Applications web modernes développées avec React, Node.js, TypeScript. 
-            Découvrez mes réalisations de développeur fullstack français, architectures performantes et interfaces élégantes.
+            <FormattedMessage id="projects.subtitle" />
           </p>
         </div>
         

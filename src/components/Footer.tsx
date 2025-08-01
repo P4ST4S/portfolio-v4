@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FormattedMessage } from "react-intl";
 
 const Footer = () => (
   <footer className="bg-[#1A1A1A]/70 border-t border-slate-800 py-8">
@@ -22,7 +23,7 @@ const Footer = () => (
         </a>
       </div>
       <p>
-        &copy; {new Date().getFullYear()} Antoine ROSPARS. Conçu avec passion.
+        &copy; {new Date().getFullYear()} Antoine ROSPARS. <FormattedMessage id="footer.copyright" />
       </p>
     </div>
   </footer>

@@ -1,12 +1,14 @@
 import { useRef, useState } from "react";
 import type { FormEvent } from "react";
 import emailjs from "@emailjs/browser";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
 const Contact = () => {
+  const intl = useIntl();
   const formRef = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
@@ -28,11 +30,11 @@ const Contact = () => {
         }
       );
 
-      setFeedback("✅ Message envoyé avec succès !");
+      setFeedback("success");
       formRef.current.reset();
     } catch (err) {
       console.error(err);
-      setFeedback("❌ Une erreur s'est produite.");
+      setFeedback("error");
     } finally {
       setSending(false);
     }
@@ -43,34 +45,35 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
-            Contactez Antoine ROSPARS - Développeur Fullstack
+            <FormattedMessage id="contact.title" />
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Développeur freelance français basé à Paris. Disponible pour vos projets React, Node.js, TypeScript.
-            Diplômé Epitech, expert en développement fullstack moderne.
+            <FormattedMessage id="contact.subtitle" />
           </p>
         </div>
-        
+
         <div className="max-w-lg mx-auto">
-          <h3 className="text-2xl font-bold mb-6 text-[#00C4B3] text-center">Freelance Developer - Devis Gratuit</h3>
+          <h3 className="text-2xl font-bold mb-6 text-[#00C4B3] text-center">
+            <FormattedMessage id="contact.formTitle" />
+          </h3>
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
               name="user_name"
-              placeholder="Votre nom"
+              placeholder={intl.formatMessage({ id: 'contact.namePlaceholder' })}
               required
               className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
             />
             <input
               type="email"
               name="user_email"
-              placeholder="Votre e-mail"
+              placeholder={intl.formatMessage({ id: 'contact.emailPlaceholder' })}
               required
               className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
             />
             <textarea
               name="message"
-              placeholder="Votre message"
+              placeholder={intl.formatMessage({ id: 'contact.messagePlaceholder' })}
               required
               rows={5}
               className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
@@ -80,10 +83,20 @@ const Contact = () => {
               disabled={sending}
               className="w-full bg-[#00C4B3] text-[#1A1A1A] font-bold py-4 px-8 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105 text-lg"
             >
-              {sending ? "Envoi en cours..." : "Envoyer un email"}
+              {sending ? (
+                <FormattedMessage id="contact.sendingButton" />
+              ) : (
+                <FormattedMessage id="contact.sendButton" />
+              )}
             </button>
             {feedback && (
-              <p className="text-sm text-center mt-2 text-white">{feedback}</p>
+              <p className="text-sm text-center mt-2 text-white">
+                {feedback === "success" ? (
+                  <FormattedMessage id="contact.successMessage" />
+                ) : (
+                  <FormattedMessage id="contact.errorMessage" />
+                )}
+              </p>
             )}
           </form>
         </div>

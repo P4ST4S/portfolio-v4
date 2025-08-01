@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import skillsData from "@/data/skills";
+import { useSkillsData } from "@/data/skills";
 import type { SkillCategory } from "@/types";
+import { FormattedMessage } from "react-intl";
 
 const Skills = () => {
+  const skillsData = useSkillsData();
   const [isVisible, setIsVisible] = useState(false);
   const [animatedBars, setAnimatedBars] = useState<Set<string>>(new Set());
   const sectionRef = useRef<HTMLElement>(null);
@@ -34,7 +36,7 @@ const Skills = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [skillsData]);
 
   const getSkillColor = (level: number) => {
     if (level >= 90) return "from-emerald-500 to-green-400";
@@ -50,11 +52,11 @@ const Skills = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4 relative inline-block">
-            Compétences Techniques
+            <FormattedMessage id="skills.title" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto mt-6">
-            Stack technique maîtrisée pour développer des applications web modernes et performantes
+            <FormattedMessage id="skills.subtitle" />
           </p>
         </div>
 
@@ -116,10 +118,13 @@ const Skills = () => {
 
         <div className={`text-center mt-12 transform transition-all duration-700 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <p className="text-slate-400 text-lg">
-            <strong className="text-[#00C4B3]">2 ans d'expérience</strong> en développement web moderne
+            <strong className="text-[#00C4B3]">
+              <FormattedMessage id="skills.experience" />
+            </strong>{' '}
+            <FormattedMessage id="skills.experienceDescription" />
           </p>
           <p className="text-sm text-slate-500 mt-2">
-            Toujours en apprentissage continu des dernières technologies
+            <FormattedMessage id="skills.learningNote" />
           </p>
         </div>
       </div>
