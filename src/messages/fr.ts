@@ -2,6 +2,7 @@ export const fr = {
   // Navigation
   'nav.about': 'À propos',
   'nav.skills': 'Compétences',
+  'nav.collaborators': 'Collaborateurs',
   'nav.projects': 'Projets',
   'nav.contact': 'Contact',
   'nav.contactMe': 'Me contacter',
@@ -85,4 +86,29 @@ export const fr = {
 
   // Common
   'common.loading': 'Chargement...',
+
+  // Collaborators Section
+  'collaborators.title': 'Collaborateurs & Anciens Collègues',
+  'collaborators.subtitle': 'Professionnels talentueux avec qui j\'ai eu le plaisir de travailler sur divers projets',
+  'collaborators.workTogether': 'Travailler ensemble',
+  'collaborators.viewProfile': 'Voir le profil',
+  'collaborators.contact': 'Contacter',
+
+  // Collaborator Roles
+  'collaborators.roles.aiExpert': 'Expert IA',
+  'collaborators.roles.projectManager': 'Chef de Projet',
+
+  // Collaborator Specialities
+  'collaborators.specialities.python': 'Python',
+  'collaborators.specialities.pytorch': 'PyTorch',
+  'collaborators.specialities.cpp': 'C++',
+  'collaborators.specialities.machineLearning': 'Apprentissage Automatique',
+  'collaborators.specialities.projectManagement': 'Gestion de Projet',
+  'collaborators.specialities.agile': 'Agile',
+  'collaborators.specialities.teamLeadership': 'Leadership d\'Équipe',
+  'collaborators.specialities.strategicPlanning': 'Planification Stratégique',
+
+  // Collaborator Descriptions
+  'collaborators.lennyVigeon.description': 'Spécialiste en IA avec une expertise approfondie en Python et PyTorch pour les applications d\'apprentissage automatique, et des compétences avancées en programmation C++.',
+  'collaborators.christopheChhor.description': 'Chef de projet expérimenté avec un historique prouvé de livraison de projets complexes dans les délais et le budget.',
 };

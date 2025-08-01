@@ -2,6 +2,7 @@ export const en = {
   // Navigation
   'nav.about': 'About',
   'nav.skills': 'Skills',
+  'nav.collaborators': 'Collaborators',
   'nav.projects': 'Projects',
   'nav.contact': 'Contact',
   'nav.contactMe': 'Contact Me',
@@ -87,4 +88,29 @@ export const en = {
 
   // Common
   'common.loading': 'Loading...',
+
+  // Collaborators Section
+  'collaborators.title': 'Collaborators & Previous Mates',
+  'collaborators.subtitle': 'Talented professionals I\'ve had the pleasure to work with on various projects',
+  'collaborators.workTogether': 'Work together',
+  'collaborators.viewProfile': 'View profile',
+  'collaborators.contact': 'Contact',
+
+  // Collaborator Roles
+  'collaborators.roles.aiExpert': 'AI Expert',
+  'collaborators.roles.projectManager': 'Project Manager',
+
+  // Collaborator Specialities
+  'collaborators.specialities.python': 'Python',
+  'collaborators.specialities.pytorch': 'PyTorch',
+  'collaborators.specialities.cpp': 'C++',
+  'collaborators.specialities.machineLearning': 'Machine Learning',
+  'collaborators.specialities.projectManagement': 'Project Management',
+  'collaborators.specialities.agile': 'Agile',
+  'collaborators.specialities.teamLeadership': 'Team Leadership',
+  'collaborators.specialities.strategicPlanning': 'Strategic Planning',
+
+  // Collaborator Descriptions
+  'collaborators.lennyVigeon.description': 'AI specialist with deep expertise in Python and PyTorch for machine learning applications, and advanced C++ programming skills.',
+  'collaborators.christopheChhor.description': 'Experienced project manager with a proven track record of delivering complex projects on time and within budget.',
 };
