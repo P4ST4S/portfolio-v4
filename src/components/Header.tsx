@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,10 +14,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: "#about", label: "À propos" },
-    { href: "#skills", label: "Compétences" },
-    { href: "#projects", label: "Projets" },
-    { href: "#contact", label: "Contact" },
+    { href: "#about", labelKey: "nav.about" },
+    { href: "#skills", labelKey: "nav.skills" },
+    { href: "#projects", labelKey: "nav.projects" },
+    { href: "#contact", labelKey: "nav.contact" },
   ];
 
   return (
@@ -46,16 +48,19 @@ const Header = () => {
                 href={link.href}
                 className="text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
               >
-                {link.label}
+                <FormattedMessage id={link.labelKey} />
               </a>
             ))}
           </nav>
-          <a
-            href="#contact"
-            className="hidden md:inline-block bg-[#00C4B3] text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
-          >
-            Me contacter
-          </a>
+          <div className="hidden md:flex items-center space-x-4">
+            <LanguageSwitcher />
+            <a
+              href="#contact"
+              className="bg-[#00C4B3] text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
+            >
+              <FormattedMessage id="nav.contactMe" />
+            </a>
+          </div>
         </div>
       </header>
     </>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaChevronDown } from "react-icons/fa6";
+import { FormattedMessage } from "react-intl";
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -50,7 +51,7 @@ const Hero = () => {
           }`}
         >
           <p className="mt-4 text-xl md:text-2xl text-[#00C4B3] font-medium animate-fade-in-up">
-            Développeur Fullstack Français & Architecte Web | Diplômé Epitech
+            <FormattedMessage id="hero.title" />
           </p>
         </div>
 
@@ -60,9 +61,7 @@ const Hero = () => {
           }`}
         >
           <p className="mt-6 max-w-2xl mx-auto text-lg text-slate-400">
-            Expert React, Node.js, TypeScript. Je transforme des idées complexes
-            en applications web modernes et performantes, de la conception à la
-            mise en production. Basé à Paris, disponible en freelance.
+            <FormattedMessage id="hero.description" />
           </p>
         </div>
 
@@ -75,7 +74,7 @@ const Hero = () => {
             href="#projects"
             className="bg-[#00C4B3] text-[#1A1A1A] font-bold py-3 px-6 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#00C4B3]/25 animate-bounce-subtle"
           >
-            Voir mes projets
+            <FormattedMessage id="hero.viewProjects" />
           </a>
           <a
             href="https://github.com/P4ST4S"
@@ -105,7 +104,9 @@ const Hero = () => {
           href="#about"
           className="flex flex-col items-center text-slate-400 hover:text-[#00C4B3] transition-colors duration-300 group"
         >
-          <span className="text-sm mb-2 opacity-75">Défilez</span>
+          <span className="text-sm mb-2 opacity-75">
+            <FormattedMessage id="hero.scroll" />
+          </span>
           <FaChevronDown className="w-5 h-5 animate-bounce group-hover:text-[#00C4B3]" />
         </a>
       </div>
