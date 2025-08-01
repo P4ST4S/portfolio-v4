@@ -144,11 +144,11 @@ const Collaborators = () => {
                       href={collaborator.links.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-slate-700/50 rounded-full flex items-center justify-center text-slate-400 hover:bg-[#00C4B3] hover:text-white transition-all duration-300 hover:scale-110"
-                      title="Website"
+                      className="w-10 h-10 bg-slate-700/50 rounded-full flex items-center justify-center text-slate-400 hover:bg-purple-500 hover:text-white transition-all duration-300 hover:scale-110"
+                      title="Portfolio"
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54C17.64 15.85 17 14.46 17 13v-2c0-.55-.45-1-1-1h-2v-2c0-.55-.45-1-1-1H9v2H7v2h2v2h4v2h2c1.1 0 2-.9 2-2v-1.54z"/>
+                        <path d="M14,2A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4C2.89,21 2,20.1 2,19V8C2,6.89 2.89,6 4,6H8V4C8,2.89 8.89,2 10,2H14M14,6V4H10V6H14Z"/>
                       </svg>
                     </a>
                   )}
