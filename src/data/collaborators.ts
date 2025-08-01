@@ -33,7 +33,8 @@ export const useCollaboratorsData = (): Collaborator[] => {
       ],
       description: intl.formatMessage({ id: 'collaborators.christopheChhor.description' }),
       links: {
-        linkedin: "https://www.linkedin.com/in/christophe-chhor/"
+        linkedin: "https://www.linkedin.com/in/christophe-chhor/",
+        website: "https://www.haoyi.fr/"
       }
     }
   ];
