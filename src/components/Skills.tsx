@@ -36,7 +36,7 @@ const Skills = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [skillsData]);
 
   const getSkillColor = (level: number) => {
     if (level >= 90) return "from-emerald-500 to-green-400";

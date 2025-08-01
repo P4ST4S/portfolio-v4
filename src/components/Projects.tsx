@@ -30,7 +30,7 @@ const Projects = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [projectsData]);
 
   return (
     <section ref={sectionRef} id="projects" className="py-20 md:py-32 bg-[#1A1A1A]/70 relative overflow-hidden">

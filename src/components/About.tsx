@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
+import type { ReactNode } from "react";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,7 +49,7 @@ const About = () => {
               <FormattedMessage
                 id="about.description1"
                 values={{
-                  strong: (chunks: any) => (
+                  strong: (chunks: ReactNode) => (
                     <strong className="text-[#00C4B3] hover:text-[#00E6D5] transition-colors duration-200 cursor-default">
                       {chunks}
                     </strong>
@@ -60,7 +61,7 @@ const About = () => {
               <FormattedMessage
                 id="about.description2"
                 values={{
-                  strong: (chunks: any) => (
+                  strong: (chunks: ReactNode) => (
                     <strong className="text-[#00C4B3] hover:text-[#00E6D5] transition-colors duration-200 cursor-default">
                       {chunks}
                     </strong>

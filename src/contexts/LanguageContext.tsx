@@ -1,29 +1,9 @@
 import {
-  createContext,
-  useContext,
   useState,
   useEffect,
   type ReactNode,
 } from "react";
-
-type Locale = "en" | "fr";
-
-interface LanguageContextType {
-  locale: Locale;
-  setLocale: (locale: Locale) => void;
-}
-
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
-);
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within a LanguageProvider");
-  }
-  return context;
-};
+import { LanguageContext, type Locale } from "./LanguageContextDefinition";
 
 interface LanguageProviderProps {
   children: ReactNode;
