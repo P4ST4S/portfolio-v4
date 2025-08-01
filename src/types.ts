@@ -25,3 +25,19 @@ export type FormState = {
     email: string;
     message: string;
 };
+
+export interface Collaborator {
+    id: number;
+    name: string;
+    role: string;
+    specialities: string[];
+    description: string;
+    links: {
+        linkedin?: string;
+        github?: string;
+        website?: string;
+        email?: string;
+    };
+    avatar?: string;
+    company?: string;
+}

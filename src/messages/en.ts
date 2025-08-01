@@ -2,6 +2,7 @@ export const en = {
   // Navigation
   'nav.about': 'About',
   'nav.skills': 'Skills',
+  'nav.collaborators': 'Collaborators',
   'nav.projects': 'Projects',
   'nav.contact': 'Contact',
   'nav.contactMe': 'Contact Me',
@@ -87,4 +88,35 @@ export const en = {
 
   // Common
   'common.loading': 'Loading...',
+
+  // Collaborators Section
+  'collaborators.title': 'Collaborators & Previous Mates',
+  'collaborators.subtitle': 'Talented professionals I\'ve had the pleasure to work with on various projects',
+  'collaborators.workTogether': 'Work together',
+  'collaborators.viewProfile': 'View profile',
+  'collaborators.contact': 'Contact',
+
+  // Collaborator Roles
+  'collaborators.roles.uiuxDesigner': 'UI/UX Designer',
+  'collaborators.roles.mobileDevExpert': 'Mobile Development Expert',
+  'collaborators.roles.devOpsEngineer': 'DevOps Engineer',
+
+  // Collaborator Specialities
+  'collaborators.specialities.uiDesign': 'UI Design',
+  'collaborators.specialities.uxResearch': 'UX Research',
+  'collaborators.specialities.prototyping': 'Prototyping',
+  'collaborators.specialities.branding': 'Branding',
+  'collaborators.specialities.reactNative': 'React Native',
+  'collaborators.specialities.flutter': 'Flutter',
+  'collaborators.specialities.ios': 'iOS',
+  'collaborators.specialities.android': 'Android',
+  'collaborators.specialities.aws': 'AWS',
+  'collaborators.specialities.kubernetes': 'Kubernetes',
+  'collaborators.specialities.terraform': 'Terraform',
+  'collaborators.specialities.cicd': 'CI/CD',
+
+  // Collaborator Descriptions
+  'collaborators.johnDoe.description': 'Creative designer with 5 years of experience in creating intuitive and beautiful user interfaces.',
+  'collaborators.janeSmith.description': 'Mobile development specialist focusing on cross-platform solutions and native performance.',
+  'collaborators.alexJohnson.description': 'Infrastructure expert specializing in cloud architecture and automated deployment pipelines.',
 };

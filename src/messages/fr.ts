@@ -2,6 +2,7 @@ export const fr = {
   // Navigation
   'nav.about': 'À propos',
   'nav.skills': 'Compétences',
+  'nav.collaborators': 'Collaborateurs',
   'nav.projects': 'Projets',
   'nav.contact': 'Contact',
   'nav.contactMe': 'Me contacter',
@@ -85,4 +86,35 @@ export const fr = {
 
   // Common
   'common.loading': 'Chargement...',
+
+  // Collaborators Section
+  'collaborators.title': 'Collaborateurs & Anciens Collègues',
+  'collaborators.subtitle': 'Professionnels talentueux avec qui j\'ai eu le plaisir de travailler sur divers projets',
+  'collaborators.workTogether': 'Travailler ensemble',
+  'collaborators.viewProfile': 'Voir le profil',
+  'collaborators.contact': 'Contacter',
+
+  // Collaborator Roles
+  'collaborators.roles.uiuxDesigner': 'Designer UI/UX',
+  'collaborators.roles.mobileDevExpert': 'Expert Développement Mobile',
+  'collaborators.roles.devOpsEngineer': 'Ingénieur DevOps',
+
+  // Collaborator Specialities
+  'collaborators.specialities.uiDesign': 'Design UI',
+  'collaborators.specialities.uxResearch': 'Recherche UX',
+  'collaborators.specialities.prototyping': 'Prototypage',
+  'collaborators.specialities.branding': 'Image de marque',
+  'collaborators.specialities.reactNative': 'React Native',
+  'collaborators.specialities.flutter': 'Flutter',
+  'collaborators.specialities.ios': 'iOS',
+  'collaborators.specialities.android': 'Android',
+  'collaborators.specialities.aws': 'AWS',
+  'collaborators.specialities.kubernetes': 'Kubernetes',
+  'collaborators.specialities.terraform': 'Terraform',
+  'collaborators.specialities.cicd': 'CI/CD',
+
+  // Collaborator Descriptions
+  'collaborators.johnDoe.description': 'Designer créatif avec 5 ans d\'expérience dans la création d\'interfaces utilisateur intuitives et belles.',
+  'collaborators.janeSmith.description': 'Spécialiste en développement mobile axé sur les solutions multiplateformes et les performances natives.',
+  'collaborators.alexJohnson.description': 'Expert en infrastructure spécialisé dans l\'architecture cloud et les pipelines de déploiement automatisés.',
 };
