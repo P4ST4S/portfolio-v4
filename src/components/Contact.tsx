@@ -41,8 +41,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/60 to-transparent"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
             <FormattedMessage id="contact.title" />

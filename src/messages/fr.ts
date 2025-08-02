@@ -37,6 +37,11 @@ export const fr = {
   'skills.experience': '2 ans d\'expérience',
   'skills.experienceDescription': 'en développement web moderne',
   'skills.learningNote': 'Toujours en apprentissage continu des dernières technologies',
+  'skills.proficiencyScale': 'Échelle de Compétence :',
+  'skills.expert': 'Expert',
+  'skills.advanced': 'Avancé',
+  'skills.intermediate': 'Intermédiaire',
+  'skills.beginner': 'Débutant',
 
   // Skills Categories
   'skills.categories.frontend': 'Frontend',

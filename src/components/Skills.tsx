@@ -48,6 +48,8 @@ const Skills = () => {
   return (
     <section ref={sectionRef} id="skills" className="py-20 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 via-transparent to-slate-700/20"></div>
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/60 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/60 to-transparent"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className={`text-center mb-16 transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
@@ -58,6 +60,37 @@ const Skills = () => {
           <p className="text-lg text-slate-400 max-w-2xl mx-auto mt-6">
             <FormattedMessage id="skills.subtitle" />
           </p>
+          <div className="mt-6 p-4 bg-slate-800/30 rounded-lg border border-slate-700/50 max-w-lg mx-auto">
+            <p className="text-sm text-slate-300 mb-3 font-medium">
+              <FormattedMessage id="skills.proficiencyScale" />
+            </p>
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-2 bg-gradient-to-r from-emerald-500 to-green-400 rounded"></div>
+                <span className="text-slate-400">
+                  90-100% <FormattedMessage id="skills.expert" />
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-2 bg-gradient-to-r from-[#00C4B3] to-cyan-400 rounded"></div>
+                <span className="text-slate-400">
+                  80-89% <FormattedMessage id="skills.advanced" />
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-2 bg-gradient-to-r from-blue-500 to-indigo-400 rounded"></div>
+                <span className="text-slate-400">
+                  70-79% <FormattedMessage id="skills.intermediate" />
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-2 bg-gradient-to-r from-purple-500 to-pink-400 rounded"></div>
+                <span className="text-slate-400">
+                  &lt;70% <FormattedMessage id="skills.beginner" />
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">

@@ -37,6 +37,11 @@ export const en = {
   'skills.experience': '2 years of experience',
   'skills.experienceDescription': 'in modern web development',
   'skills.learningNote': 'Always in continuous learning of the latest technologies',
+  'skills.proficiencyScale': 'Proficiency Scale:',
+  'skills.expert': 'Expert',
+  'skills.advanced': 'Advanced',
+  'skills.intermediate': 'Intermediate',
+  'skills.beginner': 'Beginner',
 
   // Projects Section
   'projects.title': 'Fullstack Projects - Antoine ROSPARS Portfolio',
