@@ -53,11 +53,11 @@ const Header = () => {
               </a>
             ))}
           </nav>
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <LanguageSwitcher />
             <a
               href="#contact"
-              className="bg-[#00C4B3] text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
+              className="hidden md:inline-block bg-[#00C4B3] text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
             >
               <FormattedMessage id="nav.contactMe" />
             </a>
