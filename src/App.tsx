@@ -43,7 +43,7 @@ export default function App() {
             </div>
           }
         >
-          <Collaborators />
+          <Projects />
         </Suspense>
         <Suspense
           fallback={
@@ -52,7 +52,7 @@ export default function App() {
             </div>
           }
         >
-          <Projects />
+          <Collaborators />
         </Suspense>
         <Suspense
           fallback={
