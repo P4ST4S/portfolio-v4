@@ -28,6 +28,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center text-center relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#00C4B3]/5 via-transparent to-[#00C4B3]/10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/80 to-transparent"></div>
 
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#00C4B3]/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
       <div className="absolute top-40 right-10 w-72 h-72 bg-slate-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
