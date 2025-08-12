@@ -4,6 +4,7 @@ export const fr = {
   'nav.skills': 'Compétences',
   'nav.collaborators': 'Collaborateurs',
   'nav.projects': 'Projets',
+  'nav.pricing': 'Tarification',
   'nav.contact': 'Contact',
   'nav.contactMe': 'Me contacter',
 
@@ -117,4 +118,42 @@ export const fr = {
   // Collaborator Descriptions
   'collaborators.lennyVigeon.description': 'Spécialiste en IA avec une expertise approfondie en Python et PyTorch pour les applications d\'apprentissage automatique, et des compétences avancées en programmation C++.',
   'collaborators.christopheChhor.description': 'Chef de projet expérimenté avec un historique prouvé de livraison de projets complexes dans les délais et le budget.',
+
+  // Pricing Section
+  'pricing.title': 'Tarification',
+  'pricing.subtitle': 'Des tarifs transparents et adaptés à vos besoins de développement',
+
+  // TJM Pricing
+  'pricing.tjm.title': 'TJM',
+  'pricing.tjm.subtitle': 'Tarif Journalier Moyen',
+  'pricing.tjm.feature1': 'Missions longues durée',
+  'pricing.tjm.feature2': 'Facturation mensuelle',
+  'pricing.tjm.feature3': 'Suivi et reporting régulier',
+  'pricing.tjm.rateLabel': 'Tarif sur devis',
+  'pricing.tjm.rate': 'À partir de 400 €/jour',
+
+  // Project Pricing
+  'pricing.project.title': 'Forfait Projet',
+  'pricing.project.subtitle': 'Idéal pour sites vitrines et MVP',
+  'pricing.project.popular': 'Populaire',
+  'pricing.project.example1.name': 'Site vitrine 5 pages',
+  'pricing.project.example1.price': '2 500–3 500 €',
+  'pricing.project.example1.description': 'Développé avec Next.js, design responsive',
+  'pricing.project.example2.name': 'API REST NestJS',
+  'pricing.project.example2.price': 'À partir de 3 000 €',
+  'pricing.project.example2.description': 'Architecture complète avec base de données',
+
+  // Maintenance Pricing
+  'pricing.maintenance.title': 'Pack Maintenance',
+  'pricing.maintenance.subtitle': 'Gestion complète de votre infrastructure',
+  'pricing.maintenance.feature1': 'Domaine + Hébergement',
+  'pricing.maintenance.feature2': 'CI/CD automatisé',
+  'pricing.maintenance.feature3': 'Monitoring 24/7',
+  'pricing.maintenance.feature4': 'Support technique',
+  'pricing.maintenance.rate': '150–300 €/mois',
+  'pricing.maintenance.rateNote': 'Selon complexité et SLA',
+
+  // Pricing CTA
+  'pricing.cta.text': 'Besoin d\'un devis personnalisé pour votre projet ?',
+  'pricing.cta.button': 'Demander un devis',
 };
