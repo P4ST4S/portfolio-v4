@@ -4,6 +4,7 @@ export const fr = {
   'nav.skills': 'Compétences',
   'nav.collaborators': 'Collaborateurs',
   'nav.projects': 'Projets',
+  'nav.pricing': 'Tarification',
   'nav.contact': 'Contact',
   'nav.contactMe': 'Me contacter',
 
@@ -117,4 +118,45 @@ export const fr = {
   // Collaborator Descriptions
   'collaborators.lennyVigeon.description': 'Spécialiste en IA avec une expertise approfondie en Python et PyTorch pour les applications d\'apprentissage automatique, et des compétences avancées en programmation C++.',
   'collaborators.christopheChhor.description': 'Chef de projet expérimenté avec un historique prouvé de livraison de projets complexes dans les délais et le budget.',
+
+  // Pricing Section
+  'pricing.title': 'Tarification Freelance',
+  'pricing.subtitle': 'Des tarifs transparents pour vos projets web en freelance. Développeur fullstack basé à Paris.',
+  'pricing.intro': 'Développeur freelance français spécialisé en React, Node.js et TypeScript',
+
+  // TJM Pricing
+  'pricing.tjm.title': 'TJM Freelance',
+  'pricing.tjm.subtitle': 'Missions longues en freelance',
+  'pricing.tjm.feature1': 'Développement fullstack',
+  'pricing.tjm.feature2': 'Facturation mensuelle',
+  'pricing.tjm.feature3': 'Suivi et reporting régulier',
+  'pricing.tjm.rateLabel': 'Tarif freelance sur devis',
+  'pricing.tjm.rate': 'À partir de 400 €/jour',
+
+  // Project Pricing
+  'pricing.project.title': 'Projet Freelance',
+  'pricing.project.subtitle': 'Forfait fixe pour sites vitrines et MVP',
+  'pricing.project.freelanceNote': 'Développement complet en freelance',
+  'pricing.project.popular': 'Populaire',
+  'pricing.project.example1.name': 'Site vitrine 5 pages',
+  'pricing.project.example1.price': '2 500–3 500 €',
+  'pricing.project.example1.description': 'Développé avec Next.js, design responsive',
+  'pricing.project.example2.name': 'API REST NestJS',
+  'pricing.project.example2.price': 'À partir de 3 000 €',
+  'pricing.project.example2.description': 'Architecture complète avec base de données',
+
+  // Maintenance Pricing
+  'pricing.maintenance.title': 'Maintenance Freelance',
+  'pricing.maintenance.subtitle': 'Suivi technique et hébergement en freelance',
+  'pricing.maintenance.feature1': 'Domaine + Hébergement',
+  'pricing.maintenance.feature2': 'CI/CD automatisé',
+  'pricing.maintenance.feature3': 'Monitoring 24/7',
+  'pricing.maintenance.feature4': 'Support technique',
+  'pricing.maintenance.rate': '150–300 €/mois',
+  'pricing.maintenance.rateNote': 'Selon complexité et SLA',
+
+  // Pricing CTA
+  'pricing.cta.text': 'Prêt à lancer votre projet avec un développeur freelance ?',
+  'pricing.cta.button': 'Demander un devis gratuit',
+  'pricing.cta.subtitle': 'Discutons de votre projet et obtenez un devis personnalisé sous 24h',
 };

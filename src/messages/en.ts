@@ -4,6 +4,7 @@ export const en = {
   'nav.skills': 'Skills',
   'nav.collaborators': 'Collaborators',
   'nav.projects': 'Projects',
+  'nav.pricing': 'Pricing',
   'nav.contact': 'Contact',
   'nav.contactMe': 'Contact Me',
 
@@ -119,4 +120,45 @@ export const en = {
   // Collaborator Descriptions
   'collaborators.lennyVigeon.description': 'AI specialist with deep expertise in Python and PyTorch for machine learning applications, and advanced C++ programming skills.',
   'collaborators.christopheChhor.description': 'Experienced project manager with a proven track record of delivering complex projects on time and within budget.',
+
+  // Pricing Section
+  'pricing.title': 'Freelance Pricing',
+  'pricing.subtitle': 'Transparent pricing for your freelance web projects. Fullstack developer based in Paris.',
+  'pricing.intro': 'French freelance developer specialized in React, Node.js and TypeScript',
+
+  // TJM Pricing
+  'pricing.tjm.title': 'Freelance Daily Rate',
+  'pricing.tjm.subtitle': 'Long-term freelance missions',
+  'pricing.tjm.feature1': 'Fullstack development',
+  'pricing.tjm.feature2': 'Monthly billing',
+  'pricing.tjm.feature3': 'Regular tracking and reporting',
+  'pricing.tjm.rateLabel': 'Freelance rate on request',
+  'pricing.tjm.rate': 'From €400/day',
+
+  // Project Pricing
+  'pricing.project.title': 'Freelance Project',
+  'pricing.project.subtitle': 'Fixed price for showcase sites and MVP',
+  'pricing.project.freelanceNote': 'Complete freelance development',
+  'pricing.project.popular': 'Popular',
+  'pricing.project.example1.name': '5-page showcase site',
+  'pricing.project.example1.price': '€2,500–3,500',
+  'pricing.project.example1.description': 'Developed with Next.js, responsive design',
+  'pricing.project.example2.name': 'NestJS REST API',
+  'pricing.project.example2.price': 'From €3,000',
+  'pricing.project.example2.description': 'Complete architecture with database',
+
+  // Maintenance Pricing
+  'pricing.maintenance.title': 'Freelance Maintenance',
+  'pricing.maintenance.subtitle': 'Technical support and hosting by freelancer',
+  'pricing.maintenance.feature1': 'Domain + Hosting',
+  'pricing.maintenance.feature2': 'Automated CI/CD',
+  'pricing.maintenance.feature3': '24/7 Monitoring',
+  'pricing.maintenance.feature4': 'Technical support',
+  'pricing.maintenance.rate': '€150–300/month',
+  'pricing.maintenance.rateNote': 'Based on complexity and SLA',
+
+  // Pricing CTA
+  'pricing.cta.text': 'Ready to start your project with a freelance developer?',
+  'pricing.cta.button': 'Get free quote',
+  'pricing.cta.subtitle': 'Let\'s discuss your project and get a personalized quote within 24h',
 };
