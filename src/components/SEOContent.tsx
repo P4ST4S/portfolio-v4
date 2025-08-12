@@ -10,6 +10,8 @@ const SEOContent = () => {
         Expert en développement web moderne avec React, Node.js, TypeScript, NestJS.
         Spécialisé en architecture fullstack, développement d'applications web performantes et élégantes.
         Disponible en freelance pour vos projets digitaux innovants.
+        Tarifs transparents : TJM à partir de 400€/jour, forfaits projets de 2500€ à 3500€ pour sites vitrines,
+        API REST à partir de 3000€, maintenance de 150€ à 300€/mois.
       </p>
       
       <ul>
@@ -23,6 +25,14 @@ const SEOContent = () => {
         <li>Ingénieur logiciel Epitech</li>
         <li>Développeur web performant</li>
         <li>Fullstack developer French</li>
+        <li>Tarif développeur freelance Paris</li>
+        <li>TJM développeur fullstack</li>
+        <li>Devis site web React</li>
+        <li>Prix développement application</li>
+        <li>Freelance web developer pricing</li>
+        <li>Tarification développeur indépendant</li>
+        <li>Coût développement site vitrine</li>
+        <li>Maintenance site web freelance</li>
       </ul>
       
       <address>
