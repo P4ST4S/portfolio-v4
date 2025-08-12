@@ -122,21 +122,23 @@ export const en = {
   'collaborators.christopheChhor.description': 'Experienced project manager with a proven track record of delivering complex projects on time and within budget.',
 
   // Pricing Section
-  'pricing.title': 'Pricing',
-  'pricing.subtitle': 'Transparent pricing adapted to your development needs',
+  'pricing.title': 'Freelance Pricing',
+  'pricing.subtitle': 'Transparent pricing for your freelance web projects. Fullstack developer based in Paris.',
+  'pricing.intro': 'French freelance developer specialized in React, Node.js and TypeScript',
 
   // TJM Pricing
-  'pricing.tjm.title': 'Daily Rate',
-  'pricing.tjm.subtitle': 'Average Daily Rate',
-  'pricing.tjm.feature1': 'Long-term missions',
+  'pricing.tjm.title': 'Freelance Daily Rate',
+  'pricing.tjm.subtitle': 'Long-term freelance missions',
+  'pricing.tjm.feature1': 'Fullstack development',
   'pricing.tjm.feature2': 'Monthly billing',
   'pricing.tjm.feature3': 'Regular tracking and reporting',
-  'pricing.tjm.rateLabel': 'Quote on request',
+  'pricing.tjm.rateLabel': 'Freelance rate on request',
   'pricing.tjm.rate': 'From €400/day',
 
   // Project Pricing
-  'pricing.project.title': 'Project Package',
-  'pricing.project.subtitle': 'Ideal for showcase sites and MVP',
+  'pricing.project.title': 'Freelance Project',
+  'pricing.project.subtitle': 'Fixed price for showcase sites and MVP',
+  'pricing.project.freelanceNote': 'Complete freelance development',
   'pricing.project.popular': 'Popular',
   'pricing.project.example1.name': '5-page showcase site',
   'pricing.project.example1.price': '€2,500–3,500',
@@ -146,8 +148,8 @@ export const en = {
   'pricing.project.example2.description': 'Complete architecture with database',
 
   // Maintenance Pricing
-  'pricing.maintenance.title': 'Maintenance Package',
-  'pricing.maintenance.subtitle': 'Complete infrastructure management',
+  'pricing.maintenance.title': 'Freelance Maintenance',
+  'pricing.maintenance.subtitle': 'Technical support and hosting by freelancer',
   'pricing.maintenance.feature1': 'Domain + Hosting',
   'pricing.maintenance.feature2': 'Automated CI/CD',
   'pricing.maintenance.feature3': '24/7 Monitoring',
@@ -156,6 +158,7 @@ export const en = {
   'pricing.maintenance.rateNote': 'Based on complexity and SLA',
 
   // Pricing CTA
-  'pricing.cta.text': 'Need a personalized quote for your project?',
-  'pricing.cta.button': 'Request a quote',
+  'pricing.cta.text': 'Ready to start your project with a freelance developer?',
+  'pricing.cta.button': 'Get free quote',
+  'pricing.cta.subtitle': 'Let\'s discuss your project and get a personalized quote within 24h',
 };

@@ -9,8 +9,11 @@ const Pricing = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
             <FormattedMessage id="pricing.title" />
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-4">
             <FormattedMessage id="pricing.subtitle" />
+          </p>
+          <p className="text-base text-[#00C4B3] font-semibold">
+            <FormattedMessage id="pricing.intro" />
           </p>
         </div>
 
@@ -128,12 +131,21 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-slate-400 mb-4">
+        <div className="text-center mt-16 bg-gradient-to-r from-slate-800/30 via-slate-700/20 to-slate-800/30 rounded-2xl p-8 border border-slate-700/30">
+          <h3 className="text-2xl font-bold text-slate-100 mb-3">
             <FormattedMessage id="pricing.cta.text" />
+          </h3>
+          <p className="text-slate-400 mb-6">
+            <FormattedMessage id="pricing.cta.subtitle" />
           </p>
-          <a href="#contact" className="inline-block bg-[#00C4B3] text-[#1A1A1A] font-bold py-4 px-8 rounded-lg hover:bg-[#00C4B3]/90 transition-all duration-300 transform hover:scale-105">
+          <a 
+            href="#contact" 
+            className="inline-flex items-center bg-[#00C4B3] text-[#1A1A1A] font-bold py-4 px-8 rounded-lg hover:bg-[#00C4B3]/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
             <FormattedMessage id="pricing.cta.button" />
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
         </div>
       </div>
