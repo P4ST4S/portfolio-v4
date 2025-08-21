@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
+import { HiMenu, HiX } from "react-icons/hi";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,12 +15,30 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   const navLinks = [
     { href: "#about", labelKey: "nav.about" },
     { href: "#skills", labelKey: "nav.skills" },
     { href: "#projects", labelKey: "nav.projects" },
     { href: "#pricing", labelKey: "nav.pricing" },
-    { href: "#contact", labelKey: "nav.contact" },
   ];
 
   return (
@@ -61,7 +81,41 @@ const Header = () => {
             >
               <FormattedMessage id="nav.contactMe" />
             </a>
+            <button
+              onClick={handleMobileMenuToggle}
+              className="md:hidden text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+            </button>
           </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <nav className="bg-[#1A1A1A]/95 backdrop-blur-lg px-6 py-4 space-y-4 border-t border-slate-700/20">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={handleLinkClick}
+                className="block text-slate-300 hover:text-[#00C4B3] transition-colors duration-300 py-2 border-b border-slate-700/20 last:border-b-0"
+              >
+                <FormattedMessage id={link.labelKey} />
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={handleLinkClick}
+              className="block bg-[#00C4B3] text-[#1A1A1A] font-bold py-3 px-4 rounded-lg hover:bg-[#00A699] transition-all duration-300 text-center mt-4"
+            >
+              <FormattedMessage id="nav.contactMe" />
+            </a>
+          </nav>
         </div>
       </header>
     </>
