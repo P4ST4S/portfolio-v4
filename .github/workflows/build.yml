@@ -27,7 +27,11 @@ jobs:
       - name: Activate pnpm
         run: corepack prepare pnpm@10 --activate
       - name: Fallback install pnpm (global)
-        run: npm i -g pnpm@10
+        shell: bash
+        run: |
+          if ! command -v pnpm >/dev/null 2>&1; then
+            npm i -g pnpm@10
+          fi
       - name: Get pnpm store path
         id: pnpm-cache
         run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
