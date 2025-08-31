@@ -9,10 +9,10 @@
 <div align="center">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/32c531cb-865d-4f32-b5e5-ded12fd4c086/deploy-status)](https://app.netlify.com/projects/arospars-portfolio/deploys)
-[![Lint](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lint.yml/badge.svg?branch=dev)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lint.yml)
-[![Type Check](https://github.com/P4ST4S/portfolio-v4/actions/workflows/typecheck.yml/badge.svg?branch=dev)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/typecheck.yml)
-[![Build](https://github.com/P4ST4S/portfolio-v4/actions/workflows/build.yml/badge.svg?branch=dev)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/build.yml)
-[![Lighthouse](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lhci.yml/badge.svg?branch=dev)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lhci.yml)
+[![Lint](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lint.yml)
+[![Type Check](https://github.com/P4ST4S/portfolio-v4/actions/workflows/typecheck.yml/badge.svg?branch=main)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/typecheck.yml)
+[![Build](https://github.com/P4ST4S/portfolio-v4/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/build.yml)
+[![Lighthouse](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lhci.yml/badge.svg?branch=main)](https://github.com/P4ST4S/portfolio-v4/actions/workflows/lhci.yml)
 
 </div>
 
