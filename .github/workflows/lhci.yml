@@ -23,6 +23,8 @@ jobs:
         run: corepack enable
       - name: Activate pnpm
         run: corepack prepare pnpm@10 --activate
+      - name: Fallback install pnpm (global)
+        run: npm i -g pnpm@10
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
