@@ -1,0 +1,51 @@
+name: Lighthouse
+
+on:
+  push:
+    branches: [main, dev, new-ci]
+  pull_request:
+    branches: [main, dev, new-ci]
+
+concurrency:
+  group: lhci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          check-latest: false
+      - name: Enable Corepack
+        run: corepack enable
+      - name: Activate pnpm
+        run: corepack prepare pnpm@10 --activate
+      - name: Fallback install pnpm (global)
+        shell: bash
+        run: |
+          if ! command -v pnpm >/dev/null 2>&1; then
+            npm i -g pnpm@10
+          fi
+      - name: Get pnpm store path
+        id: pnpm-cache
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm -s build
+
+      - name: Run Lighthouse CI
+        run: pnpm -s dlx @lhci/cli@0.14.x autorun --upload.target=temporary-public-storage
