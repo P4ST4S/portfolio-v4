@@ -1,0 +1,32 @@
+name: Lighthouse
+
+on:
+  push:
+    branches: [main, dev, new-ci]
+  pull_request:
+    branches: [main, dev, new-ci]
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: true
+
+      - name: Build
+        run: pnpm -s build
+
+      - name: Run Lighthouse CI
+        run: pnpm -s dlx @lhci/cli@0.14.x autorun --upload.target=temporary-public-storage
