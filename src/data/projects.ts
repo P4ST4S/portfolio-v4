@@ -89,10 +89,10 @@ const projectsData: Project[] = [
     },
     {
         id: 2,
-        title: "Datakeen App V2 et V3",
-        description: "Contribution à une plateforme d'IA en tant que développeur fullstack.",
-        tags: ["React", "NestJS", "Express", "MongoDB", "Prisma", "GitLab CI"],
-        links: {}
+        title: "Succès Dex",
+        description: "Web app de suivi des succès liés aux jeux vidéo.",
+        tags: ["NextJS", "TypeScript", "Prisma", "GitLab CI"],
+        links: { github: "https://github.com/P4ST4S/succes-dex" }
     },
     {
         id: 3,
@@ -103,10 +103,10 @@ const projectsData: Project[] = [
     },
     {
         id: 4,
-        title: "Datakeen SDK",
-        description: "Création d'un kit de développement logiciel pour l'intégration de services.",
-        tags: ["React", "TypeScript", "TailwindCSS", "Rollup"],
-        links: {}
+        title: "Go Image Microservice",
+        description: "Solution backend résiliente implémentant le 'Graceful Shutdown' et la gestion native de la concurrence. Architecture 'Zero-Dependency' optimisée pour un déploiement conteneurisé minimaliste et une latence faible.",
+        tags: ["Golang", "System Design", "Microservice", "Docker"],
+        links: { github: "https://github.com/P4ST4S/go-image-optimizer" }
     },
     {
         id: 5,
@@ -128,13 +128,6 @@ const projectsData: Project[] = [
         description: "Générateur de Conditions Générales d'Utilisation.",
         tags: ["React", "SCSS", "Frontend"],
         links: { github: "https://github.com/P4ST4S/cgu-generator", demo: "https://cgu-generator.com/" }
-    },
-    {
-        id: 8,
-        title: "Medical App",
-        description: "Application de gestion de rendez-vous médicaux avec notifications et rappels. Projet réalisé en 1 semaine dans le cadre d'un examen.",
-        tags: ["React", "TypeScript", "NestJS", "MySQL", "Prisma"],
-        links: { github: "https://github.com/DatabaseSystemRepo" }
     },
     {
         id: 9,
