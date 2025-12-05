@@ -43,6 +43,26 @@ export const fr = {
   'skills.advanced': 'Avancé',
   'skills.intermediate': 'Intermédiaire',
   'skills.beginner': 'Débutant',
+  'skills.learning': 'En apprentissage',
+
+  // Skills Contexts
+  'skills.context.react': 'Mon travail actuel (2 ans en pro), stack technique front, et par défaut pour le back',
+  'skills.context.typescript': 'Mon travail actuel (2 ans en pro), stack technique front, et par défaut pour le back',
+  'skills.context.tailwind': 'Utilisé sur la majorité de mes projets récents pour un styling rapide et maintenable',
+  'skills.context.node': 'Stack technique par défaut pour mes API. Si besoin de haute performance/concurrence, je passe au Go',
+  'skills.context.go': 'Projets personnels pour gérer la haute performance et la concurrence via goroutines',
+  'skills.context.docker': 'Utilisation quotidienne pour le développement local et la production',
+  'skills.context.prisma': 'ORM de choix pour interagir avec les bases de données SQL',
+  'skills.context.cicd': 'Mise en place de pipelines complexes (tests, déploiement auto)',
+
+  // Skills Bonus
+  'skills.learning.title': 'En cours d\'apprentissage',
+  'skills.learning.go': 'Go (Concepts avancés)',
+  'skills.learning.iac': 'IaC (Serverless)',
+  'skills.strengths.title': 'Points forts techniques',
+  'skills.strengths.perf': 'Performance',
+  'skills.strengths.clean': 'Clean Code',
+  'skills.strengths.scale': 'Scalabilité',
 
   // Skills Categories
   'skills.categories.frontend': 'Frontend',
