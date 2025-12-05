@@ -14,62 +14,69 @@ export const useProjectsData = (): Project[] => {
     },
     {
         id: 2,
+        title: intl.formatMessage({ id: 'projects.loadBalancer.title' }),
+        description: intl.formatMessage({ id: 'projects.loadBalancer.description' }),
+        tags: ["Go", "Docker", "Load Balancing", "Concurrency", "Health Checks", "Testing"],
+        links: { github: "https://github.com/P4ST4S/go-load-balancer" }
+    },
+    {
+        id: 3,
+        title: intl.formatMessage({ id: 'projects.imageOptimizer.title' }),
+        description: intl.formatMessage({ id: 'projects.imageOptimizer.description' }),
+        tags: ["Go", "Docker", "Microservices", "Image Processing", "Performance"],
+        links: { github: "https://github.com/P4ST4S/go-image-optimizer" }
+    },
+    {
+        id: 4,
+        title: intl.formatMessage({ id: 'projects.wordleSolver.title' }),
+        description: intl.formatMessage({ id: 'projects.wordleSolver.description' }),
+        tags: ["Next.js", "React", "TypeScript", "Web Workers", "Algorithms", "TailwindCSS"],
+        links: { github: "https://github.com/P4ST4S/next-wordle-bot", demo: "https://next-wordle-bot.vercel.app/" }
+    },
+    {
+        id: 5,
+        title: intl.formatMessage({ id: 'projects.pokeGenerator.title' }),
+        description: intl.formatMessage({ id: 'projects.pokeGenerator.description' }),
+        tags: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "PokéAPI", "React Hook Form"],
+        links: { github: "https://github.com/P4ST4S/poke-generator" }
+    },
+    {
+        id: 6,
         title: intl.formatMessage({ id: 'projects.datakeenApp.title' }),
         description: intl.formatMessage({ id: 'projects.datakeenApp.description' }),
         tags: ["React", "NestJS", "Express", "MongoDB", "Prisma", "GitLab CI"],
         links: {}
     },
     {
-        id: 3,
-        title: intl.formatMessage({ id: 'projects.frigoApp.title' }),
-        description: intl.formatMessage({ id: 'projects.frigoApp.description' }),
-        tags: ["React Native", "Calendrier", "Partage"],
-        links: { github: "https://github.com/AppFrigo/app-frigo" }
-    },
-    {
-        id: 4,
+        id: 7,
         title: intl.formatMessage({ id: 'projects.datakeenSdk.title' }),
         description: intl.formatMessage({ id: 'projects.datakeenSdk.description' }),
         tags: ["React", "TypeScript", "TailwindCSS", "Rollup"],
         links: {}
     },
     {
-        id: 5,
+        id: 8,
         title: intl.formatMessage({ id: 'projects.petHealth.title' }),
         description: intl.formatMessage({ id: 'projects.petHealth.description' }),
         tags: ["NestJS", "PostgreSQL", "Backend"],
         links: { github: "https://github.com/P4ST4S/pet-health-taker" }
     },
     {
-        id: 6,
+        id: 9,
         title: intl.formatMessage({ id: 'projects.francilienne.title' }),
         description: intl.formatMessage({ id: 'projects.francilienne.description' }),
         tags: ["React", "SCSS", "Frontend"],
         links: { demo: "https://francilienne-de-miroiterie.com/" }
     },
     {
-        id: 7,
-        title: intl.formatMessage({ id: 'projects.cguGenerator.title' }),
-        description: intl.formatMessage({ id: 'projects.cguGenerator.description' }),
-        tags: ["React", "SCSS", "Frontend"],
-        links: { github: "https://github.com/P4ST4S/cgu-generator", demo: "https://cgu-generator.com/" }
-    },
-    {
-        id: 8,
-        title: intl.formatMessage({ id: 'projects.medicalApp.title' }),
-        description: intl.formatMessage({ id: 'projects.medicalApp.description' }),
-        tags: ["React", "TypeScript", "NestJS", "MySQL", "Prisma"],
-        links: { github: "https://github.com/DatabaseSystemRepo" }
-    },
-    {
-        id: 9,
+        id: 10,
         title: intl.formatMessage({ id: 'projects.triosignoDoc.title' }),
         description: intl.formatMessage({ id: 'projects.triosignoDoc.description' }),
         tags: ["Docusaurus", "React", "Documentation"],
         links: { github: "https://github.com/EIP-TEK89/docs", demo: "https://docs.triosigno.com/" }
     },
     {
-        id: 10,
+        id: 11,
         title: intl.formatMessage({ id: 'projects.portfolio.title' }),
         description: intl.formatMessage({ id: 'projects.portfolio.description' }),
         tags: ["React", "TypeScript", "TailwindCSS", "Vite"],

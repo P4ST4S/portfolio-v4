@@ -69,25 +69,37 @@ export const en = {
 
   // Projects
   'projects.triosigno.title': 'TrioSigno',
-  'projects.triosigno.description': 'Project management platform with Fullstack & DevOps approach.',
+  'projects.triosigno.description': 'Fullstack project management platform with modular architecture (React, NestJS). Automated infrastructure via CI/CD and Docker containerization.',
+  
   'projects.datakeenApp.title': 'Datakeen App V2 and V3',
-  'projects.datakeenApp.description': 'Contribution to an AI platform as a fullstack developer.',
-  'projects.frigoApp.title': 'Fridge App',
-  'projects.frigoApp.description': 'Mobile app for shared fridge management: stocks, recipes, and shopping calendar.',
+  'projects.datakeenApp.description': 'Migration and modernization of an AI platform: architectural redesign, performance optimization and implementation of new features in React/TypeScript.',
+  
   'projects.datakeenSdk.title': 'Datakeen SDK',
-  'projects.datakeenSdk.description': 'Creation of a software development kit for service integration.',
+  'projects.datakeenSdk.description': 'TypeScript SDK for integrating an identity verification journey. Robust API design, technical documentation and handling of complex use cases.',
+  
   'projects.petHealth.title': 'Pet Health Taker',
-  'projects.petHealth.description': 'Backend for a veterinary appointment management application.',
+  'projects.petHealth.description': 'REST API with NestJS for veterinary appointment management. Scalable architecture with authentication, permissions management and relational database.',
+  
   'projects.francilienne.title': 'Francilienne de Miroiterie',
-  'projects.francilienne.description': 'Showcase website for a craftsman, emphasizing design and user experience.',
-  'projects.cguGenerator.title': 'CGU Generator',
-  'projects.cguGenerator.description': 'Terms of Use Generator.',
-  'projects.medicalApp.title': 'Medical App',
-  'projects.medicalApp.description': 'Medical appointment management application with notifications and reminders. Project completed in 1 week as part of an exam.',
+  'projects.francilienne.description': 'Modern and responsive showcase website with focus on performance (SEO optimization, lazy loading, lighthouse 95+) and user experience.',
+  
   'projects.triosignoDoc.title': 'TrioSigno Documentation',
-  'projects.triosignoDoc.description': 'Documentation for the TrioSigno platform, including guides and tutorials.',
+  'projects.triosignoDoc.description': 'Interactive technical documentation with advanced search, code examples and integration guides. Modern stack with static documentation generator.',
+  
   'projects.portfolio.title': 'Portfolio',
-  'projects.portfolio.description': 'My personal portfolio, showcasing my projects and skills.',
+  'projects.portfolio.description': 'Personal portfolio developed with React and TypeScript. Modular architecture, smooth animations and web performance optimization.',
+
+  'projects.pokeGenerator.title': 'Pokémon Egglocke Generator',
+  'projects.pokeGenerator.description': 'Fullstack application for creating custom Pokémon. PokéAPI integration, accent-insensitive search, state management with React Hook Form/Zod and PostgreSQL (Drizzle ORM).',
+  
+  'projects.imageOptimizer.title': 'Go Image Optimizer',
+  'projects.imageOptimizer.description': 'High-performance microservice in Go for image optimization. Semaphore pattern for memory protection, graceful shutdown and fail-fast architecture. Docker image < 21MB.',
+  
+  'projects.loadBalancer.title': 'Go Load Balancer',
+  'projects.loadBalancer.description': 'Concurrent load balancer with Least-Connections algorithm and active health checks. Thread-safe management (RWMutex), atomic operations and worker pool. Test coverage at 91%.',
+  
+  'projects.wordleSolver.title': 'Wordle Solver Bot',
+  'projects.wordleSolver.description': 'Optimal solver based on information theory (Shannon Entropy). Calculations offloaded to Web Workers to maintain 60fps, responsive interface with Next.js 16 and React 19.',
 
   // Footer
   'footer.copyright': 'Designed with passion.',
