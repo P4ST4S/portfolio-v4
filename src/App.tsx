@@ -8,7 +8,7 @@ const About = lazy(() => import("@/components/About"));
 const Skills = lazy(() => import("@/components/Skills"));
 const Collaborators = lazy(() => import("@/components/Collaborators"));
 const Projects = lazy(() => import("@/components/Projects"));
-const Pricing = lazy(() => import("@/components/Pricing"));
+// const Pricing = lazy(() => import("@/components/Pricing"));
 const Contact = lazy(() => import("@/components/Contact"));
 const Footer = lazy(() => import("@/components/Footer"));
 
