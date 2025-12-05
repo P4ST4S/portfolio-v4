@@ -55,7 +55,7 @@ export default function App() {
         >
           <Collaborators />
         </Suspense>
-        <Suspense
+        {/* <Suspense
           fallback={
             <div className="py-20 flex justify-center">
               <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
@@ -63,7 +63,7 @@ export default function App() {
           }
         >
           <Pricing />
-        </Suspense>
+        </Suspense> */}
         <Suspense
           fallback={
             <div className="py-20 flex justify-center">
