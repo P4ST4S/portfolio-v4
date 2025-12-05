@@ -43,6 +43,26 @@ export const en = {
   'skills.advanced': 'Advanced',
   'skills.intermediate': 'Intermediate',
   'skills.beginner': 'Beginner',
+  'skills.learning': 'Learning',
+
+  // Skills Contexts
+  'skills.context.react': 'My current job (2 years pro), main frontend stack, and default for backend',
+  'skills.context.typescript': 'My current job (2 years pro), main frontend stack, and default for backend',
+  'skills.context.tailwind': 'Used on most of my recent projects for fast and maintainable styling',
+  'skills.context.node': 'Default technical stack for my APIs. If high performance/concurrency is needed, I switch to Go',
+  'skills.context.go': 'Personal projects to handle high performance and concurrency via goroutines',
+  'skills.context.docker': 'Daily use for local development and production',
+  'skills.context.prisma': 'ORM of choice for interacting with SQL databases',
+  'skills.context.cicd': 'Implementation of complex pipelines (tests, auto deployment)',
+
+  // Skills Bonus
+  'skills.learning.title': 'Currently Learning',
+  'skills.learning.go': 'Go (Advanced concepts)',
+  'skills.learning.iac': 'IaC (Serverless)',
+  'skills.strengths.title': 'Technical Strengths',
+  'skills.strengths.perf': 'Performance',
+  'skills.strengths.clean': 'Clean Code',
+  'skills.strengths.scale': 'Scalability',
 
   // Projects Section
   'projects.title': 'Fullstack Projects - Antoine ROSPARS Portfolio',

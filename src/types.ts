@@ -11,8 +11,15 @@ export interface Project {
 
 export interface Skill {
     name: string;
-    level: number;
-    icon?: string;
+    icon: string;
+    level: string;
+    years: string;
+    projectCount: string;
+    context: string;
+    relatedProject?: {
+        name: string;
+        link?: string;
+    };
 }
 
 export interface SkillCategory {
