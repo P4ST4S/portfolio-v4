@@ -65,25 +65,37 @@ export const fr = {
 
   // Project Details
   'projects.triosigno.title': 'TrioSigno',
-  'projects.triosigno.description': 'Plateforme de gestion de projets avec une approche Fullstack & DevOps.',
+  'projects.triosigno.description': 'Plateforme fullstack de gestion de projets avec architecture modulaire (React, NestJS). Infrastructure automatisée via CI/CD et conteneurisation Docker.',
+  
   'projects.datakeenApp.title': 'Datakeen App V2 et V3',
-  'projects.datakeenApp.description': 'Contribution à une plateforme d\'IA en tant que développeur fullstack.',
-  'projects.frigoApp.title': 'Application Frigo',
-  'projects.frigoApp.description': 'App mobile de gestion de frigo partagé : stocks, recettes, et calendrier de courses.',
+  'projects.datakeenApp.description': 'Migration et modernisation d\'une plateforme IA : refonte architecturale, optimisation des performances et implémentation de nouvelles fonctionnalités en React/TypeScript.',
+  
   'projects.datakeenSdk.title': 'Datakeen SDK',
-  'projects.datakeenSdk.description': 'Création d\'un kit de développement logiciel pour l\'intégration de services.',
+  'projects.datakeenSdk.description': 'SDK TypeScript pour l\'intégration d\'un parcours de vérification d\'identité. Conception d\'API robuste, documentation technique et gestion des cas d\'usage complexes.',
+  
   'projects.petHealth.title': 'Pet Health Taker',
-  'projects.petHealth.description': 'Backend pour une application de gestion de rendez-vous vétérinaires.',
+  'projects.petHealth.description': 'API REST avec NestJS pour la gestion de rendez-vous vétérinaires. Architecture scalable avec authentification, gestion des permissions et base de données relationnelle.',
+  
   'projects.francilienne.title': 'Francilienne de Miroiterie',
-  'projects.francilienne.description': 'Site vitrine pour un artisan, mettant l\'accent sur le design et l\'expérience utilisateur.',
-  'projects.cguGenerator.title': 'CGU Generator',
-  'projects.cguGenerator.description': 'Générateur de Conditions Générales d\'Utilisation.',
-  'projects.medicalApp.title': 'Medical App',
-  'projects.medicalApp.description': 'Application de gestion de rendez-vous médicaux avec notifications et rappels. Projet réalisé en 1 semaine dans le cadre d\'un examen.',
+  'projects.francilienne.description': 'Site vitrine moderne et responsive avec focus sur la performance (optimisation SEO, lazy loading, lighthouse 95+) et l\'expérience utilisateur.',
+  
   'projects.triosignoDoc.title': 'TrioSigno Documentation',
-  'projects.triosignoDoc.description': 'Documentation pour la plateforme TrioSigno, incluant des guides et des tutoriels.',
+  'projects.triosignoDoc.description': 'Documentation technique interactive avec recherche avancée, exemples de code et guides d\'intégration. Stack moderne avec générateur de documentation statique.',
+  
   'projects.portfolio.title': 'Portfolio',
-  'projects.portfolio.description': 'Mon portfolio personnel, mettant en avant mes projets et compétences.',
+  'projects.portfolio.description': 'Portfolio personnel développé avec React et TypeScript. Architecture modulaire, animations fluides et optimisation des performances web.',
+
+  'projects.pokeGenerator.title': 'Pokémon Egglocke Generator',
+  'projects.pokeGenerator.description': 'Application fullstack pour la création de Pokémon personnalisés. Intégration PokéAPI, recherche insensible aux accents, gestion d\'état avec React Hook Form/Zod et PostgreSQL (Drizzle ORM).',
+  
+  'projects.imageOptimizer.title': 'Go Image Optimizer',
+  'projects.imageOptimizer.description': 'Microservice haute performance en Go pour l\'optimisation d\'images. Pattern semaphore pour la protection mémoire, graceful shutdown et architecture fail-fast. Image Docker < 21MB.',
+  
+  'projects.loadBalancer.title': 'Go Load Balancer',
+  'projects.loadBalancer.description': 'Load balancer concurrent avec algorithme Least-Connections et health checks actifs. Gestion thread-safe (RWMutex), opérations atomiques et worker pool. Coverage de tests à 91%.',
+  
+  'projects.wordleSolver.title': 'Wordle Solver Bot',
+  'projects.wordleSolver.description': 'Résolveur optimal basé sur la théorie de l\'information (Shannon Entropy). Calculs déportés en Web Workers pour maintenir 60fps, interface responsive avec Next.js 16 et React 19.',
 
   // Footer
   'footer.rights': 'Tous droits réservés.',
