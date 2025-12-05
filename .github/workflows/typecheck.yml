@@ -17,15 +17,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup pnpm cache
+        uses: actions/setup-node@v4
+        with:
           cache: 'pnpm'
-          check-latest: false
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
