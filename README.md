@@ -47,16 +47,16 @@ Portfolio moderne, responsive et performant pour valoriser le profil d’Antoine
 
 ```bash
 pnpm install
-pnpm run dev
+pnpm dev
 ```
 
 ---
 
 ## 🛠️ Scripts
 
-- `pnpm run dev` : lance le serveur de dev
-- `pnpm run build` : build production
-- `pnpm run lint` : lint du code
+- `pnpm dev` : lance le serveur de dev
+- `pnpm build` : build production
+- `pnpm lint` : lint du code
 
 ---
 
