@@ -30,7 +30,7 @@ const About = () => {
     <section
       ref={sectionRef}
       id="about"
-      className="py-20 md:py-32 relative overflow-hidden"
+      className="py-20 md:py-32 relative overflow-hidden cv-auto"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-slate-200/60 to-transparent dark:via-slate-800/10"></div>
 

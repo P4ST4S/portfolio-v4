@@ -41,7 +41,7 @@ const Collaborators = () => {
     <section
       ref={sectionRef}
       id="collaborators"
-      className="py-20 md:py-32 relative overflow-hidden"
+      className="py-20 md:py-32 relative overflow-hidden cv-auto"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-slate-200/60 via-transparent to-slate-100/40 dark:from-slate-900/30 dark:to-slate-800/20"></div>
 
@@ -82,6 +82,10 @@ const Collaborators = () => {
                           src={collaborator.avatar}
                           alt={collaborator.name}
                           className="w-full h-full rounded-full object-cover"
+                          width={80}
+                          height={80}
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         getInitials(collaborator.name)
@@ -136,6 +140,7 @@ const Collaborators = () => {
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#0077B5] hover:text-white transition-all duration-300 hover:scale-110"
                       title="LinkedIn"
+                      aria-label={`LinkedIn de ${collaborator.name}`}
                     >
                       <FaLinkedin className="w-5 h-5" />
                     </a>
@@ -148,6 +153,7 @@ const Collaborators = () => {
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-gray-800 hover:text-white transition-all duration-300 hover:scale-110"
                       title="GitHub"
+                      aria-label={`GitHub de ${collaborator.name}`}
                     >
                       <FaGithub className="w-5 h-5" />
                     </a>
@@ -160,6 +166,7 @@ const Collaborators = () => {
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-purple-500 hover:text-white transition-all duration-300 hover:scale-110"
                       title="Portfolio"
+                      aria-label={`Portfolio de ${collaborator.name}`}
                     >
                       <FaBriefcase className="w-5 h-5" />
                     </a>
@@ -170,6 +177,7 @@ const Collaborators = () => {
                       href={`mailto:${collaborator.links.email}`}
                       className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
                       title="Email"
+                      aria-label={`Envoyer un email a ${collaborator.name}`}
                     >
                       <FaEnvelope className="w-5 h-5" />
                     </a>

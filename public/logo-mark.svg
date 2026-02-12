@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Antoine Rospars monogram</title>
+  <desc id="desc">AR initials in a rounded square</desc>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#00C4B3" />
+  <path d="M18 46l10-28h8l10 28h-7l-2-6h-10l-2 6h-7zm12-12h6l-3-10-3 10zM45 18h6v28h-6z" fill="#0f172a" />
+</svg>

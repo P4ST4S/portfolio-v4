@@ -36,7 +36,7 @@ const Projects = () => {
     <section
       ref={sectionRef}
       id="projects"
-      className="py-20 md:py-32 bg-slate-50/80 dark:bg-[#1A1A1A]/70 relative overflow-hidden"
+      className="py-20 md:py-32 bg-slate-50/80 dark:bg-[#1A1A1A]/70 relative overflow-hidden cv-auto"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00C4B3]/5 to-transparent"></div>
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white via-white/70 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/70"></div>

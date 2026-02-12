@@ -41,7 +41,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 md:py-32 relative overflow-hidden cv-auto"
+    >
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white via-white/60 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/60"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
@@ -58,7 +61,11 @@ const Contact = () => {
             <FormattedMessage id="contact.formTitle" />
           </h3>
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+            <label htmlFor="contact-name" className="sr-only">
+              {intl.formatMessage({ id: "contact.namePlaceholder" })}
+            </label>
             <input
+              id="contact-name"
               type="text"
               name="user_name"
               placeholder={intl.formatMessage({
@@ -67,7 +74,11 @@ const Contact = () => {
               required
               className="w-full border border-slate-300 dark:border-slate-600 rounded px-4 py-2 placeholder:text-slate-400 dark:placeholder:text-[#00C4B3] text-slate-900 dark:text-white bg-white/80 dark:bg-transparent"
             />
+            <label htmlFor="contact-email" className="sr-only">
+              {intl.formatMessage({ id: "contact.emailPlaceholder" })}
+            </label>
             <input
+              id="contact-email"
               type="email"
               name="user_email"
               placeholder={intl.formatMessage({
@@ -76,7 +87,11 @@ const Contact = () => {
               required
               className="w-full border border-slate-300 dark:border-slate-600 rounded px-4 py-2 placeholder:text-slate-400 dark:placeholder:text-[#00C4B3] text-slate-900 dark:text-white bg-white/80 dark:bg-transparent"
             />
+            <label htmlFor="contact-message" className="sr-only">
+              {intl.formatMessage({ id: "contact.messagePlaceholder" })}
+            </label>
             <textarea
+              id="contact-message"
               name="message"
               placeholder={intl.formatMessage({
                 id: "contact.messagePlaceholder",

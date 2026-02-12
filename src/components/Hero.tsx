@@ -82,6 +82,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-600 dark:text-slate-300 hover:text-[#00C4B3] p-3 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-12 hover:shadow-lg"
+            aria-label="GitHub profile"
           >
             <FaGithub className="w-8 h-8" />
           </a>
@@ -90,6 +91,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-600 dark:text-slate-300 hover:text-[#00C4B3] p-3 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-12 hover:shadow-lg"
+            aria-label="LinkedIn profile"
           >
             <FaLinkedin className="w-8 h-8" />
           </a>

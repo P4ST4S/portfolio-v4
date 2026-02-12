@@ -10,6 +10,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[#00C4B3] transition-colors"
+          aria-label="GitHub profile"
         >
           <FaGithub className="w-6 h-6" />
         </a>
@@ -18,6 +19,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[#00C4B3] transition-colors"
+          aria-label="LinkedIn profile"
         >
           <FaLinkedin className="w-6 h-6" />
         </a>

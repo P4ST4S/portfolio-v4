@@ -4,7 +4,7 @@ const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="py-20 md:py-32 relative overflow-hidden"
+      className="py-20 md:py-32 relative overflow-hidden cv-auto"
       itemScope
       itemType="https://schema.org/PriceSpecification"
     >

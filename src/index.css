@@ -84,6 +84,11 @@ body {
     overflow-x: hidden;
 }
 
+.cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+}
+
 *::-webkit-scrollbar {
     width: 8px;
 }
