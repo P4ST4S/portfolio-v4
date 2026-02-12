@@ -65,7 +65,7 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className="py-20 md:py-32 relative overflow-hidden bg-gray-50 dark:bg-[#111]"
+      className="py-20 md:py-32 relative overflow-hidden bg-gray-50 dark:bg-[#111] cv-auto"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}

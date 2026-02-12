@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import SEOContent from "@/components/SEOContent";
 import PerformanceDashboard from "@/components/PerformanceDashboard";
 
 const About = lazy(() => import("@/components/About"));
@@ -14,8 +13,7 @@ const Footer = lazy(() => import("@/components/Footer"));
 
 export default function App() {
   return (
-    <div className="bg-[#1A1A1A] text-slate-300 font-sans leading-normal tracking-tight">
-      <SEOContent />
+    <div className="bg-white text-slate-900 dark:bg-[#1A1A1A] dark:text-slate-300 font-sans leading-normal tracking-tight">
       <Header />
       <main>
         <Hero />

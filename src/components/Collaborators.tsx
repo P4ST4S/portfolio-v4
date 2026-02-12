@@ -19,7 +19,7 @@ const Collaborators = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (sectionRef.current) {
@@ -41,9 +41,9 @@ const Collaborators = () => {
     <section
       ref={sectionRef}
       id="collaborators"
-      className="py-20 md:py-32 relative overflow-hidden"
+      className="py-20 md:py-32 relative overflow-hidden cv-auto"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-transparent to-slate-800/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-200/60 via-transparent to-slate-100/40 dark:from-slate-900/30 dark:to-slate-800/20"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div
@@ -51,11 +51,11 @@ const Collaborators = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4 relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 relative inline-block">
             <FormattedMessage id="collaborators.title" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
           </h2>
-          <p className="text-lg text-slate-400 max-w-3xl mx-auto mt-6">
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mt-6">
             <FormattedMessage id="collaborators.subtitle" />
           </p>
         </div>
@@ -72,7 +72,7 @@ const Collaborators = () => {
                   : "translate-y-12 opacity-0"
               }`}
             >
-              <div className="bg-slate-800/50 rounded-xl p-6 shadow-lg backdrop-blur-sm border border-slate-700/50 hover:border-[#00C4B3]/30 transition-all duration-500 h-full group hover:shadow-[0_0_30px_rgba(0,196,179,0.15)] hover:-translate-y-2">
+              <div className="bg-white/90 dark:bg-slate-800/50 rounded-xl p-6 shadow-lg backdrop-blur-sm border border-slate-200/70 dark:border-slate-700/50 hover:border-[#00C4B3]/30 transition-all duration-500 h-full group hover:shadow-[0_0_30px_rgba(0,196,179,0.15)] hover:-translate-y-2">
                 {/* Avatar */}
                 <div className="flex justify-center mb-6">
                   <div className="relative">
@@ -82,6 +82,10 @@ const Collaborators = () => {
                           src={collaborator.avatar}
                           alt={collaborator.name}
                           className="w-full h-full rounded-full object-cover"
+                          width={80}
+                          height={80}
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         getInitials(collaborator.name)
@@ -93,21 +97,21 @@ const Collaborators = () => {
 
                 {/* Name and Role */}
                 <div className="text-center mb-4">
-                  <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-[#00C4B3] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-[#00C4B3] transition-colors duration-300">
                     {collaborator.name}
                   </h3>
                   <p className="text-[#00C4B3] font-medium text-sm">
                     {collaborator.role}
                   </p>
                   {collaborator.company && (
-                    <p className="text-slate-500 text-xs mt-1">
+                    <p className="text-slate-500 dark:text-slate-500 text-xs mt-1">
                       @ {collaborator.company}
                     </p>
                   )}
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-400 text-sm text-center mb-6 leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 text-sm text-center mb-6 leading-relaxed">
                   {collaborator.description}
                 </p>
 
@@ -119,7 +123,7 @@ const Collaborators = () => {
                       .map((speciality, specIndex) => (
                         <span
                           key={specIndex}
-                          className="px-3 py-1 text-xs font-medium bg-slate-700/50 text-slate-300 rounded-full border border-slate-600/50 group-hover:border-[#00C4B3]/30 transition-all duration-300"
+                          className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-full border border-slate-200/70 dark:border-slate-600/50 group-hover:border-[#00C4B3]/30 transition-all duration-300"
                         >
                           {speciality}
                         </span>
@@ -134,8 +138,9 @@ const Collaborators = () => {
                       href={collaborator.links.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-slate-700/50 rounded-full flex items-center justify-center text-slate-400 hover:bg-[#0077B5] hover:text-white transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#0077B5] hover:text-white transition-all duration-300 hover:scale-110"
                       title="LinkedIn"
+                      aria-label={`LinkedIn de ${collaborator.name}`}
                     >
                       <FaLinkedin className="w-5 h-5" />
                     </a>
@@ -146,8 +151,9 @@ const Collaborators = () => {
                       href={collaborator.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-slate-700/50 rounded-full flex items-center justify-center text-slate-400 hover:bg-gray-800 hover:text-white transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-gray-800 hover:text-white transition-all duration-300 hover:scale-110"
                       title="GitHub"
+                      aria-label={`GitHub de ${collaborator.name}`}
                     >
                       <FaGithub className="w-5 h-5" />
                     </a>
@@ -158,8 +164,9 @@ const Collaborators = () => {
                       href={collaborator.links.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-slate-700/50 rounded-full flex items-center justify-center text-slate-400 hover:bg-purple-500 hover:text-white transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-purple-500 hover:text-white transition-all duration-300 hover:scale-110"
                       title="Portfolio"
+                      aria-label={`Portfolio de ${collaborator.name}`}
                     >
                       <FaBriefcase className="w-5 h-5" />
                     </a>
@@ -168,8 +175,9 @@ const Collaborators = () => {
                   {collaborator.links.email && (
                     <a
                       href={`mailto:${collaborator.links.email}`}
-                      className="w-10 h-10 bg-slate-700/50 rounded-full flex items-center justify-center text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
                       title="Email"
+                      aria-label={`Envoyer un email a ${collaborator.name}`}
                     >
                       <FaEnvelope className="w-5 h-5" />
                     </a>
@@ -189,7 +197,7 @@ const Collaborators = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <p className="text-slate-400 text-lg mb-6">
+          <p className="text-slate-600 dark:text-slate-400 text-lg mb-6">
             <FormattedMessage
               id="collaborators.lookingContact"
               values={{
