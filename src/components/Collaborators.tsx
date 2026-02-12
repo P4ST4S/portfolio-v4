@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { useCollaboratorsData } from "@/data/collaborators";
 import type { Collaborator } from "@/types";
 import { FormattedMessage } from "react-intl";
@@ -6,28 +6,6 @@ import { FaLinkedin, FaGithub, FaBriefcase, FaEnvelope } from "react-icons/fa";
 
 const Collaborators = () => {
   const collaboratorsData = useCollaboratorsData();
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const getInitials = (name: string) => {
     return name
@@ -39,18 +17,13 @@ const Collaborators = () => {
 
   return (
     <section
-      ref={sectionRef}
       id="collaborators"
       className="py-20 md:py-32 relative overflow-hidden cv-auto"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-slate-200/60 via-transparent to-slate-100/40 dark:from-slate-900/30 dark:to-slate-800/20"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div
-          className={`text-center mb-16 transform transition-all duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-          }`}
-        >
+      <div className="container mx-auto px-6 relative z-10 scroll-fx">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 relative inline-block">
             <FormattedMessage id="collaborators.title" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
@@ -64,13 +37,8 @@ const Collaborators = () => {
           {collaboratorsData.map((collaborator: Collaborator, index) => (
             <div
               key={collaborator.id}
-              className={`transform transition-all duration-700 delay-${
-                index * 200
-              } ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
-              }`}
+              className="transform transition-all duration-500 translate-y-0 opacity-100"
+              style={{ transitionDelay: `${index * 55}ms` }}
             >
               <div className="bg-white/90 dark:bg-slate-800/50 rounded-xl p-6 shadow-lg backdrop-blur-sm border border-slate-200/70 dark:border-slate-700/50 hover:border-[#00C4B3]/30 transition-all duration-500 h-full group hover:shadow-[0_0_30px_rgba(0,196,179,0.15)] hover:-translate-y-2">
                 {/* Avatar */}
@@ -192,11 +160,7 @@ const Collaborators = () => {
         </div>
 
         {/* Call to action */}
-        <div
-          className={`text-center mt-16 transform transition-all duration-700 delay-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-          }`}
-        >
+        <div className="text-center mt-16">
           <p className="text-slate-600 dark:text-slate-400 text-lg mb-6">
             <FormattedMessage
               id="collaborators.lookingContact"

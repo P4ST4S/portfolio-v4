@@ -5,6 +5,7 @@ import { FormattedMessage } from "react-intl";
 const Hero = () => {
   const [text, setText] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const fullText = "Antoine ROSPARS";
 
   useEffect(() => {
@@ -22,32 +23,77 @@ const Hero = () => {
     return () => clearInterval(typeTimer);
   }, []);
 
+  useEffect(() => {
+    let rafId = 0;
+
+    const handleScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        const maxScroll = window.innerHeight * 0.9;
+        const progress = Math.min(window.scrollY / maxScroll, 1);
+        setScrollProgress(progress);
+        rafId = 0;
+      });
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
+
+  const contentTransform = `translate3d(0, ${Math.round(scrollProgress * 120)}px, 0) scale(${(1 - scrollProgress * 0.12).toFixed(3)})`;
+  const contentOpacity = Math.max(1 - scrollProgress * 1.25, 0);
+  const auroraTransform = `translate3d(0, ${Math.round(scrollProgress * -90)}px, 0) scale(${(1 + scrollProgress * 0.08).toFixed(3)})`;
+  const gridTransform = `translate3d(0, ${Math.round(scrollProgress * -45)}px, 0)`;
+
   return (
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center text-center relative overflow-hidden"
     >
+      <div
+        className="absolute inset-0 hero-aurora"
+        style={{ transform: auroraTransform, willChange: "transform" }}
+      ></div>
+      <div
+        className="absolute inset-0 hero-grid opacity-40 dark:opacity-25"
+        style={{ transform: gridTransform, willChange: "transform" }}
+      ></div>
       <div className="absolute inset-0 bg-gradient-to-br from-[#00C4B3]/5 via-transparent to-[#00C4B3]/10"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/80"></div>
 
-      <div className="absolute top-20 left-10 w-72 h-72 bg-[#00C4B3]/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-      <div className="absolute top-40 right-10 w-72 h-72 bg-slate-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-[#00C4B3]/5 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#00C4B3]/10 rounded-full mix-blend-multiply filter blur-xl floating-slow"></div>
+      <div className="absolute top-40 right-10 w-72 h-72 bg-slate-500/10 rounded-full mix-blend-multiply filter blur-xl floating-slow [animation-delay:900ms]"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-[#00C4B3]/5 rounded-full mix-blend-multiply filter blur-xl floating-slow [animation-delay:500ms]"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div
+        className="container mx-auto px-6 relative z-10"
+        style={{
+          transform: contentTransform,
+          opacity: contentOpacity,
+          willChange: "transform, opacity",
+        }}
+      >
         <div
-          className={`transform transition-all duration-1000 ${
+          className={`reveal-up ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-slate-100 leading-tight mb-2">
-            {text}
-            <span className="animate-blink text-[#00C4B3]">|</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2">
+            <span className="text-shine">{text}</span>
+            <span className="animate-blink text-[#00C4B3] relative -top-[0.2em] align-middle">
+              |
+            </span>
           </h1>
         </div>
 
         <div
-          className={`transform transition-all duration-1000 delay-500 ${
+          className={`reveal-up reveal-delay-1 ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -57,7 +103,7 @@ const Hero = () => {
         </div>
 
         <div
-          className={`transform transition-all duration-1000 delay-700 ${
+          className={`reveal-up reveal-delay-2 ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -67,7 +113,7 @@ const Hero = () => {
         </div>
 
         <div
-          className={`mt-10 flex justify-center items-center gap-4 transform transition-all duration-1000 delay-1000 ${
+          className={`mt-10 flex justify-center items-center gap-4 reveal-up reveal-delay-3 ${
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -96,10 +142,16 @@ const Hero = () => {
             <FaLinkedin className="w-8 h-8" />
           </a>
         </div>
+
+        <div className="mt-10 flex justify-center">
+          <div className="spotlight-sweep relative overflow-hidden rounded-full border border-[#00C4B3]/30 bg-white/70 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700 shadow-lg shadow-[#00C4B3]/10 backdrop-blur-sm dark:bg-slate-900/70 dark:text-slate-200">
+            Frontend Craftsman
+          </div>
+        </div>
       </div>
 
       <div
-        className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1500 ${
+        className={`absolute bottom-20 left-1/2 transform -translate-x-1/2 reveal-up reveal-delay-4 floating-slow ${
           isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
       >

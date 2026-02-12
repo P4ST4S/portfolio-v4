@@ -1,17 +1,56 @@
-import { useState } from "react";
+import { useState, type CSSProperties, type MouseEvent } from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import type { Project } from "@/types";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [tiltStyle, setTiltStyle] = useState({
+    transform:
+      "perspective(1200px) rotateX(0deg) rotateY(0deg) translate3d(0, 0, 0)",
+    "--mx": "50%",
+    "--my": "50%",
+  } as CSSProperties);
+
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const px = (event.clientX - rect.left) / rect.width;
+    const py = (event.clientY - rect.top) / rect.height;
+    const rotateY = (px - 0.5) * 14;
+    const rotateX = (0.5 - py) * 14;
+
+    setTiltStyle({
+      transform: `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translate3d(0, -4px, 0)`,
+      "--mx": `${(px * 100).toFixed(1)}%`,
+      "--my": `${(py * 100).toFixed(1)}%`,
+    } as CSSProperties);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setTiltStyle({
+      transform:
+        "perspective(1200px) rotateX(0deg) rotateY(0deg) translate3d(0, 0, 0)",
+      "--mx": "50%",
+      "--my": "50%",
+    } as CSSProperties);
+  };
 
   return (
     <div
-      className="bg-white/90 dark:bg-slate-800/50 rounded-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#00C4B3]/20 hover:-translate-y-3 flex flex-col group relative backdrop-blur-sm border border-slate-200/70 dark:border-slate-700/50 hover:border-[#00C4B3]/30"
+      className="bg-white/90 dark:bg-slate-800/50 rounded-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#00C4B3]/20 flex flex-col group relative backdrop-blur-sm border border-slate-200/70 dark:border-slate-700/50 hover:border-[#00C4B3]/30 tilt-card"
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={tiltStyle}
     >
+      <div
+        className="card-spotlight"
+        style={{
+          background:
+            "radial-gradient(circle at var(--mx) var(--my), rgba(255,255,255,0.34), transparent 45%)",
+        }}
+      ></div>
       <div className="absolute inset-0 bg-gradient-to-br from-[#00C4B3]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="p-6 flex-grow relative z-10">

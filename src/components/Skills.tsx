@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import { useSkillsData } from "@/data/skills";
 import { FormattedMessage, useIntl } from "react-intl";
 import SkillCategory from "./SkillCategory";
@@ -9,28 +8,6 @@ import { FaCloud } from "react-icons/fa";
 const Skills = () => {
   const skillsData = useSkillsData();
   const intl = useIntl();
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const strengths = [
     {
@@ -63,15 +40,12 @@ const Skills = () => {
 
   return (
     <section
-      ref={sectionRef}
       id="skills"
-      className="py-20 md:py-32 relative overflow-hidden bg-gray-50 dark:bg-[#111] cv-auto"
+      className="py-20 md:py-32 relative overflow-hidden bg-gray-50 dark:bg-[#111] cv-auto section-noise"
     >
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 scroll-fx">
         {/* Header */}
-        <div
-          className={`text-center mb-16 transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 relative inline-block">
             <FormattedMessage id="skills.title" />
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-500 rounded-full"></div>
@@ -82,13 +56,11 @@ const Skills = () => {
         </div>
 
         {/* Strengths */}
-        <div
-          className={`grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 max-w-4xl mx-auto transform transition-all duration-700 delay-100 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 max-w-4xl mx-auto">
           {strengths.map((strength) => (
             <div
               key={strength.id}
-              className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 text-center"
+              className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10"
             >
               <span className="mb-3 flex justify-center">{strength.icon}</span>
               <h3 className="font-bold text-gray-900 dark:text-white">
@@ -99,9 +71,7 @@ const Skills = () => {
         </div>
 
         {/* Main Skills */}
-        <div
-          className={`space-y-8 transform transition-all duration-700 delay-200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-        >
+        <div className="space-y-8">
           {skillsData.map((category) => (
             <SkillCategory
               key={category.category}
@@ -112,9 +82,7 @@ const Skills = () => {
         </div>
 
         {/* Learning Section */}
-        <div
-          className={`mt-20 transform transition-all duration-700 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-        >
+        <div className="mt-20">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             <FormattedMessage id="skills.learning.title" />
           </h3>
@@ -122,7 +90,7 @@ const Skills = () => {
             {learning.map((item) => (
               <div
                 key={item.name}
-                className="flex items-center gap-3 bg-white dark:bg-gray-800 px-6 py-4 rounded-full shadow-sm border border-gray-100 dark:border-gray-700"
+                className="flex items-center gap-3 bg-white dark:bg-gray-800 px-6 py-4 rounded-full shadow-sm border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10"
               >
                 <span>{item.icon}</span>
                 <span className="font-medium text-gray-900 dark:text-white">
