@@ -1,9 +1,13 @@
-import { en } from './en';
-import { fr } from './fr';
+import type { Locale } from "@/contexts/LanguageContextDefinition";
 
-export const messages = {
-  en,
-  fr,
+export const loadMessages = async (locale: Locale) => {
+  if (locale === "en") {
+    const { en } = await import("./en");
+    return en;
+  }
+
+  const { fr } = await import("./fr");
+  return fr;
 };
 
-export type MessageKeys = keyof typeof en;
+export type Messages = Awaited<ReturnType<typeof loadMessages>>;
