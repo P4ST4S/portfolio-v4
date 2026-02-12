@@ -27,7 +27,7 @@ const Contact = () => {
         formRef.current,
         {
           publicKey: EMAILJS_PUBLIC_KEY,
-        }
+        },
       );
 
       setFeedback("success");
@@ -42,13 +42,13 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/60 to-transparent"></div>
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white via-white/60 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/60"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
             <FormattedMessage id="contact.title" />
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             <FormattedMessage id="contact.subtitle" />
           </p>
         </div>
@@ -61,28 +61,34 @@ const Contact = () => {
             <input
               type="text"
               name="user_name"
-              placeholder={intl.formatMessage({ id: 'contact.namePlaceholder' })}
+              placeholder={intl.formatMessage({
+                id: "contact.namePlaceholder",
+              })}
               required
-              className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
+              className="w-full border border-slate-300 dark:border-slate-600 rounded px-4 py-2 placeholder:text-slate-400 dark:placeholder:text-[#00C4B3] text-slate-900 dark:text-white bg-white/80 dark:bg-transparent"
             />
             <input
               type="email"
               name="user_email"
-              placeholder={intl.formatMessage({ id: 'contact.emailPlaceholder' })}
+              placeholder={intl.formatMessage({
+                id: "contact.emailPlaceholder",
+              })}
               required
-              className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
+              className="w-full border border-slate-300 dark:border-slate-600 rounded px-4 py-2 placeholder:text-slate-400 dark:placeholder:text-[#00C4B3] text-slate-900 dark:text-white bg-white/80 dark:bg-transparent"
             />
             <textarea
               name="message"
-              placeholder={intl.formatMessage({ id: 'contact.messagePlaceholder' })}
+              placeholder={intl.formatMessage({
+                id: "contact.messagePlaceholder",
+              })}
               required
               rows={5}
-              className="w-full border border-gray-300 rounded px-4 py-2 placeholder-[#00C4B3] text-white bg-transparent"
+              className="w-full border border-slate-300 dark:border-slate-600 rounded px-4 py-2 placeholder:text-slate-400 dark:placeholder:text-[#00C4B3] text-slate-900 dark:text-white bg-white/80 dark:bg-transparent"
             />
             <button
               type="submit"
               disabled={sending}
-              className="w-full bg-[#00C4B3] text-[#1A1A1A] font-bold py-4 px-8 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105 text-lg"
+              className="w-full bg-[#00C4B3] text-slate-900 dark:text-[#1A1A1A] font-bold py-4 px-8 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105 text-lg"
             >
               {sending ? (
                 <FormattedMessage id="contact.sendingButton" />
@@ -91,7 +97,7 @@ const Contact = () => {
               )}
             </button>
             {feedback && (
-              <p className="text-sm text-center mt-2 text-white">
+              <p className="text-sm text-center mt-2 text-slate-700 dark:text-white">
                 {feedback === "success" ? (
                   <FormattedMessage id="contact.successMessage" />
                 ) : (

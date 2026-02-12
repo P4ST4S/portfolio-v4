@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { HiMenu, HiX } from "react-icons/hi";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,14 +47,14 @@ const Header = () => {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#1A1A1A]/80 backdrop-blur-lg shadow-lg"
+            ? "bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-lg shadow-lg"
             : "bg-transparent"
         }`}
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <a
             href="#hero"
-            className="text-xl font-bold text-slate-100 hover:text-[#00C4B3] transition-colors"
+            className="text-xl font-bold text-slate-900 dark:text-slate-100 hover:text-[#00C4B3] transition-colors"
           >
             <img
               src="/logov2.png"
@@ -67,7 +68,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
+                className="text-slate-700 dark:text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
               >
                 <FormattedMessage id={link.labelKey} />
               </a>
@@ -75,15 +76,16 @@ const Header = () => {
           </nav>
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
+            <ThemeSwitcher />
             <a
               href="#contact"
-              className="hidden md:inline-block bg-[#00C4B3] text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
+              className="hidden md:inline-block bg-[#00C4B3] text-slate-900 dark:text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
             >
               <FormattedMessage id="nav.contactMe" />
             </a>
             <button
               onClick={handleMobileMenuToggle}
-              className="md:hidden text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
+              className="md:hidden text-slate-700 dark:text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -97,13 +99,13 @@ const Header = () => {
             isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="bg-[#1A1A1A]/95 backdrop-blur-lg px-6 py-4 space-y-4 border-t border-slate-700/20">
+          <nav className="bg-white/95 dark:bg-[#1A1A1A]/95 backdrop-blur-lg px-6 py-4 space-y-4 border-t border-slate-200/60 dark:border-slate-700/20">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={handleLinkClick}
-                className="block text-slate-300 hover:text-[#00C4B3] transition-colors duration-300 py-2 border-b border-slate-700/20 last:border-b-0"
+                className="block text-slate-700 dark:text-slate-300 hover:text-[#00C4B3] transition-colors duration-300 py-2 border-b border-slate-200/60 dark:border-slate-700/20 last:border-b-0"
               >
                 <FormattedMessage id={link.labelKey} />
               </a>
@@ -111,7 +113,7 @@ const Header = () => {
             <a
               href="#contact"
               onClick={handleLinkClick}
-              className="block bg-[#00C4B3] text-[#1A1A1A] font-bold py-3 px-4 rounded-lg hover:bg-[#00A699] transition-all duration-300 text-center mt-4"
+              className="block bg-[#00C4B3] text-slate-900 dark:text-[#1A1A1A] font-bold py-3 px-4 rounded-lg hover:bg-[#00A699] transition-all duration-300 text-center mt-4"
             >
               <FormattedMessage id="nav.contactMe" />
             </a>

@@ -14,7 +14,7 @@ const Footer = lazy(() => import("@/components/Footer"));
 
 export default function App() {
   return (
-    <div className="bg-[#1A1A1A] text-slate-300 font-sans leading-normal tracking-tight">
+    <div className="bg-white text-slate-900 dark:bg-[#1A1A1A] dark:text-slate-300 font-sans leading-normal tracking-tight">
       <SEOContent />
       <Header />
       <main>
