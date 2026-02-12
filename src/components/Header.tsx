@@ -57,7 +57,7 @@ const Header = () => {
             className="text-xl font-bold text-slate-900 dark:text-slate-100 hover:text-[#00C4B3] transition-colors"
           >
             <img
-              src="/logov2.png"
+              src="/logov2.svg"
               alt="Logo"
               className="h-8 w-auto inline-block mr-2 mb-1"
               width={32}
