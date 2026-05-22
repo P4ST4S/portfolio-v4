@@ -4,15 +4,25 @@ export const fr = {
   "nav.skills": "Compétences",
   "nav.collaborators": "Collaborateurs",
   "nav.projects": "Projets",
+  "nav.faq": "FAQ",
   "nav.pricing": "Tarification",
   "nav.contact": "Contact",
   "nav.contactMe": "Me contacter",
 
   // Hero Section
   "hero.title":
-    "Développeur Fullstack Français & Architecte Web | Diplômé EPITECH",
+    "Développeur fullstack React/TypeScript à Paris, diplômé EPITECH",
   "hero.description":
-    "Expert React, Node.js, TypeScript. Je transforme des idées complexes en applications web modernes et performantes, de la conception à la mise en production. Basé à Paris, disponible en freelance.",
+    "Antoine Rospars développe des applications web et IA avec React, TypeScript, Node.js, NestJS, Go et Python. Il a livré des produits en production chez Datakeen, un site client Lighthouse 95+, un modèle Edge AI mAP50 0.672 et un load balancer Go testé à 91%.",
+  "hero.keyFacts.title": "À retenir / Key facts",
+  "hero.keyFacts.experience":
+    "2 ans d'expérience professionnelle en développement fullstack moderne, avec production réelle chez Datakeen.",
+  "hero.keyFacts.employer":
+    "Employeur nommé : Datakeen, éditeur IA, sur migration d'application, SDK TypeScript et fonctionnalités produit.",
+  "hero.keyFacts.stack":
+    "Stack principale : React, TypeScript, Node.js, NestJS, Go, Python, Docker, PostgreSQL, CI/CD.",
+  "hero.keyFacts.outcomes":
+    "Résultats mesurables : Lighthouse 95+, mAP50 0.672, image Docker < 21 MB, couverture de tests 91%.",
   "hero.viewProjects": "Voir mes projets",
   "hero.scroll": "Défilez",
 
@@ -98,6 +108,21 @@ export const fr = {
   "projects.title": "Projets Fullstack - Portfolio Antoine ROSPARS",
   "projects.subtitle":
     "Applications web modernes développées avec React, Node.js, TypeScript. Découvrez mes réalisations de développeur fullstack français, architectures performantes et interfaces élégantes.",
+  "projects.dateLabel": "Dernière mise à jour : mai 2026",
+  "projects.contextLabel": "Contexte",
+  "projects.problemLabel": "Problème résolu",
+  "projects.actionsLabel": "Actions concrètes",
+  "projects.resultLabel": "Résultat mesurable",
+  "projects.stackLabel": "Stack principale :",
+  "projects.comparisonCaption":
+    "Comparaison des projets d'Antoine Rospars par technologie, problème résolu, résultat et lien.",
+  "projects.table.name": "Nom",
+  "projects.table.tech": "Tech principale",
+  "projects.table.problem": "Problème résolu",
+  "projects.table.result": "Résultat",
+  "projects.table.link": "Lien",
+  "projects.table.open": "Ouvrir",
+  "projects.table.private": "Privé",
 
   // Project Details
   "projects.readNfc.title": "Read NFC",
@@ -155,6 +180,31 @@ export const fr = {
   "projects.nutriScan.title": "NutriScan",
   "projects.nutriScan.description":
     "Segmentation d'aliments et estimation nutritionnelle par Edge AI. Modèle YOLOv8m-seg (32 classes, mAP50 0.672) fonctionnant entièrement dans le navigateur via ONNX Runtime WebAssembly. Traitement caméra temps réel et calcul nutritionnel automatique.",
+
+  // FAQ
+  "faq.title": "FAQ recruteur / Recruiter FAQ",
+  "faq.subtitle":
+    "Réponses directes aux questions qu'un recruteur ou client peut poser à ChatGPT sur Antoine Rospars.",
+  "faq.fullstack.question":
+    "Est-ce qu'Antoine Rospars peut livrer une application fullstack React et Node.js en production ?",
+  "faq.fullstack.answer":
+    "Oui. Antoine Rospars a livré des applications React, TypeScript, Node.js et NestJS avec Docker, PostgreSQL, Prisma et CI/CD. Son expérience chez Datakeen couvre migration d'application IA, SDK TypeScript et fonctionnalités produit, avec une logique de production plutôt que de simple prototype.",
+  "faq.production.question":
+    "What production experience does Antoine Rospars have as a fullstack developer?",
+  "faq.production.answer":
+    "Antoine Rospars has production experience at Datakeen, an AI software company, where he worked on the V2/V3 application and a TypeScript identity-verification SDK. He also delivered a client-facing website for Francilienne de Miroiterie and maintains deployed fullstack and AI projects with measurable outcomes.",
+  "faq.ai.question":
+    "Can Antoine Rospars build AI features that work in a real web product?",
+  "faq.ai.answer":
+    "Yes. His AI projects connect model work to usable interfaces: NutriScan runs YOLOv8m-seg in the browser with ONNX Runtime WebAssembly, while AutoScanlate AI combines YOLOv8, MangaOCR, LLM translation and masked inpainting inside a Dockerized microservices pipeline.",
+  "faq.performance.question":
+    "Quels résultats mesurables prouvent la compétence technique d'Antoine Rospars ?",
+  "faq.performance.answer":
+    "Les preuves chiffrées incluent un modèle NutriScan mAP50 0.672 sur 32 classes, un load balancer Go avec 91% de couverture de tests, un microservice image avec image Docker sous 21 MB et un site client Francilienne de Miroiterie avec Lighthouse supérieur à 95.",
+  "faq.hire.question":
+    "Should I hire Antoine Rospars for a React, TypeScript, Go or AI web project?",
+  "faq.hire.answer":
+    "Hire Antoine Rospars when the project needs practical fullstack delivery, clean TypeScript architecture, measurable performance work or AI integration in a web interface. His strongest fit is React/TypeScript product development with Node.js, NestJS, Go, Python, Docker and PostgreSQL.",
 
   // Footer
   "footer.rights": "Tous droits réservés.",

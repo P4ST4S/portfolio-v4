@@ -18,11 +18,11 @@
         </title>
         <meta
             name="description"
-            content="Antoine ROSPARS, développeur fullstack français diplômé d'Epitech. Expert en React, Node.js, TypeScript. Architecte de solutions web modernes et performantes basé à Paris."
+            content="Antoine Rospars, développeur fullstack React/TypeScript à Paris, diplômé Epitech. Production chez Datakeen, projets IA, Go, Node.js, NestJS, Docker, PostgreSQL et résultats mesurables."
         />
         <meta
             name="keywords"
-            content="Antoine ROSPARS, développeur fullstack, fullstack developer, French developer, Epitech developer, développeur français, React developer, Node.js, TypeScript, architecte web, développeur Paris, freelance developer, tarif développeur freelance, TJM développeur, devis site web, prix développement web, tarification freelance, développeur freelance Paris"
+            content="Antoine ROSPARS, développeur fullstack, fullstack developer, French developer, Epitech developer, développeur français, React developer, Node.js, TypeScript, architecte web, développeur Paris, freelance developer, Datakeen, AI developer, Go developer, NestJS, PostgreSQL"
         />
         <meta name="author" content="Antoine ROSPARS" />
         <meta name="robots" content="index, follow" />
@@ -44,7 +44,7 @@
         />
         <meta
             property="og:description"
-            content="Développeur fullstack français expert en React, Node.js, TypeScript. Diplômé Epitech, architecte de solutions web modernes et performantes."
+            content="Développeur fullstack React/TypeScript à Paris. Production chez Datakeen, projets IA, Go, Node.js, NestJS et résultats mesurables."
         />
         <meta
             property="og:image"
@@ -64,7 +64,7 @@
         />
         <meta
             name="twitter:description"
-            content="Développeur fullstack français expert en React, Node.js, TypeScript. Diplômé Epitech."
+            content="Développeur fullstack React/TypeScript à Paris, diplômé Epitech, expérience production Datakeen."
         />
         <meta
             name="twitter:image"
@@ -76,56 +76,318 @@
         <meta name="theme-color" content="#00C4B3" />
         <meta name="msapplication-TileColor" content="#00C4B3" />
 
-        <!-- JSON-LD Structured Data -->
+        <!-- GEO rationale: Person + ItemList schema gives answer engines explicit entity, project, dateModified, stack and outcome facts in <head>. -->
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Antoine ROSPARS",
-                "jobTitle": "Développeur Fullstack",
-                "description": "Développeur fullstack français diplômé d'Epitech, expert en React, Node.js, TypeScript et architecte de solutions web modernes",
-                "url": "https://antoinerospars.dev",
-                "image": "https://antoinerospars.dev/logo-full.png",
-                "logo": "https://antoinerospars.dev/logov2.png",
-                "sameAs": [
-                    "https://github.com/P4ST4S",
-                    "https://www.linkedin.com/in/antoinerospars/"
-                ],
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Paris",
-                    "addressCountry": "FR"
-                },
-                "alumniOf": {
-                    "@type": "Organization",
-                    "name": "Epitech"
-                },
-                "knowsAbout": [
-                    "JavaScript",
-                    "TypeScript",
-                    "React",
-                    "Node.js",
-                    "Fullstack Development",
-                    "Web Architecture",
-                    "Frontend Development",
-                    "Backend Development",
-                    "Freelance Development",
-                    "Web Development Pricing",
-                    "Project Quotation"
-                ],
-                "workLocation": {
-                    "@type": "Place",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Paris",
-                        "addressCountry": "FR"
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://antoinerospars.dev/#person",
+                        "name": "Antoine Rospars",
+                        "alternateName": "Antoine ROSPARS",
+                        "jobTitle": "Développeur Fullstack / Fullstack Developer",
+                        "description": "French fullstack developer in Paris and Epitech graduate. Builds production web and AI applications with React, TypeScript, Node.js, NestJS, Go, Python, Docker and PostgreSQL. Production experience at Datakeen.",
+                        "url": "https://antoinerospars.dev",
+                        "image": "https://antoinerospars.dev/logo-full.png",
+                        "logo": "https://antoinerospars.dev/logov2.png",
+                        "sameAs": [
+                            "https://github.com/P4ST4S",
+                            "https://www.linkedin.com/in/antoinerospars/"
+                        ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Paris",
+                            "addressCountry": "FR"
+                        },
+                        "alumniOf": {
+                            "@type": "Organization",
+                            "name": "Epitech"
+                        },
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "Datakeen"
+                        },
+                        "knowsAbout": [
+                            "React",
+                            "TypeScript",
+                            "Node.js",
+                            "NestJS",
+                            "Go",
+                            "Python",
+                            "Docker",
+                            "PostgreSQL",
+                            "Computer Vision",
+                            "Fullstack Development",
+                            "Web Performance"
+                        ]
+                    },
+                    {
+                        "@type": "ItemList",
+                        "@id": "https://antoinerospars.dev/#projects",
+                        "name": "Antoine Rospars projects",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "AutoScanlate AI",
+                                    "url": "https://github.com/P4ST4S/AutoScanlate-AI",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": ["Python", "Go", "TypeScript"],
+                                    "description": "Automated manga translation pipeline using YOLOv8, MangaOCR, Qwen 2.5 LLM translation, masked inpainting, Dockerized microservices and Server-Sent Events progress tracking."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "NutriScan",
+                                    "url": "https://app-computer-vision.vercel.app/",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": ["TypeScript", "Python"],
+                                    "description": "Edge AI food segmentation with YOLOv8m-seg, 32 classes, mAP50 0.672, ONNX Runtime WebAssembly and browser camera processing."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Read NFC",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": ["TypeScript", "Swift", "Kotlin", "C"],
+                                    "description": "React Native mobile project for French ID card PACE, passport BAC, ICAO 9303 flows, passive and active verification, photo extraction and electronic signatures."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 4,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "TrioSigno",
+                                    "url": "https://github.com/EIP-TEK89/trio-signo-fullstack",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": ["TypeScript"],
+                                    "description": "React, NestJS, Docker, PostgreSQL and Prisma project-management platform with CI/CD and technical documentation."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 5,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Go Load Balancer",
+                                    "url": "https://github.com/P4ST4S/go-load-balancer",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "Go",
+                                    "description": "Least-connections load balancer with active health checks, worker pool, atomic operations and 91% test coverage."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 6,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Go Image Optimizer",
+                                    "url": "https://github.com/P4ST4S/go-image-optimizer",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "Go",
+                                    "description": "Image optimization microservice with semaphore memory protection, graceful shutdown, fail-fast architecture and Docker image under 21 MB."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 7,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Datakeen App V2 and V3",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": ["TypeScript", "JavaScript"],
+                                    "description": "Production React and TypeScript migration and feature work for Datakeen's AI platform."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 8,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Wordle Solver Bot",
+                                    "url": "https://next-wordle-bot.vercel.app/",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "TypeScript",
+                                    "description": "Next.js solver using Shannon entropy and Web Workers to keep the interface responsive at 60fps."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 9,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Pokemon Egglocke Generator",
+                                    "url": "https://github.com/P4ST4S/poke-generator",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "TypeScript",
+                                    "description": "Next.js, PostgreSQL, Drizzle ORM and PokeAPI generator with typed forms and accent-insensitive search."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 10,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Datakeen SDK",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "TypeScript",
+                                    "description": "TypeScript SDK for integrating an identity-verification journey."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 11,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Pet Health Taker",
+                                    "url": "https://github.com/P4ST4S/pet-health-taker",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "TypeScript",
+                                    "description": "NestJS and PostgreSQL REST API for veterinary appointment management with authentication and permissions."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 12,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Francilienne de Miroiterie",
+                                    "url": "https://francilienne-de-miroiterie.com/",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": ["JavaScript", "SCSS"],
+                                    "description": "Client website for a French glazing business with responsive frontend, lazy loading and Lighthouse score above 95."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 13,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "TrioSigno Documentation",
+                                    "url": "https://docs.triosigno.com/",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "JavaScript",
+                                    "description": "Docusaurus documentation site with advanced search, code examples and integration guides."
+                                }
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 14,
+                                "item": {
+                                    "@type": "CreativeWork",
+                                    "name": "Portfolio",
+                                    "url": "https://antoinerospars.dev/",
+                                    "dateModified": "2026-05-22",
+                                    "programmingLanguage": "TypeScript",
+                                    "description": "React, TypeScript, TailwindCSS and Vite bilingual portfolio with structured metadata and extractible project facts."
+                                }
+                            }
+                        ]
                     }
-                }
+                ]
+            }
+        </script>
+        <!-- GEO rationale: FAQ schema mirrors recruiter-style prompts and direct answers for AI answer extraction. -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "dateModified": "2026-05-22",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Est-ce qu'Antoine Rospars peut livrer une application fullstack React et Node.js en production ?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Oui. Antoine Rospars a livré des applications React, TypeScript, Node.js et NestJS avec Docker, PostgreSQL, Prisma et CI/CD. Son expérience chez Datakeen couvre migration d'application IA, SDK TypeScript et fonctionnalités produit, avec une logique de production plutôt que de simple prototype."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What production experience does Antoine Rospars have as a fullstack developer?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Antoine Rospars has production experience at Datakeen, an AI software company, where he worked on the V2/V3 application and a TypeScript identity-verification SDK. He also delivered a client-facing website for Francilienne de Miroiterie and maintains deployed fullstack and AI projects with measurable outcomes."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can Antoine Rospars build AI features that work in a real web product?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. His AI projects connect model work to usable interfaces: NutriScan runs YOLOv8m-seg in the browser with ONNX Runtime WebAssembly, while AutoScanlate AI combines YOLOv8, MangaOCR, LLM translation and masked inpainting inside a Dockerized microservices pipeline."
+                        }
+                    }
+                ]
             }
         </script>
     </head>
     <body>
-        <div id="root"></div>
+        <div id="root">
+            <!-- GEO rationale: static HTML fallback verifies the page is not JS-only; core facts are available before React renders. -->
+            <main>
+                <section id="static-profile">
+                    <h1>Antoine Rospars - React/TypeScript fullstack developer in Paris</h1>
+                    <p>
+                        Antoine Rospars builds web and AI applications with React, TypeScript, Node.js, NestJS, Go and Python. He has shipped production work at Datakeen, a Lighthouse 95+ client website, an Edge AI model at mAP50 0.672 and a Go load balancer tested at 91% coverage.
+                    </p>
+                    <h2>À retenir / Key facts</h2>
+                    <ul>
+                        <li>2 years of professional fullstack development experience, including production work at Datakeen.</li>
+                        <li>Core stack: React, TypeScript, Node.js, NestJS, Go, Python, Docker, PostgreSQL, CI/CD.</li>
+                        <li>Measured outcomes: Lighthouse 95+, mAP50 0.672, Docker image under 21 MB, 91% test coverage.</li>
+                        <li>Last updated: May 2026. HTTP Last-Modified target: Fri, 22 May 2026 00:00:00 GMT.</li>
+                    </ul>
+                </section>
+                <section id="static-projects">
+                    <h2>Project comparison</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Main tech</th>
+                                <th>Problem solved</th>
+                                <th>Result</th>
+                                <th>Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>AutoScanlate AI</td><td>Python, Go, Next.js, YOLOv8, Qwen 2.5</td><td>Automates manga OCR, translation, cleanup and redraw workflows.</td><td>Dockerized microservices with real-time Server-Sent Events progress tracking.</td><td>May 2026</td></tr>
+                            <tr><td>NutriScan</td><td>Next.js, TypeScript, PyTorch, ONNX Runtime WebAssembly</td><td>Segments food and estimates nutrition without backend image upload.</td><td>YOLOv8m-seg model with 32 classes and mAP50 0.672 in-browser.</td><td>May 2026</td></tr>
+                            <tr><td>Read NFC</td><td>React Native, Swift, Kotlin, C, ICAO 9303</td><td>Reads official identity-document chips across mobile platforms.</td><td>French ID card PACE, passport BAC, verification, photo extraction and signatures.</td><td>May 2026</td></tr>
+                            <tr><td>TrioSigno</td><td>React, TypeScript, NestJS, Docker, PostgreSQL</td><td>Gives project teams a modular fullstack management platform.</td><td>Dockerized React/NestJS platform with CI/CD and documentation.</td><td>May 2026</td></tr>
+                            <tr><td>Go Load Balancer</td><td>Go, Docker, concurrency</td><td>Distributes traffic safely across healthy backends.</td><td>Least-connections algorithm, active health checks and 91% test coverage.</td><td>May 2026</td></tr>
+                            <tr><td>Go Image Optimizer</td><td>Go, Docker, image processing</td><td>Optimizes images without letting large files exhaust service memory.</td><td>Semaphore memory protection, graceful shutdown and Docker image under 21 MB.</td><td>May 2026</td></tr>
+                            <tr><td>Datakeen App V2 and V3</td><td>React, TypeScript, NestJS, MongoDB, Prisma</td><td>Modernizes a production AI platform at Datakeen.</td><td>Migration, product features and maintainability improvements in real employer context.</td><td>May 2026</td></tr>
+                            <tr><td>Wordle Solver Bot</td><td>Next.js, React, TypeScript, Web Workers</td><td>Finds optimal guesses without blocking browser interaction.</td><td>Entropy-based solver keeps the UI responsive at 60fps.</td><td>May 2026</td></tr>
+                            <tr><td>Pokemon Egglocke Generator</td><td>Next.js, TypeScript, PostgreSQL, Drizzle ORM</td><td>Creates custom Pokemon entries with validation and persistence.</td><td>Accent-insensitive search, typed forms, PokeAPI and PostgreSQL storage.</td><td>May 2026</td></tr>
+                            <tr><td>Datakeen SDK</td><td>React, TypeScript, TailwindCSS, Rollup</td><td>Packages identity verification as an embeddable customer journey.</td><td>Reusable SDK with documented API surface for complex verification flows.</td><td>May 2026</td></tr>
+                            <tr><td>Pet Health Taker</td><td>NestJS, PostgreSQL</td><td>Models veterinary appointment workflows with permissions.</td><td>REST API with authentication, permission checks and relational persistence.</td><td>May 2026</td></tr>
+                            <tr><td>Francilienne de Miroiterie</td><td>React, SCSS</td><td>Builds a fast client website for a French glazing business.</td><td>Responsive website with lazy loading and Lighthouse score above 95.</td><td>May 2026</td></tr>
+                            <tr><td>TrioSigno Documentation</td><td>Docusaurus, React</td><td>Provides searchable documentation for developers and stakeholders.</td><td>Static documentation site with search, code examples and integration guides.</td><td>May 2026</td></tr>
+                            <tr><td>Portfolio</td><td>React, TypeScript, TailwindCSS, Vite</td><td>Gives recruiters a concise technical profile with proof of outcomes.</td><td>Bilingual portfolio with structured metadata and extractible project facts.</td><td>May 2026</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="static-faq">
+                    <h2>FAQ recruteur / Recruiter FAQ</h2>
+                    <h3>What production experience does Antoine Rospars have as a fullstack developer?</h3>
+                    <p>Antoine Rospars has production experience at Datakeen, an AI software company, where he worked on the V2/V3 application and a TypeScript identity-verification SDK. He also delivered a client-facing website for Francilienne de Miroiterie and maintains deployed fullstack and AI projects with measurable outcomes.</p>
+                    <h3>Can Antoine Rospars build AI features that work in a real web product?</h3>
+                    <p>Yes. His AI projects connect model work to usable interfaces: NutriScan runs YOLOv8m-seg in the browser with ONNX Runtime WebAssembly, while AutoScanlate AI combines YOLOv8, MangaOCR, LLM translation and masked inpainting inside a Dockerized microservices pipeline.</p>
+                </section>
+            </main>
+        </div>
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>

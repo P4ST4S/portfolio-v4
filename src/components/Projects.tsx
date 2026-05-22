@@ -68,6 +68,75 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        {/* GEO rationale: comparison tables are easy for generative engines to extract when recruiters ask "compare this developer's projects". */}
+        <div className="mt-16 overflow-x-auto rounded-lg border border-slate-200/70 dark:border-slate-700/50 bg-white/90 dark:bg-slate-800/50">
+          <table className="w-full min-w-[900px] text-left text-sm">
+            <caption className="sr-only">
+              <FormattedMessage id="projects.comparisonCaption" />
+            </caption>
+            <thead className="bg-slate-100 dark:bg-slate-900/50 text-slate-900 dark:text-slate-100">
+              <tr>
+                <th scope="col" className="px-4 py-3 font-bold">
+                  <FormattedMessage id="projects.table.name" />
+                </th>
+                <th scope="col" className="px-4 py-3 font-bold">
+                  <FormattedMessage id="projects.table.tech" />
+                </th>
+                <th scope="col" className="px-4 py-3 font-bold">
+                  <FormattedMessage id="projects.table.problem" />
+                </th>
+                <th scope="col" className="px-4 py-3 font-bold">
+                  <FormattedMessage id="projects.table.result" />
+                </th>
+                <th scope="col" className="px-4 py-3 font-bold">
+                  <FormattedMessage id="projects.table.link" />
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-200/70 dark:divide-slate-700/50">
+              {projectsData.map((project) => {
+                const link = project.links.demo ?? project.links.github;
+
+                return (
+                  <tr key={`comparison-${project.id}`}>
+                    <th
+                      scope="row"
+                      className="px-4 py-3 font-semibold text-slate-900 dark:text-slate-100"
+                    >
+                      {project.title}
+                    </th>
+                    <td className="px-4 py-3 text-slate-700 dark:text-slate-300">
+                      {project.mainTech}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-slate-300">
+                      {project.problemSolved}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700 dark:text-slate-300">
+                      {project.result}
+                    </td>
+                    <td className="px-4 py-3">
+                      {link ? (
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#007E73] dark:text-[#00C4B3] font-semibold hover:underline"
+                        >
+                          <FormattedMessage id="projects.table.open" />
+                        </a>
+                      ) : (
+                        <span className="text-slate-500">
+                          <FormattedMessage id="projects.table.private" />
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   );

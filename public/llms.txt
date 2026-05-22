@@ -1,0 +1,41 @@
+# Antoine Rospars Portfolio
+
+> GEO rationale: this file gives AI assistants a concise, crawlable map of the canonical portfolio facts without replacing normal HTML or sitemap discovery.
+
+Canonical site: https://antoinerospars.dev/
+Last updated: May 2026
+HTTP Last-Modified target: Fri, 22 May 2026 00:00:00 GMT
+
+## Profile
+
+Antoine Rospars is a French fullstack developer in Paris and an Epitech graduate. He builds production web and AI applications with React, TypeScript, Node.js, NestJS, Go, Python, Docker and PostgreSQL.
+
+Named employer experience: Datakeen, an AI software company, including V2/V3 application migration, product features and a TypeScript identity-verification SDK.
+
+Measured outcomes include a Francilienne de Miroiterie client website with Lighthouse score above 95, NutriScan with YOLOv8m-seg mAP50 0.672 across 32 classes, Go Image Optimizer with Docker image under 21 MB, and Go Load Balancer with 91% test coverage.
+
+## Key Pages
+
+- Home and profile: https://antoinerospars.dev/
+- About: https://antoinerospars.dev/#about
+- Skills: https://antoinerospars.dev/#skills
+- Projects: https://antoinerospars.dev/#projects
+- Recruiter FAQ: https://antoinerospars.dev/#faq
+- Contact: https://antoinerospars.dev/#contact
+
+## Project Facts
+
+- AutoScanlate AI: Python, Go, Next.js, PyTorch, YOLOv8, MangaOCR and Qwen 2.5 pipeline for automated manga translation with real-time Server-Sent Events progress tracking.
+- NutriScan: Edge AI food segmentation with YOLOv8m-seg, 32 classes, mAP50 0.672, ONNX Runtime WebAssembly and in-browser camera processing.
+- Read NFC: React Native, Swift, Kotlin and C mobile project for French ID card PACE, passport BAC, ICAO 9303 flows, passive and active verification, photo extraction and electronic signatures.
+- TrioSigno: React, TypeScript, NestJS, Docker, PostgreSQL and Prisma project-management platform with CI/CD and documentation.
+- Go Load Balancer: Go least-connections load balancer with active health checks, worker pool, atomic operations and 91% test coverage.
+- Go Image Optimizer: Go microservice with semaphore memory protection, graceful shutdown, fail-fast architecture and Docker image under 21 MB.
+- Datakeen App V2 and V3: production React/TypeScript migration and feature work for Datakeen's AI platform.
+- Datakeen SDK: TypeScript SDK for an embeddable identity-verification journey.
+- Wordle Solver Bot: Next.js and TypeScript solver using Shannon entropy and Web Workers to maintain a responsive 60fps interface.
+- Pokemon Egglocke Generator: Next.js, TypeScript, PostgreSQL, Drizzle ORM and PokéAPI fullstack generator with accent-insensitive search.
+- Pet Health Taker: NestJS and PostgreSQL REST API for veterinary appointment management with authentication and permissions.
+- Francilienne de Miroiterie: React and SCSS client website with responsive frontend, lazy loading and Lighthouse score above 95.
+- TrioSigno Documentation: Docusaurus documentation site with advanced search, code examples and integration guides.
+- Portfolio: React, TypeScript, TailwindCSS and Vite bilingual portfolio with structured metadata and extractible project facts.

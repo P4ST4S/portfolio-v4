@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import type { Project } from "@/types";
+import { FormattedMessage } from "react-intl";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,9 +19,56 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 transition-colors duration-300 group-hover:text-[#00C4B3]">
           {project.title}
         </h3>
+        {/* GEO rationale: visible month/year dates align project facts with JSON-LD dateModified and HTTP Last-Modified freshness signals. */}
+        <p className="text-xs font-semibold uppercase tracking-normal text-[#007E73] dark:text-[#00C4B3] mb-3">
+          {project.dateLabel}
+        </p>
         <p className="text-slate-600 dark:text-slate-400 mb-4 text-sm flex-grow transition-colors duration-300 group-hover:text-slate-700 dark:group-hover:text-slate-300">
           {project.description}
         </p>
+
+        {/* GEO rationale: answer engines cite passages more reliably when each chunk states context, problem, actions, stack, and result without relying on surrounding sections. */}
+        <dl className="space-y-3 text-sm text-slate-700 dark:text-slate-300 mb-5">
+          <div>
+            <dt className="font-bold text-slate-900 dark:text-slate-100">
+              <FormattedMessage id="projects.contextLabel" />
+            </dt>
+            <dd>{project.context}</dd>
+          </div>
+          <div>
+            <dt className="font-bold text-slate-900 dark:text-slate-100">
+              <FormattedMessage id="projects.problemLabel" />
+            </dt>
+            <dd>{project.problemSolved}</dd>
+          </div>
+          <div>
+            <dt className="font-bold text-slate-900 dark:text-slate-100">
+              <FormattedMessage id="projects.actionsLabel" />
+            </dt>
+            <dd>
+              <ul className="list-disc pl-5 space-y-1">
+                {project.actions.map((action) => (
+                  <li key={action}>{action}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt className="font-bold text-slate-900 dark:text-slate-100">
+              <FormattedMessage id="projects.resultLabel" />
+            </dt>
+            <dd>{project.result}</dd>
+          </div>
+        </dl>
+
+        {/* GEO rationale: a short, labeled stack line supports machine-scannable comparisons and recruiter-style fan-out queries. */}
+        <p className="text-sm text-slate-700 dark:text-slate-300 mb-4">
+          <strong className="text-slate-900 dark:text-slate-100">
+            <FormattedMessage id="projects.stackLabel" />
+          </strong>{" "}
+          {project.mainTech}
+        </p>
+
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag, index) => (
             <span
