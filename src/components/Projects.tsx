@@ -76,6 +76,7 @@ const Projects = () => {
             <button
               type="button"
               onClick={() => setViewMode("table")}
+              aria-pressed={viewMode === "table"}
               className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors ${
                 viewMode === "table"
                   ? "bg-[#007E73] text-white"
