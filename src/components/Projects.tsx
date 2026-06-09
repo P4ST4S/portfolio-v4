@@ -36,7 +36,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 md:py-32 bg-slate-50/80 dark:bg-[#1A1A1A]/70 relative overflow-hidden cv-auto"
+      className="py-20 md:py-32 bg-slate-50/80 dark:bg-[#1A1A1A]/70 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#007E73]/5 to-transparent"></div>
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white via-white/70 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/70"></div>
@@ -91,19 +91,20 @@ const Projects = () => {
         <motion.div
           initial={canAnimate ? "hidden" : false}
           whileInView={canAnimate ? "visible" : undefined}
-          viewport={{ once: true, amount: 0.12 }}
+          viewport={{ once: true, amount: 0.01 }}
           variants={gridVariants}
           className={`grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 ${
             viewMode === "cards" ? "" : "hidden"
           }`}
         >
           {projectsData.map((project) => (
-            <div
+            <motion.div
               key={project.id}
               className="h-full"
+              variants={cardVariants}
             >
-              <ProjectCard project={project} variants={cardVariants} />
-            </div>
+              <ProjectCard project={project} />
+            </motion.div>
           ))}
         </motion.div>
 
