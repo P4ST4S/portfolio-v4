@@ -64,6 +64,7 @@ const Projects = () => {
             <button
               type="button"
               onClick={() => setViewMode("cards")}
+              aria-pressed={viewMode === "cards"}
               className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors ${
                 viewMode === "cards"
                   ? "bg-[#007E73] text-white"
