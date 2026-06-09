@@ -130,7 +130,7 @@ export const en = {
   "skills.names.webSecurity": "Web Security",
 
   // Projects
-  "projects.readNfc.title": "Read NFC",
+  "projects.readNfc.title": "ID Scan",
   "projects.readNfc.description":
     "React Native application for reading NFC chips on French ID cards (PACE + ICAO 9303) and passports (BAC). Native bridges in Swift, Kotlin, and C for cryptographic operations. Passive and active verification, electronic signature and photo extraction.",
 

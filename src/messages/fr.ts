@@ -127,7 +127,7 @@ export const fr = {
   "projects.table.private": "Privé",
 
   // Project Details
-  "projects.readNfc.title": "Read NFC",
+  "projects.readNfc.title": "ID Scan",
   "projects.readNfc.description":
     "Application React Native de lecture des puces NFC des cartes d'identité françaises (PACE + ICAO 9303) et passeports (BAC). Bridges natifs en Swift, Kotlin et C pour les opérations cryptographiques. Vérification passive et active, extraction de la signature électronique et de la photo.",
 

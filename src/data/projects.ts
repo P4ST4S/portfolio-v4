@@ -179,7 +179,9 @@ export const useProjectsData = (): Project[] => {
         "Cryptography",
         "Mobile",
       ],
-      links: {},
+      links: {
+        demo: "https://apps.apple.com/fr/app/id-scan/id6762505375",
+      },
     },
     {
       id: 4,

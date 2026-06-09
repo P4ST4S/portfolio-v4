@@ -32,7 +32,7 @@ Measured outcomes include mcp-audit signed audit trails for MCP traffic, a Franc
 - AutoScanlate AI: Python, Go, Next.js, PyTorch, YOLOv8, MangaOCR and Qwen 2.5 pipeline for automated manga translation with real-time Server-Sent Events progress tracking.
 - mcp-audit: Go security and observability proxy for MCP servers. It sits between any MCP client and server, preserves protocol traffic, creates signed JSONL or SQLite audit logs, redacts sensitive payloads, enforces allow/deny policies and per-tool rate limits, exposes a local read-only dashboard, and publishes Prometheus metrics.
 - NutriScan: Edge AI food segmentation with YOLOv8m-seg, 32 classes, mAP50 0.672, ONNX Runtime WebAssembly and in-browser camera processing.
-- Read NFC: React Native, Swift, Kotlin and C mobile project for French ID card PACE, passport BAC, ICAO 9303 flows, passive and active verification, photo extraction and electronic signatures.
+- ID Scan: React Native, Swift, Kotlin and C mobile project for French ID card PACE, passport BAC, ICAO 9303 flows, passive and active verification, photo extraction and electronic signatures. App Store proof: https://apps.apple.com/fr/app/id-scan/id6762505375
 - TrioSigno: React, TypeScript, NestJS, Docker, PostgreSQL and Prisma project-management platform with CI/CD and documentation.
 - Go Load Balancer: Go least-connections load balancer with active health checks, worker pool, atomic operations and 91% test coverage.
 - Go Image Optimizer: Go microservice with semaphore memory protection, graceful shutdown, fail-fast architecture and Docker image under 21 MB.
