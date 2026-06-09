@@ -2,8 +2,6 @@ import { useSkillsData } from "@/data/skills";
 import { FormattedMessage, useIntl } from "react-intl";
 import SkillCategory from "./SkillCategory";
 import { FaBolt, FaCode, FaChartLine } from "react-icons/fa6";
-import { SiGo } from "react-icons/si";
-import { FaCloud } from "react-icons/fa";
 import { motion, useReducedMotion, type Variants } from "motion/react";
 
 const Skills = () => {
@@ -51,17 +49,6 @@ const Skills = () => {
       id: "scale",
       icon: <FaChartLine className="text-4xl text-[#007E73] dark:text-[#5EEAD4]" />,
       title: intl.formatMessage({ id: "skills.strengths.scale" }),
-    },
-  ];
-
-  const learning = [
-    {
-      name: intl.formatMessage({ id: "skills.learning.go" }),
-      icon: <SiGo className="text-2xl text-[#007E73] dark:text-[#5EEAD4]" />,
-    },
-    {
-      name: intl.formatMessage({ id: "skills.learning.iac" }),
-      icon: <FaCloud className="text-2xl text-[#007E73] dark:text-[#5EEAD4]" />,
     },
   ];
 
@@ -123,42 +110,6 @@ const Skills = () => {
             />
           ))}
         </div>
-
-        {/* Learning Section */}
-        <motion.div
-          initial={revealInitial}
-          whileInView={revealInView}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={revealTransition}
-          className="mt-20"
-        >
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 pl-3 border-l-4 border-[#007E73]">
-            <FormattedMessage id="skills.learning.title" />
-          </h3>
-          <motion.div
-            initial={canAnimate ? "hidden" : false}
-            whileInView={canAnimate ? "visible" : undefined}
-            viewport={{ once: true, amount: 0.25 }}
-            variants={gridVariants}
-            className="grid gap-4 md:grid-cols-2"
-          >
-            {learning.map((item) => (
-              <motion.div
-                key={item.name}
-                variants={cardVariants}
-                className="flex items-center gap-3 bg-white dark:bg-slate-800 px-6 py-4 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700"
-              >
-                <span>{item.icon}</span>
-                <span className="font-medium text-slate-900 dark:text-white">
-                  {item.name}
-                </span>
-                <span className="text-xs bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-100 px-2 py-1 rounded-full ml-auto">
-                  <FormattedMessage id="skills.learning" />
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

@@ -68,11 +68,11 @@ export const useSkillsData = (): SkillCategory[] => {
           icon: <FaGolang className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Advanced",
           years: isEnglish ? "6 months" : "6 mois",
-          projectCount: isEnglish ? "2 projects" : "2 projets",
+          projectCount: isEnglish ? "4 projects" : "4 projets",
           context: intl.formatMessage({ id: "skills.context.go" }),
           relatedProject: {
-            name: "Go Load Balancer",
-            link: "https://github.com/P4ST4S/go-load-balancer",
+            name: "mcp-audit",
+            link: "https://github.com/P4ST4S/mcp-audit",
           },
         },
         {

@@ -28,8 +28,8 @@ const DocumentMetadata = () => {
     const canonicalUrl = `${SITE_URL}${localePath}`;
     const title =
       locale === "en"
-        ? "Antoine ROSPARS - React/TypeScript Fullstack Developer in Paris"
-        : "Antoine ROSPARS - Développeur Fullstack React/TypeScript à Paris";
+        ? "Antoine ROSPARS - Software Engineer @ Datakeen | Go · TypeScript · MCP & Agentic Tooling"
+        : "Antoine ROSPARS - Software Engineer @ Datakeen | Go · TypeScript · MCP & Agentic Tooling";
     const description = intl.formatMessage({ id: "meta.description" });
 
     document.title = title;
@@ -39,8 +39,8 @@ const DocumentMetadata = () => {
     setMetaContent(
       'meta[name="keywords"]',
       locale === "en"
-        ? "Antoine ROSPARS, P4ST4S, P4ST4S GitHub, P4ST4S developer, fullstack developer, React developer, TypeScript developer, Epitech, Datakeen, Go developer, Node.js, NestJS, PostgreSQL"
-        : "Antoine ROSPARS, P4ST4S, GitHub P4ST4S, développeur P4ST4S, développeur fullstack, développeur React, développeur TypeScript, Epitech, Datakeen, Go, Node.js, NestJS, PostgreSQL",
+        ? "Antoine ROSPARS, P4ST4S, P4ST4S GitHub, P4ST4S developer, Software Engineer Datakeen, Go developer, TypeScript developer, MCP, Agentic Tooling, AI agents, audit log, React developer, Epitech"
+        : "Antoine ROSPARS, P4ST4S, GitHub P4ST4S, développeur P4ST4S, Software Engineer Datakeen, développeur Go, développeur TypeScript, MCP, Agentic Tooling, agents IA, audit log, développeur React, Epitech",
     );
     setMetaContent('meta[name="language"]', locale === "en" ? "English" : "French");
     setMetaContent('meta[property="og:url"]', canonicalUrl);

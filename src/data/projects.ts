@@ -4,7 +4,7 @@ import { useIntl } from "react-intl";
 export const useProjectsData = (): Project[] => {
   const intl = useIntl();
   const dateLabel = intl.formatMessage({ id: "projects.dateLabel" });
-  const modifiedDate = "2026-05-22";
+  const modifiedDate = "2026-06-07";
   const isFrench = intl.locale.startsWith("fr");
   const text = (fr: string, en: string) => (isFrench ? fr : en);
 
@@ -53,6 +53,49 @@ export const useProjectsData = (): Project[] => {
         "PostgreSQL",
       ],
       links: { github: "https://github.com/P4ST4S/AutoScanlate-AI" },
+    },
+    {
+      id: 15,
+      title: intl.formatMessage({ id: "projects.mcpAudit.title" }),
+      description: intl.formatMessage({
+        id: "projects.mcpAudit.description",
+      }),
+      modifiedDate,
+      dateLabel,
+      mainTech: "Go, MCP, JSON-RPC, SQLite, JSONL, Prometheus, Docker",
+      problemSolved: text(
+        "Auditer les appels d'outils MCP d'agents IA sans modifier le client ni le serveur MCP existants.",
+        "Auditing MCP tool calls made by AI agents without modifying the existing MCP client or server.",
+      ),
+      result: text(
+        "Proxy Go transparent avec journaux signés JSONL/SQLite, redaction de données sensibles, policies allow/deny, rate limits par outil, dashboard local et métriques Prometheus.",
+        "Transparent Go proxy with signed JSONL/SQLite logs, sensitive-data redaction, allow/deny policies, per-tool rate limits, a local dashboard and Prometheus metrics.",
+      ),
+      context: text(
+        "Projet open source P4ST4S orienté sécurité MCP, observabilité agentique et déploiement en sidecar pour environnements régulés.",
+        "P4ST4S open-source project focused on MCP security, agentic observability and sidecar deployment for regulated environments.",
+      ),
+      actions: [
+        text(
+          "Implémentation d'un proxy JSON-RPC compatible transports stdio et HTTP pour intercepter le trafic MCP.",
+          "Implemented a JSON-RPC proxy with stdio and HTTP transports to intercept MCP traffic.",
+        ),
+        text(
+          "Ajout de signatures HMAC, stockage JSONL/SQLite, redaction PII, politiques d'accès, rate limiting et dashboard read-only.",
+          "Added HMAC signatures, JSONL/SQLite storage, PII redaction, access policies, rate limiting and a read-only dashboard.",
+        ),
+      ],
+      tags: [
+        "Go",
+        "MCP",
+        "AI Agents",
+        "Security",
+        "Audit Logs",
+        "JSON-RPC",
+        "Prometheus",
+        "Docker",
+      ],
+      links: { github: "https://github.com/P4ST4S/mcp-audit" },
     },
     {
       id: 2,
@@ -269,18 +312,19 @@ export const useProjectsData = (): Project[] => {
       }),
       modifiedDate,
       dateLabel,
-      mainTech: "React, NestJS, Express, MongoDB, Prisma, GitLab CI",
+      mainTech:
+        "React, TypeScript, NestJS, MongoDB, Prisma, Flutter, Kotlin, Swift, NFC",
       problemSolved: text(
-        "Moderniser une plateforme IA Datakeen entre V2 et V3 sans interrompre la livraison produit.",
-        "Datakeen needed to modernize an AI platform across V2 and V3 without stopping product delivery.",
+        "Moderniser une plateforme IA Datakeen entre V2 et V3 et étendre les parcours d'identité mobile/NFC sans interrompre la livraison produit.",
+        "Datakeen needed to modernize an AI platform across V2 and V3 and extend mobile/NFC identity journeys without stopping product delivery.",
       ),
       result: text(
-        "Migration de production et livraison de fonctionnalités sur un vrai produit IA utilisé dans les workflows Datakeen.",
-        "Production migration and feature delivery on a real AI product used inside Datakeen workflows.",
+        "Migration de production, fonctionnalités produit, SDK Flutter et SDK natifs Kotlin/Swift pour lecture NFC de passeports BAC et documents d'identité PACE.",
+        "Production migration, product features, Flutter SDK and native Kotlin/Swift SDKs for NFC reading of BAC passports and PACE identity documents.",
       ),
       context: text(
-        "Expérience employeur nommée chez Datakeen, centrée sur du développement applicatif React/TypeScript en production.",
-        "Named employer experience at Datakeen, focused on production React/TypeScript application work.",
+        "Expérience employeur nommée chez Datakeen, centrée sur du développement applicatif React/TypeScript en production et des briques d'identité mobile.",
+        "Named employer experience at Datakeen, focused on production React/TypeScript application work and mobile identity building blocks.",
       ),
       actions: [
         text(
@@ -288,11 +332,20 @@ export const useProjectsData = (): Project[] => {
           "Refactored application architecture and migrated existing screens incrementally.",
         ),
         text(
-          "Livraison de nouvelles fonctionnalités plateforme tout en améliorant maintenabilité et performance.",
-          "Shipped new platform features while improving maintainability and performance.",
+          "Création d'un SDK Flutter et de SDK natifs Kotlin/Swift pour la lecture NFC de documents d'identité, passeport BAC et PACE.",
+          "Created a Flutter SDK and native Kotlin/Swift SDKs for NFC identity-document reading, passport BAC and PACE.",
         ),
       ],
-      tags: ["React", "NestJS", "Express", "MongoDB", "Prisma", "GitLab CI"],
+      tags: [
+        "React",
+        "TypeScript",
+        "NestJS",
+        "Flutter",
+        "Kotlin",
+        "Swift",
+        "NFC",
+        "PACE",
+      ],
       links: {},
     },
     {
@@ -388,18 +441,18 @@ export const useProjectsData = (): Project[] => {
       }),
       modifiedDate,
       dateLabel,
-      mainTech: "React, TypeScript, TailwindCSS, Rollup",
+      mainTech: "TypeScript, Flutter, Kotlin, Swift, NFC, Rollup",
       problemSolved: text(
-        "Permettre aux clients Datakeen d'intégrer un parcours de vérification d'identité sans développement spécifique.",
-        "Datakeen customers needed an embeddable identity-verification journey instead of custom integration work.",
+        "Permettre aux clients Datakeen d'intégrer des parcours de vérification d'identité web et mobile sans redévelopper les briques sensibles.",
+        "Datakeen customers needed web and mobile identity-verification journeys without rebuilding sensitive building blocks.",
       ),
       result: text(
-        "SDK réutilisable avec surface API documentée pour des flux complexes de vérification d'identité.",
-        "Reusable SDK with documented API surface for complex identity-verification flows.",
+        "SDK TypeScript, SDK Flutter et SDK natifs Kotlin/Swift couvrant intégration produit et lecture NFC de passeports BAC et documents PACE.",
+        "TypeScript SDK, Flutter SDK and native Kotlin/Swift SDKs covering product integration and NFC reading of BAC passports and PACE documents.",
       ),
       context: text(
-        "Expérience employeur nommée chez Datakeen, avec packaging de workflows produit pour intégration externe.",
-        "Named employer experience at Datakeen, packaging product workflows for external integration.",
+        "Expérience employeur nommée chez Datakeen, avec packaging de workflows produit et capacités NFC pour intégration externe.",
+        "Named employer experience at Datakeen, packaging product workflows and NFC capabilities for external integration.",
       ),
       actions: [
         text(
@@ -407,11 +460,11 @@ export const useProjectsData = (): Project[] => {
           "Designed the SDK API and build pipeline for reusable frontend integration.",
         ),
         text(
-          "Documentation des états complexes de vérification pour sécuriser l'implémentation par les intégrateurs.",
-          "Documented complex verification states so integrators could implement the journey safely.",
+          "Développement des couches Flutter, Kotlin et Swift pour exposer les flux NFC passeport BAC et document d'identité PACE.",
+          "Built Flutter, Kotlin and Swift layers exposing NFC passport BAC and PACE identity-document flows.",
         ),
       ],
-      tags: ["React", "TypeScript", "TailwindCSS", "Rollup"],
+      tags: ["TypeScript", "Flutter", "Kotlin", "Swift", "NFC", "PACE", "SDK"],
       links: {},
     },
     {

@@ -81,18 +81,15 @@ NSBezierPath(ovalIn: NSRect(x: 900, y: 430, width: 300, height: 300)).fill()
 color(0x0f172a, alpha: 0.06).setFill()
 NSBezierPath(ovalIn: NSRect(x: 870, y: 40, width: 360, height: 360)).fill()
 
-roundedRect(x: 84, y: 76, w: 132, h: 132, radius: 26, fill: color(0x0f172a))
-let mark = NSBezierPath()
-mark.move(to: NSPoint(x: 150, y: top(108, 0)))
-mark.line(to: NSPoint(x: 196, y: top(176, 0)))
-mark.line(to: NSPoint(x: 170, y: top(176, 0)))
-mark.line(to: NSPoint(x: 150, y: top(139, 0)))
-mark.line(to: NSPoint(x: 130, y: top(176, 0)))
-mark.line(to: NSPoint(x: 104, y: top(176, 0)))
-mark.close()
-color(0x2dd4bf).setFill()
-mark.fill()
-roundedRect(x: 166, y: 136, w: 34, h: 18, radius: 0, fill: color(0xf8fafc))
+guard let logo = NSImage(contentsOfFile: "public/logov2.png") else {
+  fatalError("Missing public/logov2.png")
+}
+logo.draw(
+  in: NSRect(x: 84, y: top(76, 132), width: 132, height: 132),
+  from: NSRect(origin: .zero, size: logo.size),
+  operation: .sourceOver,
+  fraction: 1
+)
 
 text(
   "Antoine ROSPARS",
@@ -105,7 +102,7 @@ text(
   fill: color(0x0f172a)
 )
 text(
-  "Fullstack React/TypeScript Developer",
+  "Software Engineer @ Datakeen",
   x: 84,
   y: 346,
   width: 980,
@@ -115,7 +112,7 @@ text(
   fill: color(0x0f766e)
 )
 text(
-  "Paris - Epitech - Datakeen - AI - Go - Node.js",
+  "Go - TypeScript - MCP & Agentic Tooling - P4ST4S",
   x: 84,
   y: 405,
   width: 980,
@@ -129,7 +126,7 @@ roundedRect(x: 84, y: 508, w: 282, h: 48, radius: 8, fill: color(0x0f172a))
 text("antoinerospars.dev", x: 106, y: 519, width: 238, height: 28, size: 22, weight: .bold, fill: color(0xf8fafc))
 
 roundedRect(x: 390, y: 508, w: 238, h: 48, radius: 8, fill: color(0xccfbf1))
-text("Lighthouse 95+", x: 414, y: 519, width: 190, height: 28, size: 22, weight: .bold, fill: color(0x0f766e))
+text("mcp-audit", x: 414, y: 519, width: 190, height: 28, size: 22, weight: .bold, fill: color(0x0f766e))
 
 roundedRect(x: 652, y: 508, w: 166, h: 48, radius: 8, fill: color(0xe0f2fe))
 text("91% tests", x: 676, y: 519, width: 118, height: 28, size: 22, weight: .bold, fill: color(0x0369a1))

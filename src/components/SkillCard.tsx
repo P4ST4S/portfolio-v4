@@ -32,8 +32,6 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, variants }) => {
         return intl.formatMessage({ id: "skills.advanced" });
       case "Intermediate":
         return intl.formatMessage({ id: "skills.intermediate" });
-      case "Learning":
-        return intl.formatMessage({ id: "skills.learning" });
       default:
         return level;
     }
