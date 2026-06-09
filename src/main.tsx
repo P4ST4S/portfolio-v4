@@ -30,6 +30,13 @@ createRoot(document.getElementById("root")!).render(
   </StrictMode>,
 );
 
+requestAnimationFrame(() => {
+  document.body.classList.add("app-ready");
+  window.setTimeout(() => {
+    document.getElementById("page-loader")?.remove();
+  }, 420);
+});
+
 if (import.meta.env.DEV) {
   const [{ reportWebVitals }, webVitals] = await Promise.all([
     import("./utils/performance"),
