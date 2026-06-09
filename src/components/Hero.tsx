@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaChevronDown } from "react-icons/fa6";
 import { FormattedMessage } from "react-intl";
+import Terminal from "@/components/Terminal";
 import {
   motion,
   useReducedMotion,
@@ -39,7 +40,7 @@ const Hero = () => {
     <motion.section
       ref={sectionRef}
       id="hero"
-      className="min-h-screen flex items-center justify-center text-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center py-24 text-center relative overflow-hidden"
     >
       <motion.div
         aria-hidden="true"
@@ -80,33 +81,6 @@ const Hero = () => {
           </p>
         </motion.div>
 
-        {/* GEO rationale: the key facts block makes the strongest facts extractible as a standalone passage. */}
-        <motion.aside
-          initial={canAnimate ? { opacity: 0, y: 20 } : false}
-          whileInView={canAnimate ? { opacity: 1, y: 0 } : undefined}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 0.64, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 max-w-3xl mx-auto text-left bg-white/95 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-lg p-6 shadow-sm"
-        >
-          <h2 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-3">
-            <FormattedMessage id="hero.keyFacts.title" />
-          </h2>
-          <ul className="grid gap-4 text-base leading-relaxed text-slate-700 dark:text-slate-300 md:grid-cols-2 md:gap-x-8">
-            <li>
-              <FormattedMessage id="hero.keyFacts.experience" />
-            </li>
-            <li>
-              <FormattedMessage id="hero.keyFacts.employer" />
-            </li>
-            <li>
-              <FormattedMessage id="hero.keyFacts.stack" />
-            </li>
-            <li>
-              <FormattedMessage id="hero.keyFacts.outcomes" />
-            </li>
-          </ul>
-        </motion.aside>
-
         <motion.div
           initial={canAnimate ? "hidden" : false}
           animate={canAnimate ? "visible" : undefined}
@@ -142,9 +116,18 @@ const Hero = () => {
             <FaLinkedin className="w-8 h-8" />
           </motion.a>
         </motion.div>
+
+        <motion.div
+          initial={canAnimate ? { opacity: 0, y: 18 } : false}
+          animate={canAnimate ? { opacity: 1, y: 0 } : undefined}
+          transition={{ duration: 0.72, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-12"
+        >
+          <Terminal />
+        </motion.div>
       </div>
 
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1500 translate-y-0 opacity-100">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1500 translate-y-0 opacity-100">
         <a
           href="#about"
           className="flex flex-col items-center text-slate-600 dark:text-slate-400 hover:text-[#007E73] dark:hover:text-[#5EEAD4] transition-colors duration-300 group"
