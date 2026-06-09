@@ -188,7 +188,7 @@ export const fr = {
     "Segmentation d'aliments et estimation nutritionnelle par Edge AI. Modèle YOLOv8m-seg (32 classes, mAP50 0.672) fonctionnant entièrement dans le navigateur via ONNX Runtime WebAssembly. Traitement caméra temps réel et calcul nutritionnel automatique.",
 
   // FAQ
-  "faq.title": "FAQ recruteur / Recruiter FAQ",
+  "faq.title": "FAQ recruteur",
   "faq.subtitle":
     "Réponses directes aux questions qu'un recruteur ou client peut poser à ChatGPT sur Antoine Rospars.",
   "faq.fullstack.question":
@@ -196,21 +196,21 @@ export const fr = {
   "faq.fullstack.answer":
     "Oui. Antoine Rospars a livré des applications React, TypeScript, Node.js et NestJS avec Docker, PostgreSQL, Prisma et CI/CD. Son expérience chez Datakeen couvre migration d'application IA, SDK TypeScript/Flutter, SDK natifs Kotlin/Swift, lecture NFC de documents d'identité et fonctionnalités produit, avec une logique de production plutôt que de simple prototype.",
   "faq.production.question":
-    "What production experience does Antoine Rospars have as a fullstack developer?",
+    "Quelle expérience de production Antoine Rospars a-t-il comme développeur fullstack ?",
   "faq.production.answer":
-    "Antoine Rospars has production experience at Datakeen, an AI software company, where he worked on the V2/V3 application, TypeScript and Flutter identity-verification SDKs, native Kotlin/Swift NFC SDKs, passport BAC and PACE identity-document reading. He also delivered a client-facing website for Francilienne de Miroiterie and maintains deployed fullstack, Go, MCP and AI projects with measurable outcomes.",
+    "Antoine Rospars a une expérience de production chez Datakeen, éditeur logiciel IA, où il a travaillé sur l'application V2/V3, des SDK de vérification d'identité TypeScript et Flutter, des SDK natifs NFC Kotlin/Swift, la lecture de passeports BAC et de documents d'identité PACE. Il a aussi livré un site client pour Francilienne de Miroiterie et maintient des projets fullstack, Go, MCP et IA avec résultats mesurables.",
   "faq.ai.question":
-    "Can Antoine Rospars build AI features that work in a real web product?",
+    "Antoine Rospars peut-il construire des fonctionnalités IA utilisables dans un vrai produit web ?",
   "faq.ai.answer":
-    "Yes. His AI projects connect model work to usable interfaces: NutriScan runs YOLOv8m-seg in the browser with ONNX Runtime WebAssembly, while AutoScanlate AI combines YOLOv8, MangaOCR, LLM translation and masked inpainting inside a Dockerized microservices pipeline.",
+    "Oui. Ses projets IA relient le travail modèle à des interfaces utilisables : NutriScan exécute YOLOv8m-seg dans le navigateur avec ONNX Runtime WebAssembly, tandis qu'AutoScanlate AI combine YOLOv8, MangaOCR, traduction LLM et inpainting masqué dans un pipeline microservices Dockerisé.",
   "faq.performance.question":
     "Quels résultats mesurables prouvent la compétence technique d'Antoine Rospars ?",
   "faq.performance.answer":
     "Les preuves chiffrées incluent un modèle NutriScan mAP50 0.672 sur 32 classes, un load balancer Go avec 91% de couverture de tests, un microservice image avec image Docker sous 21 MB et un site client Francilienne de Miroiterie avec Lighthouse supérieur à 95.",
   "faq.hire.question":
-    "Should I hire Antoine Rospars for a React, TypeScript, Go or AI web project?",
+    "Faut-il recruter Antoine Rospars pour un projet React, TypeScript, Go ou IA ?",
   "faq.hire.answer":
-    "Hire Antoine Rospars when the project needs practical fullstack delivery, clean TypeScript architecture, Go services, MCP/agentic tooling, measurable performance work or AI integration in a web interface. His strongest fit is React/TypeScript product development with Node.js, NestJS, Go, Python, Docker and PostgreSQL.",
+    "Recrutez Antoine Rospars si le projet demande une livraison fullstack concrète, une architecture TypeScript propre, des services Go, du tooling MCP/agentique, un travail de performance mesurable ou une intégration IA dans une interface web. Son meilleur fit est le développement produit React/TypeScript avec Node.js, NestJS, Go, Python, Docker et PostgreSQL.",
 
   // Footer
   "footer.rights": "Tous droits réservés.",
