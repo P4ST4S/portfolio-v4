@@ -1,41 +1,40 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useProjectsData } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import { FormattedMessage } from "react-intl";
+import { motion, useReducedMotion, type Variants } from "motion/react";
 
 const Projects = () => {
   const projectsData = useProjectsData();
-  const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const [viewMode, setViewMode] = useState<"cards" | "table">("cards");
-  const sectionRef = useRef<HTMLElement>(null);
+  const shouldReduceMotion = useReducedMotion();
+  const canAnimate = !shouldReduceMotion;
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            projectsData.forEach((_, index) => {
-              setTimeout(() => {
-                setVisibleCards((prev) => [...prev, index]);
-              }, index * 150);
-            });
-            observer.disconnect();
-          }
-        });
+  const revealInitial = canAnimate ? { opacity: 0, y: 24 } : false;
+  const revealInView = canAnimate ? { opacity: 1, y: 0 } : undefined;
+  const revealTransition = {
+    duration: 0.64,
+    ease: [0.22, 1, 0.36, 1] as const,
+  };
+  const gridVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.07,
       },
-      { threshold: 0.1 },
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [projectsData]);
+    },
+  };
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: revealTransition,
+    },
+  };
 
   return (
     <section
-      ref={sectionRef}
       id="projects"
       className="py-20 md:py-32 bg-slate-50/80 dark:bg-[#1A1A1A]/70 relative overflow-hidden cv-auto"
     >
@@ -44,7 +43,13 @@ const Projects = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/70 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/70"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={revealInitial}
+          whileInView={revealInView}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={revealTransition}
+          className="text-center mb-16"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 relative inline-block">
             <FormattedMessage id="projects.title" />
           </h2>
@@ -52,7 +57,7 @@ const Projects = () => {
           <p className="text-slate-700 dark:text-slate-300 mt-6 max-w-2xl mx-auto leading-relaxed">
             <FormattedMessage id="projects.subtitle" />
           </p>
-        </div>
+        </motion.div>
 
         <div className="mb-8 flex justify-center">
           <div className="inline-flex rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-1 shadow-sm">
@@ -81,28 +86,31 @@ const Projects = () => {
           </div>
         </div>
 
-        <div
+        <motion.div
+          initial={canAnimate ? "hidden" : false}
+          whileInView={canAnimate ? "visible" : undefined}
+          viewport={{ once: true, amount: 0.12 }}
+          variants={gridVariants}
           className={`grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 ${
             viewMode === "cards" ? "" : "hidden"
           }`}
         >
-          {projectsData.map((project, index) => (
+          {projectsData.map((project) => (
             <div
               key={project.id}
-              className={`h-full transform transition-all duration-700 ${
-                visibleCards.includes(index)
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              className="h-full"
             >
-              <ProjectCard project={project} />
+              <ProjectCard project={project} variants={cardVariants} />
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* GEO rationale: comparison tables are easy for generative engines to extract when recruiters ask "compare this developer's projects". */}
-        <div
+        <motion.div
+          initial={revealInitial}
+          whileInView={revealInView}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={revealTransition}
           className={`overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm ${
             viewMode === "table" ? "" : "hidden"
           }`}
@@ -172,7 +180,7 @@ const Projects = () => {
               })}
             </tbody>
           </table>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

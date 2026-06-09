@@ -2,15 +2,25 @@ import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import type { Project } from "@/types";
 import { FormattedMessage } from "react-intl";
+import { motion, type Variants } from "motion/react";
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({
+  project,
+  variants,
+}: {
+  project: Project;
+  variants?: Variants;
+}) => {
   const iconButtonClass =
     "inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 transition-all duration-200 hover:border-[#007E73] hover:text-[#007E73] dark:hover:border-[#5EEAD4] dark:hover:text-[#5EEAD4] hover:bg-[#007E73]/5";
   const disabledIconClass =
     "inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 text-slate-300 dark:text-slate-600";
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md h-full flex flex-col group relative border border-slate-200 dark:border-slate-700 hover:border-[#007E73]/40 dark:hover:border-[#5EEAD4]/40">
+    <motion.div
+      variants={variants}
+      className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md h-full flex flex-col group relative border border-slate-200 dark:border-slate-700 hover:border-[#007E73]/40 dark:hover:border-[#5EEAD4]/40 motion-safe:hover:-translate-y-1"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-[#007E73]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
       <div className="p-6 flex-grow relative z-10">
@@ -121,7 +131,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#007E73] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -3,17 +3,33 @@ import { FormattedMessage } from "react-intl";
 import { HiMenu, HiX } from "react-icons/hi";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { useReducedMotion } from "motion/react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+    const getScrolledState = () => {
+      const hero = document.getElementById("hero");
+      const heroThreshold = hero
+        ? hero.offsetTop + hero.offsetHeight * 0.75
+        : window.innerHeight * 0.75;
+
+      return window.scrollY >= heroThreshold;
     };
+
+    const handleScroll = () => setIsScrolled(getScrolledState());
+
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -45,10 +61,14 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 border-b ${
+          shouldReduceMotion
+            ? ""
+            : "transition-[background-color,border-color,box-shadow] duration-200 ease-out"
+        } ${
           isScrolled
-            ? "bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-lg shadow-lg"
-            : "bg-transparent"
+            ? "bg-white/90 dark:bg-[#1A1A1A]/90 border-slate-200/80 dark:border-slate-800 shadow-sm"
+            : "bg-transparent border-transparent shadow-none"
         }`}
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">

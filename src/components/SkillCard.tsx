@@ -1,12 +1,14 @@
 import React from "react";
 import type { Skill } from "@/types";
 import { useIntl } from "react-intl";
+import { motion, type Variants } from "motion/react";
 
 interface SkillCardProps {
   skill: Skill;
+  variants?: Variants;
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
+const SkillCard: React.FC<SkillCardProps> = ({ skill, variants }) => {
   const intl = useIntl();
 
   const getLevelColor = (level: string) => {
@@ -38,7 +40,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   };
 
   return (
-    <div className="group relative bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-[#007E73]/40 dark:hover:border-[#5EEAD4]/40 h-full flex flex-col">
+    <motion.div
+      variants={variants}
+      className="group relative bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-[#007E73]/40 dark:hover:border-[#5EEAD4]/40 h-full flex flex-col motion-safe:hover:-translate-y-1"
+    >
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
           <span
@@ -111,7 +116,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
           </a>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
