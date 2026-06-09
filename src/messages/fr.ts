@@ -104,7 +104,7 @@ export const fr = {
   "skills.names.webSecurity": "Sécurité Web",
 
   // Projects Section
-  "projects.title": "Projets Fullstack - Portfolio Antoine ROSPARS",
+  "projects.title": "Projets - Portfolio Antoine ROSPARS",
   "projects.subtitle":
     "Applications web, IA et outils agents développés avec Go, TypeScript, React, Node.js et MCP. Découvrez mes réalisations, architectures performantes, sécurité MCP et résultats mesurables.",
   "projects.dateLabel": "Dernière mise à jour : juin 2026",

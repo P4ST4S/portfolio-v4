@@ -88,7 +88,7 @@ export const en = {
   "skills.strengths.scale": "Scalability",
 
   // Projects Section
-  "projects.title": "Fullstack Projects - Antoine ROSPARS Portfolio",
+  "projects.title": "Projects - Antoine ROSPARS Portfolio",
   "projects.subtitle":
     "Web, AI and agentic tooling projects built with Go, TypeScript, React, Node.js and MCP. Discover performant architectures, MCP security work and measurable outcomes.",
   "projects.dateLabel": "Last updated: June 2026",
