@@ -54,7 +54,7 @@ const Header = () => {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <a
             href="#hero"
-            className="text-xl font-bold text-slate-900 dark:text-slate-100 hover:text-[#00C4B3] transition-colors"
+            className="text-xl font-bold text-slate-900 dark:text-slate-100 hover:text-[#007E73] dark:hover:text-[#5EEAD4] transition-colors"
           >
             <img
               src="/logov2.svg"
@@ -72,7 +72,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
+                className="text-slate-700 dark:text-slate-300 hover:text-[#007E73] dark:hover:text-[#5EEAD4] transition-colors duration-300"
               >
                 <FormattedMessage id={link.labelKey} />
               </a>
@@ -83,13 +83,13 @@ const Header = () => {
             <ThemeSwitcher />
             <a
               href="#contact"
-              className="hidden md:inline-block bg-[#00C4B3] text-slate-900 dark:text-[#1A1A1A] font-bold py-2 px-4 rounded-lg hover:bg-[#00C4B3] transition-all duration-300 transform hover:scale-105"
+              className="hidden md:inline-block bg-[#007E73] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#006A60] transition-all duration-300 transform hover:scale-105"
             >
               <FormattedMessage id="nav.contactMe" />
             </a>
             <button
               onClick={handleMobileMenuToggle}
-              className="md:hidden text-slate-700 dark:text-slate-300 hover:text-[#00C4B3] transition-colors duration-300"
+              className="md:hidden text-slate-700 dark:text-slate-300 hover:text-[#007E73] dark:hover:text-[#5EEAD4] transition-colors duration-300"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -109,7 +109,7 @@ const Header = () => {
                 key={link.href}
                 href={link.href}
                 onClick={handleLinkClick}
-                className="block text-slate-700 dark:text-slate-300 hover:text-[#00C4B3] transition-colors duration-300 py-2 border-b border-slate-200/60 dark:border-slate-700/20 last:border-b-0"
+                className="block text-slate-700 dark:text-slate-300 hover:text-[#007E73] dark:hover:text-[#5EEAD4] transition-colors duration-300 py-2 border-b border-slate-200/60 dark:border-slate-700/20 last:border-b-0"
               >
                 <FormattedMessage id={link.labelKey} />
               </a>
@@ -117,7 +117,7 @@ const Header = () => {
             <a
               href="#contact"
               onClick={handleLinkClick}
-              className="block bg-[#00C4B3] text-slate-900 dark:text-[#1A1A1A] font-bold py-3 px-4 rounded-lg hover:bg-[#00A699] transition-all duration-300 text-center mt-4"
+              className="block bg-[#007E73] text-white font-bold py-3 px-4 rounded-lg hover:bg-[#006A60] transition-all duration-300 text-center mt-4"
             >
               <FormattedMessage id="nav.contactMe" />
             </a>

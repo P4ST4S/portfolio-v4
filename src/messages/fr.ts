@@ -1,6 +1,6 @@
 export const fr = {
   "meta.description":
-    "Antoine Rospars, développeur fullstack React/TypeScript à Paris, diplômé Epitech. Production chez Datakeen, projets IA, Go, Node.js, NestJS, Docker, PostgreSQL et résultats mesurables.",
+    "Antoine Rospars, aussi connu sous le pseudo professionnel P4ST4S, développeur fullstack React/TypeScript à Paris, diplômé Epitech. Production chez Datakeen, projets IA, Go, Node.js, NestJS, Docker, PostgreSQL et résultats mesurables.",
 
   // Navigation
   "nav.about": "À propos",
@@ -17,7 +17,7 @@ export const fr = {
     "Développeur fullstack React/TypeScript à Paris, diplômé EPITECH",
   "hero.description":
     "Antoine Rospars développe des applications web et IA avec React, TypeScript, Node.js, NestJS, Go et Python. Il a livré des produits en production chez Datakeen, un site client Lighthouse 95+, un modèle Edge AI mAP50 0.672 et un load balancer Go testé à 91%.",
-  "hero.keyFacts.title": "À retenir / Key facts",
+  "hero.keyFacts.title": "À retenir",
   "hero.keyFacts.experience":
     "2 ans d'expérience professionnelle en développement fullstack moderne, avec production réelle chez Datakeen.",
   "hero.keyFacts.employer":
@@ -58,6 +58,9 @@ export const fr = {
   "skills.experienceDescription": "en développement web moderne",
   "skills.learningNote":
     "Toujours en apprentissage continu des dernières technologies",
+  "skills.card.experience": "Expérience",
+  "skills.card.projects": "Projets",
+  "skills.card.featuredIn": "Mis en avant dans :",
   "skills.proficiencyScale": "Échelle de Compétence :",
   "skills.expert": "Expert",
   "skills.advanced": "Avancé",
@@ -117,8 +120,11 @@ export const fr = {
   "projects.actionsLabel": "Actions concrètes",
   "projects.resultLabel": "Résultat mesurable",
   "projects.stackLabel": "Stack principale :",
+  "projects.detailsSummary": "Contexte et actions",
   "projects.comparisonCaption":
     "Comparaison des projets d'Antoine Rospars par technologie, problème résolu, résultat et lien.",
+  "projects.view.cards": "Cartes",
+  "projects.view.table": "Tableau",
   "projects.table.name": "Nom",
   "projects.table.tech": "Tech principale",
   "projects.table.problem": "Problème résolu",

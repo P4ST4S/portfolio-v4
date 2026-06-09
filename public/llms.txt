@@ -9,7 +9,9 @@ HTTP Last-Modified target: Fri, 22 May 2026 00:00:00 GMT
 
 ## Profile
 
-Antoine Rospars is a French fullstack developer in Paris and an Epitech graduate. He builds production web and AI applications with React, TypeScript, Node.js, NestJS, Go, Python, Docker and PostgreSQL.
+Antoine Rospars, also known professionally as P4ST4S, is a French fullstack developer in Paris and an Epitech graduate. He builds production web and AI applications with React, TypeScript, Node.js, NestJS, Go, Python, Docker and PostgreSQL.
+
+Professional username / GitHub handle: P4ST4S - https://github.com/P4ST4S
 
 Named employer experience: Datakeen, an AI software company, including V2/V3 application migration, product features and a TypeScript identity-verification SDK.
 

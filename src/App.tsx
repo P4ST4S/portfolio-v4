@@ -23,7 +23,7 @@ export default function App() {
         <Suspense
           fallback={
             <div className="py-20 flex justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
             </div>
           }
         >
@@ -32,7 +32,7 @@ export default function App() {
         <Suspense
           fallback={
             <div className="py-20 flex justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
             </div>
           }
         >
@@ -41,7 +41,7 @@ export default function App() {
         <Suspense
           fallback={
             <div className="py-20 flex justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
             </div>
           }
         >
@@ -50,7 +50,7 @@ export default function App() {
         <Suspense
           fallback={
             <div className="py-20 flex justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
             </div>
           }
         >
@@ -59,7 +59,7 @@ export default function App() {
         <Suspense
           fallback={
             <div className="py-20 flex justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
             </div>
           }
         >
@@ -68,7 +68,7 @@ export default function App() {
         {/* <Suspense
           fallback={
             <div className="py-20 flex justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
             </div>
           }
         >
@@ -77,7 +77,7 @@ export default function App() {
         <Suspense
           fallback={
             <div className="py-20 flex justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
             </div>
           }
         >
@@ -87,7 +87,7 @@ export default function App() {
       <Suspense
         fallback={
           <div className="py-10 flex justify-center">
-            <div className="animate-spin w-6 h-6 border-2 border-[#00C4B3] border-t-transparent rounded-full"></div>
+            <div className="animate-spin w-6 h-6 border-2 border-[#007E73] border-t-transparent rounded-full"></div>
           </div>
         }
       >

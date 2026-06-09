@@ -36,6 +36,12 @@ const DocumentMetadata = () => {
     document.documentElement.lang = locale;
 
     setMetaContent('meta[name="description"]', description);
+    setMetaContent(
+      'meta[name="keywords"]',
+      locale === "en"
+        ? "Antoine ROSPARS, P4ST4S, P4ST4S GitHub, P4ST4S developer, fullstack developer, React developer, TypeScript developer, Epitech, Datakeen, Go developer, Node.js, NestJS, PostgreSQL"
+        : "Antoine ROSPARS, P4ST4S, GitHub P4ST4S, développeur P4ST4S, développeur fullstack, développeur React, développeur TypeScript, Epitech, Datakeen, Go, Node.js, NestJS, PostgreSQL",
+    );
     setMetaContent('meta[name="language"]', locale === "en" ? "English" : "French");
     setMetaContent('meta[property="og:url"]', canonicalUrl);
     setMetaContent('meta[property="og:title"]', title);

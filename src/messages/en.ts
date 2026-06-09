@@ -1,6 +1,6 @@
 export const en = {
   "meta.description":
-    "Antoine Rospars is a React/TypeScript fullstack developer in Paris and Epitech graduate with production experience at Datakeen, AI projects, Go, Node.js, NestJS, Docker and PostgreSQL.",
+    "Antoine Rospars, also known professionally as P4ST4S, is a React/TypeScript fullstack developer in Paris and Epitech graduate with production experience at Datakeen, AI projects, Go, Node.js, NestJS, Docker and PostgreSQL.",
 
   // Navigation
   "nav.about": "About",
@@ -16,7 +16,7 @@ export const en = {
   "hero.title": "React/TypeScript fullstack developer in Paris, Epitech graduate",
   "hero.description":
     "Antoine Rospars builds web and AI applications with React, TypeScript, Node.js, NestJS, Go and Python. He has shipped production work at Datakeen, a Lighthouse 95+ client website, an Edge AI model at mAP50 0.672 and a Go load balancer tested at 91% coverage.",
-  "hero.keyFacts.title": "À retenir / Key facts",
+  "hero.keyFacts.title": "Key facts",
   "hero.keyFacts.experience":
     "2 years of professional fullstack development experience, including real production work at Datakeen.",
   "hero.keyFacts.employer":
@@ -58,6 +58,9 @@ export const en = {
   "skills.experienceDescription": "in modern web development",
   "skills.learningNote":
     "Always in continuous learning of the latest technologies",
+  "skills.card.experience": "Experience",
+  "skills.card.projects": "Projects",
+  "skills.card.featuredIn": "Featured in:",
   "skills.proficiencyScale": "Proficiency Scale:",
   "skills.expert": "Expert",
   "skills.advanced": "Advanced",
@@ -100,8 +103,11 @@ export const en = {
   "projects.actionsLabel": "Concrete actions",
   "projects.resultLabel": "Measurable result",
   "projects.stackLabel": "Main stack:",
+  "projects.detailsSummary": "Context and actions",
   "projects.comparisonCaption":
     "Comparison of Antoine Rospars' projects by technology, problem solved, result and link.",
+  "projects.view.cards": "Cards",
+  "projects.view.table": "Table",
   "projects.table.name": "Name",
   "projects.table.tech": "Main tech",
   "projects.table.problem": "Problem solved",

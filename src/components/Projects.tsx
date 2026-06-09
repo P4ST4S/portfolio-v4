@@ -6,6 +6,7 @@ import { FormattedMessage } from "react-intl";
 const Projects = () => {
   const projectsData = useProjectsData();
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const [viewMode, setViewMode] = useState<"cards" | "table">("cards");
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const Projects = () => {
       id="projects"
       className="py-20 md:py-32 bg-slate-50/80 dark:bg-[#1A1A1A]/70 relative overflow-hidden cv-auto"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#00C4B3]/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#007E73]/5 to-transparent"></div>
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white via-white/70 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/70"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/70 to-transparent dark:from-[#1A1A1A] dark:via-[#1A1A1A]/70"></div>
 
@@ -46,18 +47,49 @@ const Projects = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 relative inline-block">
             <FormattedMessage id="projects.title" />
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 mt-6 max-w-2xl mx-auto">
+          <div className="mx-auto h-1 w-24 rounded-full bg-[#007E73]"></div>
+          <p className="text-slate-700 dark:text-slate-300 mt-6 max-w-2xl mx-auto leading-relaxed">
             <FormattedMessage id="projects.subtitle" />
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mb-8 flex justify-center">
+          <div className="inline-flex rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 p-1 shadow-sm">
+            <button
+              type="button"
+              onClick={() => setViewMode("cards")}
+              className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors ${
+                viewMode === "cards"
+                  ? "bg-[#007E73] text-white"
+                  : "text-slate-700 hover:text-[#007E73] dark:text-slate-300 dark:hover:text-[#5EEAD4]"
+              }`}
+            >
+              <FormattedMessage id="projects.view.cards" />
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewMode("table")}
+              className={`rounded-md px-4 py-2 text-sm font-semibold transition-colors ${
+                viewMode === "table"
+                  ? "bg-[#007E73] text-white"
+                  : "text-slate-700 hover:text-[#007E73] dark:text-slate-300 dark:hover:text-[#5EEAD4]"
+              }`}
+            >
+              <FormattedMessage id="projects.view.table" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 ${
+            viewMode === "cards" ? "" : "hidden"
+          }`}
+        >
           {projectsData.map((project, index) => (
             <div
               key={project.id}
-              className={`transform transition-all duration-700 ${
+              className={`h-full transform transition-all duration-700 ${
                 visibleCards.includes(index)
                   ? "translate-y-0 opacity-100"
                   : "translate-y-12 opacity-0"
@@ -70,7 +102,11 @@ const Projects = () => {
         </div>
 
         {/* GEO rationale: comparison tables are easy for generative engines to extract when recruiters ask "compare this developer's projects". */}
-        <div className="mt-16 overflow-x-auto rounded-lg border border-slate-200/70 dark:border-slate-700/50 bg-white/90 dark:bg-slate-800/50">
+        <div
+          className={`overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm ${
+            viewMode === "table" ? "" : "hidden"
+          }`}
+        >
           <table className="w-full min-w-[900px] text-left text-sm">
             <caption className="sr-only">
               <FormattedMessage id="projects.comparisonCaption" />
@@ -121,7 +157,7 @@ const Projects = () => {
                           href={link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#007E73] dark:text-[#00C4B3] font-semibold hover:underline"
+                          className="text-[#007E73] dark:text-[#5EEAD4] font-semibold hover:underline"
                         >
                           <FormattedMessage id="projects.table.open" />
                         </a>
