@@ -27,9 +27,7 @@ const DocumentMetadata = () => {
     const localePath = `/${locale}/`;
     const canonicalUrl = `${SITE_URL}${localePath}`;
     const title =
-      locale === "en"
-        ? "Antoine ROSPARS - Software Engineer @ Datakeen | Go · TypeScript · MCP & Agentic Tooling"
-        : "Antoine ROSPARS - Software Engineer @ Datakeen | Go · TypeScript · MCP & Agentic Tooling";
+      "Antoine ROSPARS - Software Engineer @ Datakeen | Go · TypeScript · MCP & Agentic Tooling";
     const description = intl.formatMessage({ id: "meta.description" });
 
     document.title = title;
