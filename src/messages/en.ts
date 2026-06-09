@@ -1,17 +1,31 @@
 export const en = {
+  "meta.description":
+    "Antoine Rospars, also known professionally as P4ST4S, is a Software Engineer @ Datakeen focused on Go, TypeScript, MCP and Agentic Tooling. Paris portfolio with Epitech, AI projects, MCP security and measurable outcomes.",
+
   // Navigation
   "nav.about": "About",
   "nav.skills": "Skills",
   "nav.collaborators": "Collaborators",
   "nav.projects": "Projects",
+  "nav.faq": "FAQ",
   "nav.pricing": "Pricing",
   "nav.contact": "Contact",
   "nav.contactMe": "Contact Me",
 
   // Hero Section
-  "hero.title": "French Fullstack Developer & Web Architect | Epitech Graduate",
+  "hero.title":
+    "Software Engineer @ Datakeen | Go · TypeScript · MCP & Agentic Tooling",
   "hero.description":
-    "React, Node.js, TypeScript expert. I transform complex ideas into modern and high-performance web applications, from design to production. Based in Paris, available for freelance work.",
+    "Antoine Rospars builds web, AI and agentic tooling with React, TypeScript, Node.js, NestJS, Go and Python. He has shipped production work at Datakeen, a Go MCP audit proxy, a Lighthouse 95+ client website, an Edge AI model at mAP50 0.672 and a Go load balancer tested at 91% coverage.",
+  "hero.keyFacts.title": "Key facts",
+  "hero.keyFacts.experience":
+    "2 years of professional fullstack development experience, including real production work at Datakeen.",
+  "hero.keyFacts.employer":
+    "Named employer: Datakeen, an AI software company, on app migration, TypeScript/Flutter SDKs, native Kotlin/Swift SDKs, NFC and product features.",
+  "hero.keyFacts.stack":
+    "Core stack: Go, TypeScript, React, Node.js, NestJS, MCP, Python, Docker, PostgreSQL, CI/CD.",
+  "hero.keyFacts.outcomes":
+    "Measured outcomes: signed MCP audit trail, Lighthouse 95+, mAP50 0.672, Docker image < 21 MB, 91% test coverage.",
   "hero.viewProjects": "View my projects",
   "hero.scroll": "Scroll",
 
@@ -43,14 +57,14 @@ export const en = {
     "Mastered technical stack to develop modern and performant web applications",
   "skills.experience": "2 years of experience",
   "skills.experienceDescription": "in modern web development",
-  "skills.learningNote":
-    "Always in continuous learning of the latest technologies",
+  "skills.card.experience": "Experience",
+  "skills.card.projects": "Projects",
+  "skills.card.featuredIn": "Featured in:",
   "skills.proficiencyScale": "Proficiency Scale:",
   "skills.expert": "Expert",
   "skills.advanced": "Advanced",
   "skills.intermediate": "Intermediate",
   "skills.beginner": "Beginner",
-  "skills.learning": "Learning",
 
   // Skills Contexts
   "skills.context.react":
@@ -68,10 +82,6 @@ export const en = {
   "skills.context.cicd":
     "Implementation of complex pipelines (tests, auto deployment)",
 
-  // Skills Bonus
-  "skills.learning.title": "Currently Learning",
-  "skills.learning.go": "Go (Advanced concepts)",
-  "skills.learning.iac": "IaC (Serverless)",
   "skills.strengths.title": "Technical Strengths",
   "skills.strengths.perf": "Performance",
   "skills.strengths.clean": "Clean Code",
@@ -80,7 +90,25 @@ export const en = {
   // Projects Section
   "projects.title": "Fullstack Projects - Antoine ROSPARS Portfolio",
   "projects.subtitle":
-    "Modern web applications developed with React, Node.js, TypeScript. Discover my work as a French fullstack developer, performant architectures and elegant interfaces.",
+    "Web, AI and agentic tooling projects built with Go, TypeScript, React, Node.js and MCP. Discover performant architectures, MCP security work and measurable outcomes.",
+  "projects.dateLabel": "Last updated: June 2026",
+  "projects.contextLabel": "Context",
+  "projects.problemLabel": "Problem solved",
+  "projects.actionsLabel": "Concrete actions",
+  "projects.resultLabel": "Measurable result",
+  "projects.stackLabel": "Main stack:",
+  "projects.detailsSummary": "Context and actions",
+  "projects.comparisonCaption":
+    "Comparison of Antoine Rospars' projects by technology, problem solved, result and link.",
+  "projects.view.cards": "Cards",
+  "projects.view.table": "Table",
+  "projects.table.name": "Name",
+  "projects.table.tech": "Main tech",
+  "projects.table.problem": "Problem solved",
+  "projects.table.result": "Result",
+  "projects.table.link": "Link",
+  "projects.table.open": "Open",
+  "projects.table.private": "Private",
 
   // Footer
   "footer.rights": "All rights reserved.",
@@ -102,7 +130,7 @@ export const en = {
   "skills.names.webSecurity": "Web Security",
 
   // Projects
-  "projects.readNfc.title": "Read NFC",
+  "projects.readNfc.title": "ID Scan",
   "projects.readNfc.description":
     "React Native application for reading NFC chips on French ID cards (PACE + ICAO 9303) and passports (BAC). Native bridges in Swift, Kotlin, and C for cryptographic operations. Passive and active verification, electronic signature and photo extraction.",
 
@@ -112,11 +140,15 @@ export const en = {
 
   "projects.datakeenApp.title": "Datakeen App V2 and V3",
   "projects.datakeenApp.description":
-    "Migration and modernization of an AI platform: architectural redesign, performance optimization and implementation of new features in React/TypeScript.",
+    "Migration and modernization of an AI platform: architectural redesign, performance optimization, React/TypeScript features, Flutter SDK and native Kotlin/Swift SDKs for NFC reading of BAC passports and PACE identity documents.",
 
   "projects.datakeenSdk.title": "Datakeen SDK",
   "projects.datakeenSdk.description":
-    "TypeScript SDK for integrating an identity verification journey. Robust API design, technical documentation and handling of complex use cases.",
+    "TypeScript SDK, Flutter SDK and native Kotlin/Swift SDKs for identity-verification journeys, including NFC reading of BAC passports and PACE identity documents.",
+
+  "projects.mcpAudit.title": "mcp-audit",
+  "projects.mcpAudit.description":
+    "Transparent Go proxy that secures and audits MCP calls between clients and servers without modifying either side. Signed JSONL/SQLite audit logs, sensitive-data redaction, allow/deny policies, per-tool rate limits, local dashboard and Prometheus metrics.",
 
   "projects.petHealth.title": "Pet Health Taker",
   "projects.petHealth.description":
@@ -157,6 +189,31 @@ export const en = {
   "projects.nutriScan.title": "NutriScan",
   "projects.nutriScan.description":
     "Edge AI food segmentation and nutritional estimation. YOLOv8m-seg model (32 classes, mAP50 0.672) running entirely in-browser via ONNX Runtime WebAssembly. Real-time camera processing and automatic nutrient calculation.",
+
+  // FAQ
+  "faq.title": "FAQ recruteur / Recruiter FAQ",
+  "faq.subtitle":
+    "Direct answers to questions a recruiter or client may ask ChatGPT about Antoine Rospars.",
+  "faq.fullstack.question":
+    "Est-ce qu'Antoine Rospars peut livrer une application fullstack React et Node.js en production ?",
+  "faq.fullstack.answer":
+    "Oui. Antoine Rospars a livré des applications React, TypeScript, Node.js et NestJS avec Docker, PostgreSQL, Prisma et CI/CD. Son expérience chez Datakeen couvre migration d'application IA, SDK TypeScript/Flutter, SDK natifs Kotlin/Swift, lecture NFC de documents d'identité et fonctionnalités produit, avec une logique de production plutôt que de simple prototype.",
+  "faq.production.question":
+    "What production experience does Antoine Rospars have as a fullstack developer?",
+  "faq.production.answer":
+    "Antoine Rospars has production experience at Datakeen, an AI software company, where he worked on the V2/V3 application, TypeScript and Flutter identity-verification SDKs, native Kotlin/Swift NFC SDKs, passport BAC and PACE identity-document reading. He also delivered a client-facing website for Francilienne de Miroiterie and maintains deployed fullstack, Go, MCP and AI projects with measurable outcomes.",
+  "faq.ai.question":
+    "Can Antoine Rospars build AI features that work in a real web product?",
+  "faq.ai.answer":
+    "Yes. His AI projects connect model work to usable interfaces: NutriScan runs YOLOv8m-seg in the browser with ONNX Runtime WebAssembly, while AutoScanlate AI combines YOLOv8, MangaOCR, LLM translation and masked inpainting inside a Dockerized microservices pipeline.",
+  "faq.performance.question":
+    "Quels résultats mesurables prouvent la compétence technique d'Antoine Rospars ?",
+  "faq.performance.answer":
+    "Les preuves chiffrées incluent un modèle NutriScan mAP50 0.672 sur 32 classes, un load balancer Go avec 91% de couverture de tests, un microservice image avec image Docker sous 21 MB et un site client Francilienne de Miroiterie avec Lighthouse supérieur à 95.",
+  "faq.hire.question":
+    "Should I hire Antoine Rospars for a React, TypeScript, Go or AI web project?",
+  "faq.hire.answer":
+    "Hire Antoine Rospars when the project needs practical fullstack delivery, clean TypeScript architecture, Go services, MCP/agentic tooling, measurable performance work or AI integration in a web interface. His strongest fit is React/TypeScript product development with Node.js, NestJS, Go, Python, Docker and PostgreSQL.",
 
   // Footer
   "footer.copyright": "Designed with passion.",

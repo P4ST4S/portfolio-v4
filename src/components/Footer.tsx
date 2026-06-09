@@ -9,7 +9,7 @@ const Footer = () => (
           href="https://github.com/P4ST4S"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-[#00C4B3] transition-colors"
+          className="hover:text-[#007E73] dark:hover:text-[#5EEAD4] transition-colors"
           aria-label="GitHub profile"
         >
           <FaGithub className="w-6 h-6" />
@@ -18,7 +18,7 @@ const Footer = () => (
           href="https://www.linkedin.com/in/antoinerospars/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-[#00C4B3] transition-colors"
+          className="hover:text-[#007E73] dark:hover:text-[#5EEAD4] transition-colors"
           aria-label="LinkedIn profile"
         >
           <FaLinkedin className="w-6 h-6" />

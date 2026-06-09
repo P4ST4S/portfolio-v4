@@ -53,14 +53,14 @@ const Collaborators = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 relative inline-block">
             <FormattedMessage id="collaborators.title" />
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mt-6">
+          <div className="mx-auto h-1 w-24 rounded-full bg-[#007E73]"></div>
+          <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto mt-6">
             <FormattedMessage id="collaborators.subtitle" />
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
           {collaboratorsData.map((collaborator: Collaborator, index) => (
             <div
               key={collaborator.id}
@@ -72,11 +72,11 @@ const Collaborators = () => {
                   : "translate-y-12 opacity-0"
               }`}
             >
-              <div className="bg-white/90 dark:bg-slate-800/50 rounded-xl p-6 shadow-lg backdrop-blur-sm border border-slate-200/70 dark:border-slate-700/50 hover:border-[#00C4B3]/30 transition-all duration-500 h-full group hover:shadow-[0_0_30px_rgba(0,196,179,0.15)] hover:-translate-y-2">
+              <div className="bg-white dark:bg-slate-800/50 rounded-lg p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:border-[#007E73]/40 dark:hover:border-[#5EEAD4]/40 transition-all duration-300 h-full group hover:shadow-md">
                 {/* Avatar */}
                 <div className="flex justify-center mb-6">
                   <div className="relative">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#00C4B3] to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-all duration-300">
+                    <div className="w-20 h-20 bg-[#007E73] rounded-full flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-all duration-300">
                       {collaborator.avatar ? (
                         <img
                           src={collaborator.avatar}
@@ -91,16 +91,16 @@ const Collaborators = () => {
                         getInitials(collaborator.name)
                       )}
                     </div>
-                    <div className="absolute -inset-1 bg-gradient-to-r from-[#00C4B3] to-cyan-400 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse"></div>
+                    <div className="absolute -inset-1 bg-[#007E73] rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                   </div>
                 </div>
 
                 {/* Name and Role */}
                 <div className="text-center mb-4">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-[#00C4B3] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1 group-hover:text-[#007E73] dark:group-hover:text-[#5EEAD4] transition-colors duration-300">
                     {collaborator.name}
                   </h3>
-                  <p className="text-[#00C4B3] font-medium text-sm">
+                  <p className="text-[#007E73] dark:text-[#5EEAD4] font-medium text-sm">
                     {collaborator.role}
                   </p>
                   {collaborator.company && (
@@ -111,7 +111,7 @@ const Collaborators = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-600 dark:text-slate-400 text-sm text-center mb-6 leading-relaxed">
+                <p className="text-slate-700 dark:text-slate-300 text-sm text-center mb-6 leading-relaxed">
                   {collaborator.description}
                 </p>
 
@@ -123,7 +123,7 @@ const Collaborators = () => {
                       .map((speciality, specIndex) => (
                         <span
                           key={specIndex}
-                          className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-full border border-slate-200/70 dark:border-slate-600/50 group-hover:border-[#00C4B3]/30 transition-all duration-300"
+                          className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-full border border-slate-200 dark:border-slate-600 group-hover:border-[#007E73]/40 dark:group-hover:border-[#5EEAD4]/40 transition-all duration-300"
                         >
                           {speciality}
                         </span>
@@ -164,7 +164,7 @@ const Collaborators = () => {
                       href={collaborator.links.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-purple-500 hover:text-white transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#007E73] hover:text-white transition-all duration-300 hover:scale-105"
                       title="Portfolio"
                       aria-label={`Portfolio de ${collaborator.name}`}
                     >
@@ -175,7 +175,7 @@ const Collaborators = () => {
                   {collaborator.links.email && (
                     <a
                       href={`mailto:${collaborator.links.email}`}
-                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-red-500 hover:text-white transition-all duration-300 hover:scale-110"
+                      className="w-10 h-10 bg-slate-100 dark:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-[#007E73] hover:text-white transition-all duration-300 hover:scale-105"
                       title="Email"
                       aria-label={`Envoyer un email a ${collaborator.name}`}
                     >
@@ -185,7 +185,7 @@ const Collaborators = () => {
                 </div>
 
                 {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00C4B3]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#007E73]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               </div>
             </div>
           ))}
@@ -197,12 +197,14 @@ const Collaborators = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <p className="text-slate-600 dark:text-slate-400 text-lg mb-6">
+          <p className="text-slate-700 dark:text-slate-300 text-lg mb-6">
             <FormattedMessage
               id="collaborators.lookingContact"
               values={{
                 strong: (chunks: ReactNode) => (
-                  <strong className="text-[#00C4B3]">{chunks}</strong>
+                  <strong className="font-semibold text-slate-900 dark:text-slate-100">
+                    {chunks}
+                  </strong>
                 ),
               }}
             />
@@ -210,7 +212,7 @@ const Collaborators = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#00C4B3] to-cyan-400 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-[#00C4B3]/25 transition-all duration-300 hover:-translate-y-1"
+              className="inline-flex items-center px-6 py-3 bg-[#007E73] text-white font-medium rounded-lg hover:bg-[#006A60] hover:shadow-md transition-all duration-300"
             >
               <FormattedMessage id="collaborators.workTogether" />
             </a>

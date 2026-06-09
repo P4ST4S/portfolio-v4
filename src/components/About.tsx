@@ -1,56 +1,49 @@
-import { useEffect, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import type { ReactNode } from "react";
+import { motion, useReducedMotion } from "motion/react";
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.3 },
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const shouldReduceMotion = useReducedMotion();
+  const canAnimate = !shouldReduceMotion;
+  const revealInitial = canAnimate ? { opacity: 0, y: 20 } : false;
+  const revealInView = canAnimate ? { opacity: 1, y: 0 } : undefined;
+  const revealTransition = {
+    duration: 0.64,
+    ease: [0.22, 1, 0.36, 1] as const,
+  };
 
   return (
     <section
-      ref={sectionRef}
       id="about"
-      className="py-20 md:py-32 relative overflow-hidden cv-auto"
+      className="py-20 md:py-32 relative overflow-hidden bg-white dark:bg-[#1A1A1A] cv-auto"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-slate-200/60 to-transparent dark:via-slate-800/10"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div
-          className={`text-center mb-16 transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+        <motion.div
+          initial={revealInitial}
+          whileInView={revealInView}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={revealTransition}
+          className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4 relative inline-block">
             <FormattedMessage id="about.title" />
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[#00C4B3] to-transparent"></div>
           </h2>
-          <h3 className="text-lg text-slate-600 dark:text-slate-400 mt-4">
+          <div className="mx-auto h-1 w-24 rounded-full bg-[#007E73]"></div>
+          <h3 className="text-lg text-slate-700 dark:text-slate-300 mt-4">
             <FormattedMessage id="about.subtitle" />
           </h3>
-        </div>
+        </motion.div>
 
-        <div
-          className={`max-w-3xl mx-auto bg-white/80 dark:bg-slate-800/50 rounded-lg p-8 shadow-lg backdrop-blur-sm border border-slate-200/60 dark:border-slate-700/50 hover:border-[#00C4B3]/30 transition-all duration-500 transform ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"} hover:shadow-2xl hover:shadow-[#00C4B3]/10`}
+        <motion.div
+          initial={revealInitial}
+          whileInView={revealInView}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ ...revealTransition, delay: 0.08 }}
+          className="max-w-3xl mx-auto bg-white dark:bg-slate-800/50 rounded-lg p-8 shadow-sm border border-slate-200 dark:border-slate-700 hover:border-[#007E73]/30 transition-all duration-300 hover:shadow-md"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#00C4B3]/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#007E73]/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
 
           <div className="relative z-10">
             <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -58,7 +51,7 @@ const About = () => {
                 id="about.description1"
                 values={{
                   strong: (chunks: ReactNode) => (
-                    <strong className="text-[#00C4B3] hover:text-[#00E6D5] transition-colors duration-200 cursor-default">
+                    <strong className="font-semibold text-slate-900 dark:text-slate-100">
                       {chunks}
                     </strong>
                   ),
@@ -70,7 +63,7 @@ const About = () => {
                 id="about.description2"
                 values={{
                   strong: (chunks: ReactNode) => (
-                    <strong className="text-[#00C4B3] hover:text-[#00E6D5] transition-colors duration-200 cursor-default">
+                    <strong className="font-semibold text-slate-900 dark:text-slate-100">
                       {chunks}
                     </strong>
                   ),
@@ -78,7 +71,7 @@ const About = () => {
               />
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -11,6 +11,7 @@ import { GoSync } from "react-icons/go";
 
 export const useSkillsData = (): SkillCategory[] => {
   const intl = useIntl();
+  const isEnglish = intl.locale.startsWith("en");
 
   return [
     {
@@ -18,10 +19,10 @@ export const useSkillsData = (): SkillCategory[] => {
       skills: [
         {
           name: "React",
-          icon: <FaReact className="text-3xl text-[#61DAFB]" />,
+          icon: <FaReact className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Advanced",
-          years: "2 ans",
-          projectCount: "10-15 projets",
+          years: isEnglish ? "2 years" : "2 ans",
+          projectCount: isEnglish ? "10-15 projects" : "10-15 projets",
           context: intl.formatMessage({ id: "skills.context.react" }),
           relatedProject: {
             name: "Wordle Solver",
@@ -30,10 +31,10 @@ export const useSkillsData = (): SkillCategory[] => {
         },
         {
           name: "TypeScript",
-          icon: <SiTypescript className="text-3xl text-[#3178C6]" />,
+          icon: <SiTypescript className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Advanced",
-          years: "2 ans",
-          projectCount: "10-15 projets",
+          years: isEnglish ? "2 years" : "2 ans",
+          projectCount: isEnglish ? "10-15 projects" : "10-15 projets",
           context: intl.formatMessage({ id: "skills.context.typescript" }),
           relatedProject: {
             name: "Poke Generator",
@@ -42,10 +43,10 @@ export const useSkillsData = (): SkillCategory[] => {
         },
         {
           name: "TailwindCSS",
-          icon: <SiTailwindcss className="text-3xl text-[#06B6D4]" />,
+          icon: <SiTailwindcss className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Intermediate",
-          years: "1.5 ans",
-          projectCount: "5-10 projets",
+          years: isEnglish ? "1.5 years" : "1,5 ans",
+          projectCount: isEnglish ? "5-10 projects" : "5-10 projets",
           context: intl.formatMessage({ id: "skills.context.tailwind" }),
         },
       ],
@@ -55,31 +56,31 @@ export const useSkillsData = (): SkillCategory[] => {
       skills: [
         {
           name: "Node.js / NestJS",
-          icon: <SiNestjs className="text-3xl text-[#E0234E]" />,
+          icon: <SiNestjs className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Expert",
-          years: "2.5 ans",
-          projectCount: "10+ projets",
+          years: isEnglish ? "2.5 years" : "2,5 ans",
+          projectCount: isEnglish ? "10+ projects" : "10+ projets",
           context: intl.formatMessage({ id: "skills.context.node" }),
           relatedProject: { name: "TrioSigno", link: "https://triosigno.com/" },
         },
         {
           name: "Go",
-          icon: <FaGolang className="text-3xl text-[#00ADD8]" />,
+          icon: <FaGolang className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Advanced",
-          years: "6 mois",
-          projectCount: "2 projets",
+          years: isEnglish ? "6 months" : "6 mois",
+          projectCount: isEnglish ? "4 projects" : "4 projets",
           context: intl.formatMessage({ id: "skills.context.go" }),
           relatedProject: {
-            name: "Go Load Balancer",
-            link: "https://github.com/P4ST4S/go-load-balancer",
+            name: "mcp-audit",
+            link: "https://github.com/P4ST4S/mcp-audit",
           },
         },
         {
           name: "Prisma",
-          icon: <SiPrisma className="text-3xl text-[#2D3748]" />,
+          icon: <SiPrisma className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Advanced",
-          years: "2 ans",
-          projectCount: "10+ projets",
+          years: isEnglish ? "2 years" : "2 ans",
+          projectCount: isEnglish ? "10+ projects" : "10+ projets",
           context: intl.formatMessage({ id: "skills.context.prisma" }),
         },
       ],
@@ -89,18 +90,18 @@ export const useSkillsData = (): SkillCategory[] => {
       skills: [
         {
           name: "Docker",
-          icon: <FaDocker className="text-3xl text-[#2496ED]" />,
+          icon: <FaDocker className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Advanced",
-          years: "2 ans",
-          projectCount: "Daily use",
+          years: isEnglish ? "2 years" : "2 ans",
+          projectCount: isEnglish ? "Daily use" : "Usage quotidien",
           context: intl.formatMessage({ id: "skills.context.docker" }),
         },
         {
           name: "CI/CD",
-          icon: <GoSync className="text-3xl text-[#2088FF]" />,
+          icon: <GoSync className="text-3xl text-[#007E73] dark:text-[#5EEAD4]" />,
           level: "Advanced",
-          years: "2 ans",
-          projectCount: "Multiple pipelines",
+          years: isEnglish ? "2 years" : "2 ans",
+          projectCount: isEnglish ? "Multiple pipelines" : "Pipelines multiples",
           context: intl.formatMessage({ id: "skills.context.cicd" }),
           relatedProject: {
             name: "TrioSigno",

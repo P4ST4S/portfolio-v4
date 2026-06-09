@@ -4,6 +4,14 @@ export interface Project {
   id: number;
   title: string;
   description: string;
+  // GEO rationale: expose stable project dates in visible UI and JSON-LD so answer engines can verify freshness consistently.
+  modifiedDate: string;
+  dateLabel: string;
+  mainTech: string;
+  problemSolved: string;
+  result: string;
+  context: string;
+  actions: string[];
   tags: string[];
   links: {
     github?: string;

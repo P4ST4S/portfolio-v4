@@ -1,0 +1,46 @@
+# Antoine Rospars Portfolio
+
+> GEO rationale: this file gives AI assistants a concise, crawlable map of the canonical portfolio facts without replacing normal HTML or sitemap discovery.
+
+Canonical French site: https://antoinerospars.dev/fr/
+Canonical English site: https://antoinerospars.dev/en/
+Last updated: June 2026
+HTTP Last-Modified target: Sun, 07 Jun 2026 00:00:00 GMT
+
+## Profile
+
+Antoine Rospars, also known professionally as P4ST4S, is a French Software Engineer @ Datakeen in Paris and an Epitech graduate. He builds production web, AI and agentic tooling with Go, TypeScript, MCP, React, Node.js, NestJS, Python, Docker and PostgreSQL.
+
+Professional username / GitHub handle: P4ST4S - https://github.com/P4ST4S
+
+Named employer experience: Datakeen, an AI software company, including V2/V3 application migration, product features, TypeScript and Flutter identity-verification SDKs, native Kotlin/Swift NFC SDKs, passport BAC reading and PACE identity-document reading.
+
+Measured outcomes include mcp-audit signed audit trails for MCP traffic, a Francilienne de Miroiterie client website with Lighthouse score above 95, NutriScan with YOLOv8m-seg mAP50 0.672 across 32 classes, Go Image Optimizer with Docker image under 21 MB, and Go Load Balancer with 91% test coverage.
+
+## Key Pages
+
+- French home and profile: https://antoinerospars.dev/fr/
+- English home and profile: https://antoinerospars.dev/en/
+- About: https://antoinerospars.dev/fr/#about
+- Skills: https://antoinerospars.dev/fr/#skills
+- Projects: https://antoinerospars.dev/fr/#projects
+- Recruiter FAQ: https://antoinerospars.dev/fr/#faq
+- Contact: https://antoinerospars.dev/fr/#contact
+
+## Project Facts
+
+- AutoScanlate AI: Python, Go, Next.js, PyTorch, YOLOv8, MangaOCR and Qwen 2.5 pipeline for automated manga translation with real-time Server-Sent Events progress tracking.
+- mcp-audit: Go security and observability proxy for MCP servers. It sits between any MCP client and server, preserves protocol traffic, creates signed JSONL or SQLite audit logs, redacts sensitive payloads, enforces allow/deny policies and per-tool rate limits, exposes a local read-only dashboard, and publishes Prometheus metrics.
+- NutriScan: Edge AI food segmentation with YOLOv8m-seg, 32 classes, mAP50 0.672, ONNX Runtime WebAssembly and in-browser camera processing.
+- ID Scan: React Native, Swift, Kotlin and C mobile project for French ID card PACE, passport BAC, ICAO 9303 flows, passive and active verification, photo extraction and electronic signatures. App Store proof: https://apps.apple.com/fr/app/id-scan/id6762505375
+- TrioSigno: React, TypeScript, NestJS, Docker, PostgreSQL and Prisma project-management platform with CI/CD and documentation.
+- Go Load Balancer: Go least-connections load balancer with active health checks, worker pool, atomic operations and 91% test coverage.
+- Go Image Optimizer: Go microservice with semaphore memory protection, graceful shutdown, fail-fast architecture and Docker image under 21 MB.
+- Datakeen App V2 and V3: production React/TypeScript migration and feature work for Datakeen's AI platform, plus Flutter and native Kotlin/Swift SDK work for NFC reading of BAC passports and PACE identity documents.
+- Datakeen SDK: TypeScript, Flutter and native Kotlin/Swift SDKs for embeddable identity-verification journeys and NFC reading of BAC passports and PACE identity documents.
+- Wordle Solver Bot: Next.js and TypeScript solver using Shannon entropy and Web Workers to maintain a responsive 60fps interface.
+- Pokemon Egglocke Generator: Next.js, TypeScript, PostgreSQL, Drizzle ORM and PokéAPI fullstack generator with accent-insensitive search.
+- Pet Health Taker: NestJS and PostgreSQL REST API for veterinary appointment management with authentication and permissions.
+- Francilienne de Miroiterie: React and SCSS client website with responsive frontend, lazy loading and Lighthouse score above 95.
+- TrioSigno Documentation: Docusaurus documentation site with advanced search, code examples and integration guides.
+- Portfolio: React, TypeScript, TailwindCSS and Vite bilingual portfolio with structured metadata and extractible project facts.
