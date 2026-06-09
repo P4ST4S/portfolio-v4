@@ -1,0 +1,30 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/fr/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/fr/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/en/:path*",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Last-Modified",
+          "value": "Fri, 22 May 2026 00:00:00 GMT"
+        }
+      ]
+    }
+  ]
+}

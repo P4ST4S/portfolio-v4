@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import DocumentMetadata from "@/components/DocumentMetadata";
 import PerformanceDashboard from "@/components/PerformanceDashboard";
 
 const About = lazy(() => import("@/components/About"));
@@ -15,6 +16,7 @@ const Footer = lazy(() => import("@/components/Footer"));
 export default function App() {
   return (
     <div className="bg-white text-slate-900 dark:bg-[#1A1A1A] dark:text-slate-300 font-sans leading-normal tracking-tight">
+      <DocumentMetadata />
       <Header />
       <main>
         <Hero />

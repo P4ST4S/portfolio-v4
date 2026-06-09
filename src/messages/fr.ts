@@ -1,4 +1,7 @@
 export const fr = {
+  "meta.description":
+    "Antoine Rospars, développeur fullstack React/TypeScript à Paris, diplômé Epitech. Production chez Datakeen, projets IA, Go, Node.js, NestJS, Docker, PostgreSQL et résultats mesurables.",
+
   // Navigation
   "nav.about": "À propos",
   "nav.skills": "Compétences",

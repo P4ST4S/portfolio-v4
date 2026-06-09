@@ -1,4 +1,7 @@
 export const en = {
+  "meta.description":
+    "Antoine Rospars is a React/TypeScript fullstack developer in Paris and Epitech graduate with production experience at Datakeen, AI projects, Go, Node.js, NestJS, Docker and PostgreSQL.",
+
   // Navigation
   "nav.about": "About",
   "nav.skills": "Skills",

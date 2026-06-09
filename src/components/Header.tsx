@@ -40,7 +40,6 @@ const Header = () => {
     { href: "#skills", labelKey: "nav.skills" },
     { href: "#projects", labelKey: "nav.projects" },
     { href: "#faq", labelKey: "nav.faq" },
-    // { href: "#pricing", labelKey: "nav.pricing" },
   ];
 
   return (

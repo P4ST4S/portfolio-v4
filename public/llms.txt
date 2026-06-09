@@ -2,7 +2,8 @@
 
 > GEO rationale: this file gives AI assistants a concise, crawlable map of the canonical portfolio facts without replacing normal HTML or sitemap discovery.
 
-Canonical site: https://antoinerospars.dev/
+Canonical French site: https://antoinerospars.dev/fr/
+Canonical English site: https://antoinerospars.dev/en/
 Last updated: May 2026
 HTTP Last-Modified target: Fri, 22 May 2026 00:00:00 GMT
 
@@ -16,12 +17,13 @@ Measured outcomes include a Francilienne de Miroiterie client website with Light
 
 ## Key Pages
 
-- Home and profile: https://antoinerospars.dev/
-- About: https://antoinerospars.dev/#about
-- Skills: https://antoinerospars.dev/#skills
-- Projects: https://antoinerospars.dev/#projects
-- Recruiter FAQ: https://antoinerospars.dev/#faq
-- Contact: https://antoinerospars.dev/#contact
+- French home and profile: https://antoinerospars.dev/fr/
+- English home and profile: https://antoinerospars.dev/en/
+- About: https://antoinerospars.dev/fr/#about
+- Skills: https://antoinerospars.dev/fr/#skills
+- Projects: https://antoinerospars.dev/fr/#projects
+- Recruiter FAQ: https://antoinerospars.dev/fr/#faq
+- Contact: https://antoinerospars.dev/fr/#contact
 
 ## Project Facts
 
